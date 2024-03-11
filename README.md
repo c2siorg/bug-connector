@@ -17,32 +17,32 @@ The idea of this project is to create a public dataset based on openly available
     - [MITRE](https://www.cve.org/Downloads#current-format)
     - [CVE Details](https://www.cvedetails.com/vulnerability-search.php?f=1&vendor=&product=&cweid=&cvssscoremin=&cvssscoremax=&publishdatestart=&publishdateend=&updatedatestart=&updatedateend=&cisaaddstart=&cisaaddend=&cisaduestart=&cisadueend=&page=1)
     - [Rapid7](https://www.rapid7.com/db/?q=&type=nexpose)
-- Each source has its own module, and each module is responsible for gathering data from the source and storing it in a format.
+- Each source has its own module, which is responsible for gathering and storing data from the source in a format.
   
   **Alternative:**
   - [CvelistV5](https://github.com/CVEProject/cvelistV5) is a public repository that contains a list of all CVEs, and the data is updated regularly, the data is available in JSON format, and the data can be used for research purposes.
   
 ## Data Processing:
-- The data processing component is responsible for processing the datacollected from different sources, the processing can be:
+- The data processing component is responsible for processing the data collected from different sources, the processing can be:
     - Data Augmentation
     - Data Normalization
     - Data Enrichment
-- Each processing module is responsible for processing the data andstoring it in a predefined format.
+- Each processing module is responsible for processing and storing the data in a predefined format.
 
 ## Data Storage:
-- The data storage component is responsible for storing the processeddata in a predefined format, the storage can be:
+- The data storage component is responsible for storing the processed data in a predefined format, the storage can be:
     - CSV
     - JSON
     - XML
     - SQL
-- Each storage module is responsible for storing the data in apredefined format.
+- Each storage module is responsible for storing the data in a predefined format.
 
-## Data Updatation:
-- The data updatation component is responsible for updating the data on aregular basis, the update can be:
+## Data Updation:
+- The data updation component is responsible for updating the data regularly, the update can be:
     - Daily
     - Weekly
     - Monthly
-- Using Github Actions, the data can be updated on a regular basis, and thedata can be made publicly available for research purposes.
+- Using Github Actions, the data can be updated regularly, and the data can be made publicly available for research purposes.
 
 ## Deployment:
 - The project is deployed on a [Streamlit](https://streamlit.io) platform, and the data is publicly available for research purposes.
