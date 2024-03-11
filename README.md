@@ -1,23 +1,23 @@
 # Bug Connector
 
 ## Introduction:
-    The idea of this project is to create a public dataset based on openly available CVE information, the key goal is to create fully functional scapers set to gather CVE information from different sources augment comprehensive data points, and make it publicly available for research purposes.
 
+The idea of this project is to create a public dataset based on openly available CVE information, the key goal is to create fully functional scapers set to gather CVE information from different sources augment comprehensive data points, and make it publicly available for research purposes.
+ 
 ## Project Structure:    
 - The project is divided into 3 main components:
-    - Data Collection
-    - Data Processing
-    - Data Storage
-- Each component is further divided into sub-components, and eachsub-component is a standalone module that can be used independently.
+  - Data Collection
+  - Data Processing
+  - Data Storage
+- Each component is further divided into sub-components, and each sub-component is a standalone module that can be used independently.
 
 ## Data Collection:
-- The data collection component is responsible for gathering CVEinformation from different sources, the sources can be:
-    - NVD
-    - MITRE
-    - CVE Details
-    - Rapid7
-    - JVN
-- Each source has its own module, and each module is responsible forgathering data from the source and storing it in a predefined format.
+- The data collection component is responsible for gathering CVE information from different sources, the sources can be:
+    - [NVD](https://nvd.nist.gov/vuln/search/results?form_type=Basic&results_type=overview&search_type=all&isCpeNameSearch=false)
+    - [MITRE](https://www.cve.org/Downloads#current-format)
+    - [CVE Details](https://www.cvedetails.com/vulnerability-search.php?f=1&vendor=&product=&cweid=&cvssscoremin=&cvssscoremax=&publishdatestart=&publishdateend=&updatedatestart=&updatedateend=&cisaaddstart=&cisaaddend=&cisaduestart=&cisadueend=&page=1)
+    - [Rapid7](https://www.rapid7.com/db/?q=&type=nexpose)
+- Each source has its own module, and each module is responsible for gathering data from the source and storing it in a format.
   
   **Alternative:**
   - [CvelistV5](https://github.com/CVEProject/cvelistV5) is a public repository that contains a list of all CVEs, and the data is updated regularly, the data is available in JSON format, and the data can be used for research purposes.
