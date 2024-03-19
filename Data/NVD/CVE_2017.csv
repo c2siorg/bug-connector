@@ -1,0 +1,2 @@
+Vuln ID,Summary,CVSS Severity,Link
+CVE-2017-20189,"In Clojure before 1.9.0, classes can be used to construct a serialized object that executes arbitrary code upon deserialization. This is relevant if a server deserializes untrusted objects.","January 22, 2024; 1:15:07 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2017-20189

@@ -1,0 +1,25 @@
+Vuln ID,Summary,CVSS Severity,Link
+CVE-2019-6268,"RAD SecFlow-2 devices with Hardware 0202, Firmware 4.1.01.63, and U-Boot 2010.12 allow URIs beginning with /.. for Directory Traversal, as demonstrated by reading /etc/shadow.","March 07, 2024; 9:15:47 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2019-6268
+CVE-2019-25210,"An issue was discovered in Cloud Native Computing Foundation (CNCF) Helm through 3.13.3. It displays values of secrets when the --dry-run flag is used. This is a security concern in some use cases, such as a --dry-run call by a CI/CD tool. NOTE: the vendor's position is that this behavior was introduced intentionally, and cannot be removed without breaking backwards compatibility (some users may be relying on these values). Also, it is not the Helm Project's responsibility if a user decides to use --dry-run within a CI/CD environment whose output is visible to unauthorized persons.","March 03, 2024; 4:15:49 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2019-25210
+CVE-2019-25162,"In the Linux kernel, the following vulnerability has been resolved:
+
+i2c: Fix a potential use after free
+
+Free the adap structure only after we are done using it.
+This patch just moves the put_device() down a bit to avoid the
+use after free.
+
+[wsa: added comment to the code, added Fixes tag]","February 26, 2024; 1:15:07 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2019-25162
+CVE-2019-25160,"In the Linux kernel, the following vulnerability has been resolved:
+
+netlabel: fix out-of-bounds memory accesses
+
+There are two array out-of-bounds memory accesses, one in
+cipso_v4_map_lvl_valid(), the other in netlbl_bitmap_walk().  Both
+errors are embarassingly simple, and the fixes are straightforward.
+
+As a FYI for anyone backporting this patch to kernels prior to v4.8,
+you'll want to apply the netlbl_bitmap_walk() patch to
+cipso_v4_bitmap_walk() as netlbl_bitmap_walk() doesn't exist before
+Linux v4.8.","February 26, 2024; 1:15:06 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2019-25160
+CVE-2019-25159,A vulnerability was found in mpedraza2020 Intranet del Monterroso up to 4.50.0. It has been classified as critical. This affects an unknown part of the file config/cargos.php. The manipulation of the argument dni_profe leads to sql injection. Upgrading to version 4.51.0 is able to address this issue. The identifier of the patch is 678190bee1dfd64b54a2b0e88abfd009e78adce8. It is recommended to upgrade the affected component. The identifier VDB-252717 was assigned to this vulnerability.,"February 04, 2024; 1:15:07 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2019-25159

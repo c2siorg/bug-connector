@@ -1,0 +1,2 @@
+Vuln ID,Summary,CVSS Severity,Link
+CVE-2010-10011,"A vulnerability, which was classified as problematic, was found in Acritum Femitter Server 1.04. Affected is an unknown function. The manipulation leads to path traversal. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. VDB-250446 is the identifier assigned to this vulnerability.","January 12, 2024; 3:15:46 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2010-10011

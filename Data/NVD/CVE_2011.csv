@@ -1,0 +1,2 @@
+Vuln ID,Summary,CVSS Severity,Link
+CVE-2011-10005,"A vulnerability, which was classified as critical, was found in EasyFTP 1.7.0.2. Affected is an unknown function of the component MKD Command Handler. The manipulation leads to buffer overflow. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-250716.","January 16, 2024; 3:15:07 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2011-10005

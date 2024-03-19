@@ -1,0 +1,203 @@
+Vuln ID,Summary,CVSS Severity,Link
+CVE-2020-11862,"Allocation of Resources Without Limits or Throttling vulnerability in OpenText NetIQ Privileged Account Manager on Linux, Windows, 64 bit allows Flooding.This issue affects NetIQ Privileged Account Manager: before 3.7.0.2.","March 13, 2024; 6:15:07 PM -0400",https://nvd.nist.gov/vuln/detail/CVE-2020-11862
+CVE-2020-36787,"In the Linux kernel, the following vulnerability has been resolved:
+
+media: aspeed: fix clock handling logic
+
+Video engine uses eclk and vclk for its clock sources and its reset
+control is coupled with eclk so the current clock enabling sequence works
+like below.
+
+ Enable eclk
+ De-assert Video Engine reset
+ 10ms delay
+ Enable vclk
+
+It introduces improper reset on the Video Engine hardware and eventually
+the hardware generates unexpected DMA memory transfers that can corrupt
+memory region in random and sporadic patterns. This issue is observed
+very rarely on some specific AST2500 SoCs but it causes a critical
+kernel panic with making a various shape of signature so it's extremely
+hard to debug. Moreover, the issue is observed even when the video
+engine is not actively used because udevd turns on the video engine
+hardware for a short time to make a query in every boot.
+
+To fix this issue, this commit changes the clock handling logic to make
+the reset de-assertion triggered after enabling both eclk and vclk. Also,
+it adds clk_unprepare call for a case when probe fails.
+
+clk: ast2600: fix reset settings for eclk and vclk
+Video engine reset setting should be coupled with eclk to match it
+with the setting for previous Aspeed SoCs which is defined in
+clk-aspeed.c since all Aspeed SoCs are sharing a single video engine
+driver. Also, reset bit 6 is defined as 'Video Engine' reset in
+datasheet so it should be de-asserted when eclk is enabled. This
+commit fixes the setting.","February 28, 2024; 4:15:37 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-36787
+CVE-2020-36786,"In the Linux kernel, the following vulnerability has been resolved:
+
+media: [next] staging: media: atomisp: fix memory leak of object flash
+
+In the case where the call to lm3554_platform_data_func returns an
+error there is a memory leak on the error return path of object
+flash.  Fix this by adding an error return path that will free
+flash and rename labels fail2 to fail3 and fail1 to fail2.","February 28, 2024; 4:15:36 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-36786
+CVE-2020-36785,"In the Linux kernel, the following vulnerability has been resolved:
+
+media: atomisp: Fix use after free in atomisp_alloc_css_stat_bufs()
+
+The ""s3a_buf"" is freed along with all the other items on the
+""asd->s3a_stats"" list.  It leads to a double free and a use after free.","February 28, 2024; 4:15:36 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-36785
+CVE-2020-36784,"In the Linux kernel, the following vulnerability has been resolved:
+
+i2c: cadence: fix reference leak when pm_runtime_get_sync fails
+
+The PM reference count is not expected to be incremented on
+return in functions cdns_i2c_master_xfer and cdns_reg_slave.
+
+However, pm_runtime_get_sync will increment pm usage counter
+even failed. Forgetting to putting operation will result in a
+reference leak here.
+
+Replace it with pm_runtime_resume_and_get to keep usage
+counter balanced.","February 28, 2024; 4:15:36 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-36784
+CVE-2020-36783,"In the Linux kernel, the following vulnerability has been resolved:
+
+i2c: img-scb: fix reference leak when pm_runtime_get_sync fails
+
+The PM reference count is not expected to be incremented on
+return in functions img_i2c_xfer and img_i2c_init.
+
+However, pm_runtime_get_sync will increment the PM reference
+count even failed. Forgetting to putting operation will result
+in a reference leak here.
+
+Replace it with pm_runtime_resume_and_get to keep usage
+counter balanced.","February 28, 2024; 4:15:36 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-36783
+CVE-2020-36782,"In the Linux kernel, the following vulnerability has been resolved:
+
+i2c: imx-lpi2c: fix reference leak when pm_runtime_get_sync fails
+
+The PM reference count is not expected to be incremented on
+return in lpi2c_imx_master_enable.
+
+However, pm_runtime_get_sync will increment the PM reference
+count even failed. Forgetting to putting operation will result
+in a reference leak here.
+
+Replace it with pm_runtime_resume_and_get to keep usage
+counter balanced.","February 28, 2024; 4:15:36 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-36782
+CVE-2020-36781,"In the Linux kernel, the following vulnerability has been resolved:
+
+i2c: imx: fix reference leak when pm_runtime_get_sync fails
+
+In i2c_imx_xfer() and i2c_imx_remove(), the pm reference count
+is not expected to be incremented on return.
+
+However, pm_runtime_get_sync will increment pm reference count
+even failed. Forgetting to putting operation will result in a
+reference leak here.
+
+Replace it with pm_runtime_resume_and_get to keep usage
+counter balanced.","February 28, 2024; 4:15:36 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-36781
+CVE-2020-36780,"In the Linux kernel, the following vulnerability has been resolved:
+
+i2c: sprd: fix reference leak when pm_runtime_get_sync fails
+
+The PM reference count is not expected to be incremented on
+return in sprd_i2c_master_xfer() and sprd_i2c_remove().
+
+However, pm_runtime_get_sync will increment the PM reference
+count even failed. Forgetting to putting operation will result
+in a reference leak here.
+
+Replace it with pm_runtime_resume_and_get to keep usage
+counter balanced.","February 28, 2024; 4:15:36 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-36780
+CVE-2020-36779,"In the Linux kernel, the following vulnerability has been resolved:
+
+i2c: stm32f7: fix reference leak when pm_runtime_get_sync fails
+
+The PM reference count is not expected to be incremented on
+return in these stm32f7_i2c_xx serious functions.
+
+However, pm_runtime_get_sync will increment the PM reference
+count even failed. Forgetting to putting operation will result
+in a reference leak here.
+
+Replace it with pm_runtime_resume_and_get to keep usage
+counter balanced.","February 28, 2024; 4:15:36 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-36779
+CVE-2020-36778,"In the Linux kernel, the following vulnerability has been resolved:
+
+i2c: xiic: fix reference leak when pm_runtime_get_sync fails
+
+The PM reference count is not expected to be incremented on
+return in xiic_xfer and xiic_i2c_remove.
+
+However, pm_runtime_get_sync will increment the PM reference
+count even failed. Forgetting to putting operation will result
+in a reference leak here.
+
+Replace it with pm_runtime_resume_and_get to keep usage
+counter balanced.","February 28, 2024; 4:15:36 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-36778
+CVE-2020-36777,"In the Linux kernel, the following vulnerability has been resolved:
+
+media: dvbdev: Fix memory leak in dvb_media_device_free()
+
+dvb_media_device_free() is leaking memory. Free `dvbdev->adapter->conn`
+before setting it to NULL, as documented in include/media/media-device.h:
+""The media_entity instance itself must be freed explicitly by the driver
+if required.""","February 27, 2024; 2:04:05 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-36777
+CVE-2020-36776,"In the Linux kernel, the following vulnerability has been resolved:
+
+thermal/drivers/cpufreq_cooling: Fix slab OOB issue
+
+Slab OOB issue is scanned by KASAN in cpu_power_to_freq().
+If power is limited below the power of OPP0 in EM table,
+it will cause slab out-of-bound issue with negative array
+index.
+
+Return the lowest frequency if limited power cannot found
+a suitable OPP in EM table to fix this issue.
+
+Backtrace:
+[<ffffffd02d2a37f0>] die+0x104/0x5ac
+[<ffffffd02d2a5630>] bug_handler+0x64/0xd0
+[<ffffffd02d288ce4>] brk_handler+0x160/0x258
+[<ffffffd02d281e5c>] do_debug_exception+0x248/0x3f0
+[<ffffffd02d284488>] el1_dbg+0x14/0xbc
+[<ffffffd02d75d1d4>] __kasan_report+0x1dc/0x1e0
+[<ffffffd02d75c2e0>] kasan_report+0x10/0x20
+[<ffffffd02d75def8>] __asan_report_load8_noabort+0x18/0x28
+[<ffffffd02e6fce5c>] cpufreq_power2state+0x180/0x43c
+[<ffffffd02e6ead80>] power_actor_set_power+0x114/0x1d4
+[<ffffffd02e6fac24>] allocate_power+0xaec/0xde0
+[<ffffffd02e6f9f80>] power_allocator_throttle+0x3ec/0x5a4
+[<ffffffd02e6ea888>] handle_thermal_trip+0x160/0x294
+[<ffffffd02e6edd08>] thermal_zone_device_check+0xe4/0x154
+[<ffffffd02d351cb4>] process_one_work+0x5e4/0xe28
+[<ffffffd02d352f44>] worker_thread+0xa4c/0xfac
+[<ffffffd02d360124>] kthread+0x33c/0x358
+[<ffffffd02d289940>] ret_from_fork+0xc/0x18","February 27, 2024; 2:04:05 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-36776
+CVE-2020-36775,"In the Linux kernel, the following vulnerability has been resolved:
+
+f2fs: fix to avoid potential deadlock
+
+Using f2fs_trylock_op() in f2fs_write_compressed_pages() to avoid potential
+deadlock like we did in f2fs_write_single_data_page().","February 26, 2024; 1:15:07 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-36775
+CVE-2020-36774,"plugins/gtk+/glade-gtk-box.c in GNOME Glade before 3.38.1 and 3.39.x before 3.40.0 mishandles widget rebuilding for GladeGtkBox, leading to a denial of service (application crash).","February 18, 2024; 9:15:47 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-36774
+CVE-2020-36773,"Artifex Ghostscript before 9.53.0 has an out-of-bounds write and use-after-free in devices/vector/gdevtxtw.c (for txtwrite) because a single character code in a PDF document can map to more than one Unicode code point (e.g., for a ligature).","February 04, 2024; 1:16:00 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-36773
+CVE-2020-29504,"Dell BSAFE Crypto-C Micro Edition, versions before 4.1.5, and Dell BSAFE Micro Edition Suite, versions before 4.5.2, contain a Missing Required Cryptographic Step Vulnerability.","February 02, 2024; 11:15:44 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-29504
+CVE-2020-24682,"Unquoted Search Path or Element vulnerability in B&R Industrial Automation Automation Studio, B&R Industrial Automation NET/PVI allows Target Programs with Elevated Privileges.This issue affects Automation Studio: from 4.0 through 4.6, from 4.7.0 before 4.7.7 SP, from 4.8.0 before 4.8.6 SP, from 4.9.0 before 4.9.4 SP; NET/PVI: from 4.0 through 4.6, from 4.7.0 before 4.7.7, from 4.8.0 before 4.8.6, from 4.9.0 before 4.9.4.","February 02, 2024; 3:15:45 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-24682
+CVE-2020-24681,"Incorrect Permission Assignment for Critical Resource vulnerability in B&R Industrial Automation Automation Studio allows Privilege Escalation.This issue affects Automation Studio: from 4.6.0 through 4.6.X, from 4.7.0 before 4.7.7 SP, from 4.8.0 before 4.8.6 SP, from 4.9.0 before 4.9.4 SP.","February 02, 2024; 2:15:07 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-24681
+CVE-2020-36772,"CloudLinux
+ CageFS 7.0.8-2 or below insufficiently restricts file paths supplied to
+ the sendmail proxy command. This allows local users to read and write 
+arbitrary files outside the CageFS environment in a limited way.","January 22, 2024; 10:15:07 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-36772
+CVE-2020-36771,"CloudLinux
+ CageFS 7.1.1-1 or below passes the authentication token as command line
+ argument. In some configurations this allows local users to view it via
+ the process list and gain code execution as another user.","January 22, 2024; 9:15:07 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-36771
+CVE-2020-36770,pkg_postinst in the Gentoo ebuild for Slurm through 22.05.3 unnecessarily calls chown to assign root's ownership on files in the live root filesystem. This could be exploited by the slurm user to become the owner of root-owned files.,"January 15, 2024; 2:15:07 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-36770
+CVE-2020-26630,A Time-Based SQL Injection vulnerability was discovered in Hospital Management System V4.0 which can allow an attacker to dump database information via a special payload in the 'Doctor Specialization' field under the 'Go to Doctors' tab after logging in as an admin.,"January 10, 2024; 4:15:43 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-26630
+CVE-2020-26629,A JQuery Unrestricted Arbitrary File Upload vulnerability was discovered in Hospital Management System V4.0 which allows an unauthenticated attacker to upload any file to the server.,"January 10, 2024; 4:15:43 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-26629
+CVE-2020-26628,"A Cross-Site Scripting (XSS) vulnerability was discovered in Hospital Management System V4.0 which allows an attacker to execute arbitrary web scripts or HTML code via a malicious payload appended to a username on the 'Edit Profile"" page and triggered by another user visiting the profile.","January 10, 2024; 4:15:43 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-26628
+CVE-2020-26627,A Time-Based SQL Injection vulnerability was discovered in Hospital Management System V4.0 which can allow an attacker to dump database information via a crafted payload entered into the 'Admin Remark' parameter under the 'Contact Us Queries -> Unread Query' tab.,"January 10, 2024; 4:15:43 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2020-26627

@@ -1,0 +1,316 @@
+Vuln ID,Summary,CVSS Severity,Link
+CVE-2022-47037,"Siklu TG Terragraph devices before 2.1.1 allow attackers to discover valid, randomly generated credentials via GetCredentials.","March 17, 2024; 11:15:06 PM -0400",https://nvd.nist.gov/vuln/detail/CVE-2022-47037
+CVE-2022-47036,"Siklu TG Terragraph devices before approximately 2.1.1 have a hardcoded root password that has been revealed via a brute force attack on an MD5 hash. It can be used for ""debug login"" by an admin. NOTE: the vulnerability is not fixed by the 2.1.1 firmware; instead, it is fixed in newer hardware, which would typically be used with firmware 2.1.1 or later.","March 17, 2024; 11:15:05 PM -0400",https://nvd.nist.gov/vuln/detail/CVE-2022-47036
+CVE-2022-34321,"Improper Authentication vulnerability in Apache Pulsar Proxy allows an attacker to connect to the /proxy-stats endpoint without authentication. The vulnerable endpoint exposes detailed statistics about live connections, along with the capability to modify the logging level of proxied connections without requiring proper authentication credentials.
+
+This issue affects Apache Pulsar versions from 2.6.0 to 2.10.5, from 2.11.0 to 2.11.2, from 3.0.0 to 3.0.1, and 3.1.0.
+
+The known risks include exposing sensitive information such as connected client IP and unauthorized logging level manipulation which could lead to a denial-of-service condition by significantly increasing the proxy's logging overhead. When deployed via the Apache Pulsar Helm chart within Kubernetes environments, the actual client IP might not be revealed through the load balancer's default behavior, which typically obscures the original source IP addresses when externalTrafficPolicy is being configured to ""Cluster"" by default. The /proxy-stats endpoint contains topic level statistics, however, in the default configuration, the topic level statistics aren't known to be exposed.
+
+2.10 Pulsar Proxy users should upgrade to at least 2.10.6.
+2.11 Pulsar Proxy users should upgrade to at least 2.11.3.
+3.0 Pulsar Proxy users should upgrade to at least 3.0.2.
+3.1 Pulsar Proxy users should upgrade to at least 3.1.1.
+
+Users operating versions prior to those listed above should upgrade to the aforementioned patched versions or newer versions. Additionally, it's imperative to recognize that the Apache Pulsar Proxy is not intended for direct exposure to the internet. The architectural design of Pulsar Proxy assumes that it will operate within a secured network environment, safeguarded by appropriate perimeter defenses.","March 12, 2024; 3:15:47 PM -0400",https://nvd.nist.gov/vuln/detail/CVE-2022-34321
+CVE-2022-32257,A vulnerability has been identified in SINEMA Remote Connect Server (All versions < V3.2). The affected application consists of a web service that lacks proper access control for some of the endpoints. This could lead to unauthorized access to resources and potentially lead to code execution.,"March 12, 2024; 7:15:45 AM -0400",https://nvd.nist.gov/vuln/detail/CVE-2022-32257
+CVE-2022-46070,GV-ASManager V6.0.1.0 contains a Local File Inclusion vulnerability in GeoWebServer via Path.,"March 11, 2024; 6:15:54 PM -0400",https://nvd.nist.gov/vuln/detail/CVE-2022-46070
+CVE-2022-43855,"IBM SPSS Statistics 26.0, 27.0.1, and 28.0 could allow a local user to create multiple files that could exhaust the file handles capacity and cause a denial of service.  IBM X-Force ID:  230235.","March 08, 2024; 1:15:48 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-43855
+CVE-2022-46499,Hospital Management System 1.0 was discovered to contain a SQL injection vulnerability via the pat_number parameter at his_admin_view_single_patient.php.,"March 07, 2024; 4:15:38 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-46499
+CVE-2022-46498,Hospital Management System 1.0 was discovered to contain a SQL injection vulnerability via the doc_number parameter at his_admin_view_single_employee.php.,"March 07, 2024; 4:15:38 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-46498
+CVE-2022-46497,Hospital Management System 1.0 was discovered to contain a SQL injection vulnerability via the pat_number parameter at his_doc_view_single_patien.php.,"March 07, 2024; 4:15:37 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-46497
+CVE-2022-46091,Cross Site Scripting (XSS) vulnerability in the feedback form of Online Flight Booking Management System v1.0 allows attackers to execute arbitrary web scripts or HTML via a crafted payload injected into the airline parameter.,"March 07, 2024; 4:15:37 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-46091
+CVE-2022-46089,Cross Site Scripting (XSS) vulnerability in the add-airline form of Online Flight Booking Management System v1.0 allows attackers to execute arbitrary web scripts or HTML via a crafted payload injected into the airline parameter.,"March 06, 2024; 9:15:51 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-46089
+CVE-2022-22399,"IBM Aspera Faspex 5.0.0 and 5.0.1 is vulnerable to HTTP header injection, caused by improper validation of input by the HOST headers.  This could allow an attacker to conduct various attacks against the vulnerable system, including cross-site scripting, cache poisoning or session hijacking.  IBM X-Force ID:  222562.","March 05, 2024; 3:16:00 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-22399
+CVE-2022-46088,Online Flight Booking Management System v1.0 was discovered to contain a cross-site scripting (XSS) vulnerability via the feedback form.,"March 05, 2024; 11:15:49 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-46088
+CVE-2022-48630,"In the Linux kernel, the following vulnerability has been resolved:
+
+crypto: qcom-rng - fix infinite loop on requests not multiple of WORD_SZ
+
+The commit referenced in the Fixes tag removed the 'break' from the else
+branch in qcom_rng_read(), causing an infinite loop whenever 'max' is
+not a multiple of WORD_SZ. This can be reproduced e.g. by running:
+
+    kcapi-rng -b 67 >/dev/null
+
+There are many ways to fix this without adding back the 'break', but
+they all seem more awkward than simply adding it back, so do just that.
+
+Tested on a machine with Qualcomm Amberwing processor.","March 05, 2024; 7:15:45 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-48630
+CVE-2022-48629,"In the Linux kernel, the following vulnerability has been resolved:
+
+crypto: qcom-rng - ensure buffer for generate is completely filled
+
+The generate function in struct rng_alg expects that the destination
+buffer is completely filled if the function returns 0. qcom_rng_read()
+can run into a situation where the buffer is partially filled with
+randomness and the remaining part of the buffer is zeroed since
+qcom_rng_generate() doesn't check the return value. This issue can
+be reproduced by running the following from libkcapi:
+
+    kcapi-rng -b 9000000 > OUTFILE
+
+The generated OUTFILE will have three huge sections that contain all
+zeros, and this is caused by the code where the test
+'val & PRNG_STATUS_DATA_AVAIL' fails.
+
+Let's fix this issue by ensuring that qcom_rng_read() always returns
+with a full buffer if the function returns success. Let's also have
+qcom_rng_generate() return the correct value.
+
+Here's some statistics from the ent project
+(https://www.fourmilab.ch/random/) that shows information about the
+quality of the generated numbers:
+
+    $ ent -c qcom-random-before
+    Value Char Occurrences Fraction
+      0           606748   0.067416
+      1            33104   0.003678
+      2            33001   0.003667
+    ...
+    253   ?        32883   0.003654
+    254   ?        33035   0.003671
+    255   ?        33239   0.003693
+
+    Total:       9000000   1.000000
+
+    Entropy = 7.811590 bits per byte.
+
+    Optimum compression would reduce the size
+    of this 9000000 byte file by 2 percent.
+
+    Chi square distribution for 9000000 samples is 9329962.81, and
+    randomly would exceed this value less than 0.01 percent of the
+    times.
+
+    Arithmetic mean value of data bytes is 119.3731 (127.5 = random).
+    Monte Carlo value for Pi is 3.197293333 (error 1.77 percent).
+    Serial correlation coefficient is 0.159130 (totally uncorrelated =
+    0.0).
+
+Without this patch, the results of the chi-square test is 0.01%, and
+the numbers are certainly not random according to ent's project page.
+The results improve with this patch:
+
+    $ ent -c qcom-random-after
+    Value Char Occurrences Fraction
+      0            35432   0.003937
+      1            35127   0.003903
+      2            35424   0.003936
+    ...
+    253   ?        35201   0.003911
+    254   ?        34835   0.003871
+    255   ?        35368   0.003930
+
+    Total:       9000000   1.000000
+
+    Entropy = 7.999979 bits per byte.
+
+    Optimum compression would reduce the size
+    of this 9000000 byte file by 0 percent.
+
+    Chi square distribution for 9000000 samples is 258.77, and randomly
+    would exceed this value 42.24 percent of the times.
+
+    Arithmetic mean value of data bytes is 127.5006 (127.5 = random).
+    Monte Carlo value for Pi is 3.141277333 (error 0.01 percent).
+    Serial correlation coefficient is 0.000468 (totally uncorrelated =
+    0.0).
+
+This change was tested on a Nexus 5 phone (msm8974 SoC).","March 05, 2024; 7:15:45 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-48629
+CVE-2022-43890,IBM Security Verify Privilege On-Premises 11.5 could disclose sensitive information through an HTTP request that could aid an attacker in further attacks against the system.  IBM X-Force ID:  240453.,"March 04, 2024; 11:15:48 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-43890
+CVE-2022-43880,IBM QRadar WinCollect Agent 10.0 through 10.1.2 could allow a privileged user to cause a denial of service.  IBM X-Force ID:  240151.,"March 03, 2024; 11:15:49 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-43880
+CVE-2022-48628,"In the Linux kernel, the following vulnerability has been resolved:
+
+ceph: drop messages from MDS when unmounting
+
+When unmounting all the dirty buffers will be flushed and after
+the last osd request is finished the last reference of the i_count
+will be released. Then it will flush the dirty cap/snap to MDSs,
+and the unmounting won't wait the possible acks, which will ihold
+the inodes when updating the metadata locally but makes no sense
+any more, of this. This will make the evict_inodes() to skip these
+inodes.
+
+If encrypt is enabled the kernel generate a warning when removing
+the encrypt keys when the skipped inodes still hold the keyring:
+
+WARNING: CPU: 4 PID: 168846 at fs/crypto/keyring.c:242 fscrypt_destroy_keyring+0x7e/0xd0
+CPU: 4 PID: 168846 Comm: umount Tainted: G S  6.1.0-rc5-ceph-g72ead199864c #1
+Hardware name: Supermicro SYS-5018R-WR/X10SRW-F, BIOS 2.0 12/17/2015
+RIP: 0010:fscrypt_destroy_keyring+0x7e/0xd0
+RSP: 0018:ffffc9000b277e28 EFLAGS: 00010202
+RAX: 0000000000000002 RBX: ffff88810d52ac00 RCX: ffff88810b56aa00
+RDX: 0000000080000000 RSI: ffffffff822f3a09 RDI: ffff888108f59000
+RBP: ffff8881d394fb88 R08: 0000000000000028 R09: 0000000000000000
+R10: 0000000000000001 R11: 11ff4fe6834fcd91 R12: ffff8881d394fc40
+R13: ffff888108f59000 R14: ffff8881d394f800 R15: 0000000000000000
+FS:  00007fd83f6f1080(0000) GS:ffff88885fd00000(0000) knlGS:0000000000000000
+CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+CR2: 00007f918d417000 CR3: 000000017f89a005 CR4: 00000000003706e0
+DR0: 0000000000000000 DR1: 0000000000000000 DR2: 0000000000000000
+DR3: 0000000000000000 DR6: 00000000fffe0ff0 DR7: 0000000000000400
+Call Trace:
+<TASK>
+generic_shutdown_super+0x47/0x120
+kill_anon_super+0x14/0x30
+ceph_kill_sb+0x36/0x90 [ceph]
+deactivate_locked_super+0x29/0x60
+cleanup_mnt+0xb8/0x140
+task_work_run+0x67/0xb0
+exit_to_user_mode_prepare+0x23d/0x240
+syscall_exit_to_user_mode+0x25/0x60
+do_syscall_64+0x40/0x80
+entry_SYSCALL_64_after_hwframe+0x63/0xcd
+RIP: 0033:0x7fd83dc39e9b
+
+Later the kernel will crash when iput() the inodes and dereferencing
+the ""sb->s_master_keys"", which has been released by the
+generic_shutdown_super().","March 02, 2024; 5:15:47 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-48628
+CVE-2022-48627,"In the Linux kernel, the following vulnerability has been resolved:
+
+vt: fix memory overlapping when deleting chars in the buffer
+
+A memory overlapping copy occurs when deleting a long line. This memory
+overlapping copy can cause data corruption when scr_memcpyw is optimized
+to memcpy because memcpy does not ensure its behavior if the destination
+buffer overlaps with the source buffer. The line buffer is not always
+broken, because the memcpy utilizes the hardware acceleration, whose
+result is not deterministic.
+
+Fix this problem by using replacing the scr_memcpyw with scr_memmovew.","March 02, 2024; 5:15:46 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-48627
+CVE-2022-36677,Obsidian Mind Map v1.1.0 allows attackers to execute arbitrary code via a crafted payload injected into an uploaded document.,"February 28, 2024; 8:35:29 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-36677
+CVE-2022-34270,An issue was discovered in RWS WorldServer before 11.7.3. Regular users can create users with the Administrator role via UserWSUserManager.,"February 28, 2024; 8:35:13 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-34270
+CVE-2022-34269,"An issue was discovered in RWS WorldServer before 11.7.3. An authenticated, remote attacker can perform a ws-legacy/load_dtd?system_id= blind SSRF attack to deploy JSP code to the Apache Axis service running on the localhost interface, leading to command execution.","February 28, 2024; 8:35:13 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-34269
+CVE-2022-48626,"In the Linux kernel, the following vulnerability has been resolved:
+
+moxart: fix potential use-after-free on remove path
+
+It was reported that the mmc host structure could be accessed after it
+was freed in moxart_remove(), so fix this by saving the base register of
+the device and using it instead of the pointer dereference.","February 26, 2024; 11:27:45 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-48626
+CVE-2022-34357,"IBM Cognos Analytics Mobile Server 11.1.7, 11.2.4, and 12.0.0 is vulnerable to Denial of Service due to due to weak or absence of rate limiting. By making unlimited http requests, it is possible for a single user to exhaust server resources over a period of time making service unavailable for other legitimate users.  IBM X-Force ID:  230510.","February 26, 2024; 11:27:45 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-34357
+CVE-2022-43842,"IBM Aspera Console 3.4.0 through 3.4.2 is vulnerable to SQL injection. A remote attacker could send specially crafted SQL statements, which could allow the attacker to view, add, modify or delete information in the back-end database.  IBM X-Force ID:  239079.","February 23, 2024; 2:15:08 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-43842
+CVE-2022-25377,"The ACME-challenge endpoint in Appwrite 0.5.0 through 0.12.x before 0.12.2 allows remote attackers to read arbitrary local files via ../ directory traversal. In order to be vulnerable, APP_STORAGE_CERTIFICATES/.well-known/acme-challenge must exist on disk. (This pathname is automatically created if the user chooses to install Let's Encrypt certificates via Appwrite.)","February 22, 2024; 5:15:47 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-25377
+CVE-2022-45179,"An issue was discovered in LIVEBOX Collaboration vDesk through v031. A basic XSS vulnerability exists under the /api/v1/vdeskintegration/todo/createorupdate endpoint via the title parameter and /dashboard/reminders. A remote user (authenticated to the product) can store arbitrary HTML code in the reminder section title in order to corrupt the web page (for example, by creating phishing sections to exfiltrate victims' credentials).","February 21, 2024; 11:15:49 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-45179
+CVE-2022-45177,"An issue was discovered in LIVEBOX Collaboration vDesk through v031. An Observable Response Discrepancy can occur under the /api/v1/vdeskintegration/user/isenableuser endpoint, the /api/v1/sharedsearch?search={NAME]+{SURNAME] endpoint, and the /login endpoint. The web application provides different responses to incoming requests in a way that reveals internal state information to an unauthorized actor outside of the intended control sphere.","February 21, 2024; 11:15:49 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-45177
+CVE-2022-45169,"An issue was discovered in LIVEBOX Collaboration vDesk through v031. A URL Redirection to an Untrusted Site (Open Redirect) can occur under the /api/v1/notification/createnotification endpoint, allowing an authenticated user to send an arbitrary push notification to any other user of the system. This push notification can include an (invisible) clickable link.","February 21, 2024; 11:15:49 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-45169
+CVE-2022-45320,"Liferay Portal before 7.4.3.16 and Liferay DXP before 7.2 fix pack 19, 7.3 before update 6, and 7.4 before update 16 allow remote authenticated users to become the owner of a wiki page by editing the wiki page.","February 20, 2024; 12:15:07 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-45320
+CVE-2022-48625,"Yealink Config Encrypt Tool add RSA before 1.2 has a built-in RSA key pair, and thus there is a risk of decryption by an adversary.","February 19, 2024; 7:15:14 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-48625
+CVE-2022-48624,close_altfile in filename.c in less before 606 omits shell_quote calls for LESSCLOSE.,"February 18, 2024; 8:15:48 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-48624
+CVE-2022-48621,Vulnerability of missing authentication for critical functions in the Wi-Fi module.Successful exploitation of this vulnerability may affect service confidentiality.,"February 18, 2024; 2:15:07 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-48621
+CVE-2022-42443,An undisclosed issue in Trusteer iOS SDK for mobile versions prior to 5.7 and Trusteer Android SDK for mobile versions prior to 5.7 may allow uploading of files.  IBM X-Force ID:  238535.,"February 17, 2024; 12:15:07 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-42443
+CVE-2022-41738,IBM Storage Scale Container Native Storage Access 5.1.2.1 -through 5.1.7.0 could allow an attacker to initiate connections to containers from external networks.  IBM X-Force ID:  237812.,"February 17, 2024; 12:15:07 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-41738
+CVE-2022-41737,IBM Storage Scale Container Native Storage Access 5.1.2.1 through 5.1.7.0 could allow a local attacker to initiate connections from a container outside the current namespace.  IBM X-Force ID:  237811.,"February 17, 2024; 12:15:07 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-41737
+CVE-2022-23093,"ping reads raw IP packets from the network to process responses in the pr_pack() function.  As part of processing a response ping has to reconstruct the IP header, the ICMP header and if present a ""quoted packet,"" which represents the packet that generated an ICMP error.  The quoted packet again has an IP header and an ICMP header.
+
+The pr_pack() copies received IP and ICMP headers into stack buffers for further processing.  In so doing, it fails to take into account the possible presence of IP option headers following the IP header in either the response or the quoted packet.  When IP options are present, pr_pack() overflows the destination buffer by up to 40 bytes.
+
+The memory safety bugs described above can be triggered by a remote host, causing the ping program to crash.
+
+The ping process runs in a capability mode sandbox on all affected versions of FreeBSD and is thus very constrained in how it can interact with the rest of the system at the point where the bug can occur.","February 15, 2024; 1:15:45 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-23093
+CVE-2022-23092,"The implementation of lib9p's handling of RWALK messages was missing a bounds check needed when unpacking the message contents.  The missing check means that the receipt of a specially crafted message will cause lib9p to overwrite unrelated memory.
+
+The bug can be triggered by a malicious bhyve guest kernel to overwrite memory in the bhyve(8) process.  This could potentially lead to user-mode code execution on the host, subject to bhyve's Capsicum sandbox.","February 15, 2024; 1:15:45 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-23092
+CVE-2022-23091,"A particular case of memory sharing is mishandled in the virtual memory system.  This is very similar to SA-21:08.vm, but with a different root cause.
+
+An unprivileged local user process can maintain a mapping of a page after it is freed, allowing that process to read private data belonging to other processes or the kernel.","February 15, 2024; 1:15:45 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-23091
+CVE-2022-23090,"The aio_aqueue function, used by the lio_listio system call, fails to release a reference to a credential in an error case.
+
+An attacker may cause the reference count to overflow, leading to a use after free (UAF).","February 15, 2024; 1:15:45 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-23090
+CVE-2022-23089,"When dumping core and saving process information, proc_getargv() might return an sbuf which have a sbuf_len() of 0 or -1, which is not properly handled.
+
+An out-of-bound read can happen when user constructs a specially crafted ps_string, which in turn can cause the kernel to crash.","February 15, 2024; 12:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-23089
+CVE-2022-23088,"The 802.11 beacon handling routine failed to validate the length of an IEEE 802.11s Mesh ID before copying it to a heap-allocated buffer.
+
+While a FreeBSD Wi-Fi client is in scanning mode (i.e., not associated with a SSID) a malicious beacon frame may overwrite kernel memory, leading to remote code execution.","February 15, 2024; 12:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-23088
+CVE-2022-23087,"The e1000 network adapters permit a variety of modifications to an Ethernet packet when it is being transmitted.  These include the insertion of IP and TCP checksums, insertion of an Ethernet VLAN header, and TCP segmentation offload (""TSO"").  The e1000 device model uses an on-stack buffer to generate the modified packet header when simulating these modifications on transmitted packets.
+
+When checksum offload is requested for a transmitted packet, the e1000 device model used a guest-provided value to specify the checksum offset in the on-stack buffer.  The offset was not validated for certain packet types.
+
+A misbehaving bhyve guest could overwrite memory in the bhyve process on the host, possibly leading to code execution in the host context.
+
+The bhyve process runs in a Capsicum sandbox, which (depending on the FreeBSD version and bhyve configuration) limits the impact of exploiting this issue.","February 15, 2024; 12:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-23087
+CVE-2022-23086,"Handlers for *_CFG_PAGE read / write ioctls in the mpr, mps, and mpt drivers allocated a buffer of a caller-specified size, but copied to it a fixed size header.  Other heap content would be overwritten if the specified size was too small.
+
+Users with access to the mpr, mps or mpt device node may overwrite heap data, potentially resulting in privilege escalation.  Note that the device node is only accessible to root and members of the operator group.","February 15, 2024; 12:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-23086
+CVE-2022-23085,"A user-provided integer option was passed to nmreq_copyin() without checking if it would overflow.  This insufficient bounds checking could lead to kernel memory corruption.
+
+On systems configured to include netmap in their devfs_ruleset, a privileged process running in a jail can affect the host environment.","February 15, 2024; 12:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-23085
+CVE-2022-23084,"The total size of the user-provided nmreq to nmreq_copyin() was first computed and then trusted during the copyin.  This time-of-check to time-of-use bug could lead to kernel memory corruption.
+
+On systems configured to include netmap in their devfs_ruleset, a privileged process running in a jail can affect the host environment.","February 15, 2024; 12:15:08 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-23084
+CVE-2022-48220,"Potential vulnerabilities have been identified in certain HP Desktop PC products using the HP TamperLock feature, which might allow intrusion detection bypass via a physical attack. HP is releasing firmware and guidance to mitigate these potential vulnerabilities.","February 14, 2024; 6:15:08 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-48220
+CVE-2022-48219,"Potential vulnerabilities have been identified in certain HP Desktop PC products using the HP TamperLock feature, which might allow intrusion detection bypass via a physical attack. HP is releasing firmware and guidance to mitigate these potential vulnerabilities.","February 14, 2024; 6:15:07 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-48219
+CVE-2022-48623,The Cpanel::JSON::XS package before 4.33 for Perl performs out-of-bounds accesses in a way that allows attackers to obtain sensitive information or cause a denial of service.,"February 13, 2024; 12:15:08 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-48623
+CVE-2022-22506,IBM Robotic Process Automation 21.0.2 contains a vulnerability that could allow user ids may be exposed across tenants.  IBM X-Force ID:  227293.,"February 12, 2024; 3:15:08 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-22506
+CVE-2022-34311,IBM CICS TX Standard and Advanced 11.1 could allow a user with physical access to the web browser to gain access to the user's session due to insufficiently protected credentials.  IBM X-Force ID:  229446.,"February 12, 2024; 2:15:09 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-34311
+CVE-2022-34309,IBM CICS TX Standard and Advanced 11.1 uses weaker than expected cryptographic algorithms that could allow an attacker to decrypt highly sensitive information.  IBM X-Force ID:  229440.,"February 12, 2024; 2:15:08 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-34309
+CVE-2022-38714,IBM DataStage on Cloud Pak for Data 4.0.6 to 4.5.2 stores sensitive credential information that can be read by a privileged user.  IBM X-Force ID:  235060.,"February 12, 2024; 1:15:08 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-38714
+CVE-2022-34310,IBM CICS TX Standard and Advanced 11.1 uses weaker than expected cryptographic algorithms that could allow an attacker to decrypt highly sensitive information.  IBM X-Force ID:  229441.,"February 12, 2024; 1:15:07 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-34310
+CVE-2022-34381,"Dell BSAFE SSL-J version 7.0 and all versions prior to 6.5, and Dell BSAFE Crypto-J versions prior to 6.2.6.1 contain an unmaintained third-party component vulnerability. An unauthenticated remote attacker could potentially exploit this vulnerability, leading to the compromise of the impacted system. This is a Critical vulnerability and Dell recommends customers to upgrade at the earliest opportunity.","February 02, 2024; 11:15:45 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-34381
+CVE-2022-40744,IBM Aspera Faspex 5.0.6 is vulnerable to stored cross-site scripting. This vulnerability allows users to embed arbitrary JavaScript code in the Web UI thus altering the intended functionality potentially leading to credentials disclosure within a trusted session.  IBM X-Force ID:  236441.,"February 01, 2024; 11:15:07 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-40744
+CVE-2022-47072,SQL injection vulnerability in Enterprise Architect 16.0.1605 32-bit allows attackers to run arbitrary SQL commands via the Find parameter in the Select Classifier dialog box..,"January 31, 2024; 4:15:08 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-47072
+CVE-2022-48622,"In GNOME GdkPixbuf (aka gdk-pixbuf) through 2.42.10, the ANI (Windows animated cursor) decoder encounters heap memory corruption (in ani_load_chunk in io-ani.c) when parsing chunks in a crafted .ani file. A crafted file could allow an attacker to overwrite heap metadata, leading to a denial of service or code execution attack. This occurs in gdk_pixbuf_set_option() in gdk-pixbuf.c.","January 26, 2024; 4:15:07 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-48622
+CVE-2022-4964,Ubuntu's pipewire-pulse in snap grants microphone access even when the snap interface for audio-record is not set.,"January 23, 2024; 8:15:07 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-4964
+CVE-2022-45792,Project files may contain malicious contents which the software will use to create files on the filesystem. This allows directory traversal and overwriting files with the privileges of the logged-in user.,"January 22, 2024; 1:15:19 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-45792
+CVE-2022-45790,"The Omron FINS protocol has an authenticated feature to prevent access to memory regions. Authentication is susceptible to bruteforce attack, which may allow an adversary to gain access to protected memory. This access can allow overwrite of values including programmed logic.","January 22, 2024; 1:15:19 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-45790
+CVE-2022-47160,Exposure of Sensitive Information to an Unauthorized Actor vulnerability in Wpmet Wp Social Login and Register Social Counter.This issue affects Wp Social Login and Register Social Counter: from n/a through 1.9.0.,"January 19, 2024; 10:15:08 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-47160
+CVE-2022-45845,Deserialization of Untrusted Data vulnerability in Nextend Smart Slider 3.This issue affects Smart Slider 3: from n/a through 3.5.1.9.,"January 19, 2024; 10:15:08 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-45845
+CVE-2022-45083,"Deserialization of Untrusted Data vulnerability in ProfilePress Membership Team Paid Membership Plugin, Ecommerce, User Registration Form, Login Form, User Profile & Restrict Content – ProfilePress.This issue affects Paid Membership Plugin, Ecommerce, User Registration Form, Login Form, User Profile & Restrict Content – ProfilePress: from n/a through 4.3.2.","January 19, 2024; 10:15:08 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-45083
+CVE-2022-40700,"Server-Side Request Forgery (SSRF) vulnerability in Montonio Montonio for WooCommerce, Wpopal Wpopal Core Features, AMO for WP – Membership Management ArcStone wp-amo, Long Watch Studio WooVirtualWallet – A virtual wallet for WooCommerce, Long Watch Studio WooVIP – Membership plugin for WordPress and WooCommerce, Long Watch Studio WooSupply – Suppliers, Supply Orders and Stock Management, Squidesma Theme Minifier, Paul Clark Styles styles, Designmodo Inc. WordPress Page Builder – Qards, Philip M. Hofer (Frumph) PHPFreeChat, Arun Basil Lal Custom Login Admin Front-end CSS, Team Agence-Press CSS Adder By Agence-Press, Unihost Confirm Data, deano1987 AMP Toolbox amp-toolbox, Arun Basil Lal Admin CSS MU.This issue affects Montonio for WooCommerce: from n/a through 6.0.1; Wpopal Core Features: from n/a through 1.5.8; ArcStone: from n/a through 4.6.6; WooVirtualWallet – A virtual wallet for WooCommerce: from n/a through 2.2.1; WooVIP – Membership plugin for WordPress and WooCommerce: from n/a through 1.4.4; WooSupply – Suppliers, Supply Orders and Stock Management: from n/a through 1.2.2; Theme Minifier: from n/a through 2.0; Styles: from n/a through 1.2.3; WordPress Page Builder – Qards: from n/a through 1.0.5; PHPFreeChat: from n/a through 0.2.8; Custom Login Admin Front-end CSS: from n/a through 1.4.1; CSS Adder By Agence-Press: from n/a through 1.5.0; Confirm Data: from n/a through 1.0.7; AMP Toolbox: from n/a through 2.1.1; Admin CSS MU: from n/a through 2.6.","January 19, 2024; 10:15:08 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-40700
+CVE-2022-42884,Missing Authorization vulnerability in ThemeinProgress WIP Custom Login.This issue affects WIP Custom Login: from n/a through 1.2.7.,"January 17, 2024; 2:15:08 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-42884
+CVE-2022-41790,Missing Authorization vulnerability in CodePeople WP Time Slots Booking Form.This issue affects WP Time Slots Booking Form: from n/a through 1.1.76.,"January 17, 2024; 1:15:45 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-41790
+CVE-2022-41786,Missing Authorization vulnerability in WP Job Portal WP Job Portal – A Complete Job Board.This issue affects WP Job Portal – A Complete Job Board: from n/a through 2.0.1.,"January 17, 2024; 1:15:45 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-41786
+CVE-2022-41990,Cross-Site Request Forgery (CSRF) vulnerability in Vinoj Cardoza 3D Tag Cloud allows Stored XSS.This issue affects 3D Tag Cloud: from n/a through 3.8.,"January 17, 2024; 12:15:09 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-41990
+CVE-2022-41695,Missing Authorization vulnerability in SedLex Traffic Manager.This issue affects Traffic Manager: from n/a through 1.4.5.,"January 17, 2024; 12:15:09 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-41695
+CVE-2022-41619,Missing Authorization vulnerability in SedLex Image Zoom.This issue affects Image Zoom: from n/a through 1.8.8.,"January 17, 2024; 12:15:09 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-41619
+CVE-2022-40702,Missing Authorization vulnerability in Zorem Advanced Local Pickup for WooCommerce.This issue affects Advanced Local Pickup for WooCommerce: from n/a through 1.5.2.,"January 17, 2024; 12:15:09 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-40702
+CVE-2022-40203,Missing Authorization vulnerability in AlgolPlus Advanced Dynamic Pricing for WooCommerce.This issue affects Advanced Dynamic Pricing for WooCommerce: from n/a through 4.1.5.,"January 17, 2024; 11:15:46 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-40203
+CVE-2022-38141,Missing Authorization vulnerability in Zorem Sales Report Email for WooCommerce.This issue affects Sales Report Email for WooCommerce: from n/a through 2.8.,"January 17, 2024; 11:15:46 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-38141
+CVE-2022-36418,Missing Authorization vulnerability in Vagary Digital HREFLANG Tags Lite.This issue affects HREFLANG Tags Lite: from n/a through 2.0.0.,"January 17, 2024; 11:15:45 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-36418
+CVE-2022-31021,Ursa is a cryptographic library for use with blockchains. A weakness in the Hyperledger AnonCreds specification that is not mitigated in the Ursa and AnonCreds implementations is that the Issuer does not publish a key correctness proof demonstrating that a generated private key is sufficient to meet the unlinkability guarantees of AnonCreds. The Ursa and AnonCreds CL-Signatures implementations always generate a sufficient private key. A malicious issuer could in theory create a custom CL Signature implementation (derived from the Ursa or AnonCreds CL-Signatures implementations) that uses weakened private keys such that presentations from holders could be shared by verifiers to the issuer who could determine the holder to which the credential was issued. This vulnerability could impact holders of AnonCreds credentials implemented using the CL-signature scheme in the Ursa and AnonCreds implementations of CL Signatures. The ursa project has has moved to end-of-life status and no fix is expected.,"January 16, 2024; 5:15:37 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-31021
+CVE-2022-3899,"The 3dprint WordPress plugin before 3.5.6.9 does not protect against CSRF attacks in the modified version of Tiny File Manager included with the plugin, allowing an attacker to craft a malicious request that will delete any number of files or directories on the target server by tricking a logged in admin into submitting a form.","January 16, 2024; 11:15:10 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-3899
+CVE-2022-3836,"The Seed Social WordPress plugin before 2.0.4 does not sanitise and escape some of its settings, which could allow high privilege users such as admin to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in multisite setup).","January 16, 2024; 11:15:10 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-3836
+CVE-2022-3829,"The Font Awesome 4 Menus WordPress plugin through 4.7.0 does not sanitise and escape some of its settings, which could allow high privilege users such as admin to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in multisite setup).","January 16, 2024; 11:15:10 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-3829
+CVE-2022-3764,"The plugin does not filter the ""delete_entries"" parameter from user requests, leading to an SQL Injection vulnerability.","January 16, 2024; 11:15:10 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-3764
+CVE-2022-3739,"The WP Best Quiz WordPress plugin through 1.0 does not sanitize and escape some parameters, which could allow users with a role as low as Author to perform Cross-Site Scripting attacks.","January 16, 2024; 11:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-3739
+CVE-2022-3604,"The Contact Form Entries WordPress plugin before 1.3.0 does not validate data when its output in a CSV file, which could lead to CSV injection.","January 16, 2024; 11:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-3604
+CVE-2022-3194,"The Dokan WordPress plugin before 3.6.4 allows vendors to inject arbitrary javascript in product reviews, which may allow them to run stored XSS attacks against other users like site administrators.","January 16, 2024; 11:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-3194
+CVE-2022-2413,"The Slide Anything WordPress plugin before 2.3.47 does not properly sanitize or escape the slide title before outputting it in the admin pages, allowing a logged in user with roles as low as Author to inject a javascript payload into the slide title even when the unfiltered_html capability is disabled.","January 16, 2024; 11:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-2413
+CVE-2022-23180,"The Contact Form & Lead Form Elementor Builder WordPress plugin before 1.7.4 doesn't have authorisation and nonce checks, which could allow any authenticated users, such as subscriber to update and change various settings","January 16, 2024; 11:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-23180
+CVE-2022-23179,"The Contact Form & Lead Form Elementor Builder WordPress plugin before 1.7.0 does not escape some of its form fields before outputting them in attributes, which could allow high privilege users to perform Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed","January 16, 2024; 11:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-23179
+CVE-2022-1760,"The Core Control WordPress plugin through 1.2.1 does not have CSRF check in place when updating its settings, which could allow attackers to make a logged in admin change them via a CSRF attack","January 16, 2024; 11:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-1760
+CVE-2022-1618,"The Coru LFMember WordPress plugin through 1.0.2 does not have CSRF check in place when adding a new game, and is lacking sanitisation as well as escaping in their settings, allowing attacker to make a logged in admin add an arbitrary game with XSS payloads","January 16, 2024; 11:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-1618
+CVE-2022-1617,"The WP-Invoice WordPress plugin through 4.3.1 does not have CSRF check in place when updating its settings, and is lacking sanitisation as well as escaping in some of them, allowing attacker to make a logged in admin change them and add XSS payload in them","January 16, 2024; 11:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-1617
+CVE-2022-1609,"The School Management WordPress plugin before 9.9.7 contains an obfuscated backdoor injected in it's license checking code that registers a REST API handler, allowing an unauthenticated attacker to execute arbitrary PHP code on the site.","January 16, 2024; 11:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-1609
+CVE-2022-1563,The WPGraphQL WooCommerce WordPress plugin before 0.12.4 does not prevent unauthenticated attackers from enumerating a shop's coupon codes and values via GraphQL.,"January 16, 2024; 11:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-1563
+CVE-2022-1538,"Theme Demo Import WordPress plugin before 1.1.1 does not validate the imported file, allowing high-privilege users such as admin to upload arbitrary files (such as PHP) even when FILE_MODS and FILE_EDIT are disallowed.","January 16, 2024; 11:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-1538
+CVE-2022-0775,"The WooCommerce WordPress plugin before 6.2.1 does not have proper authorisation check when deleting reviews, which could allow any authenticated users, such as subscriber to delete arbitrary comment","January 16, 2024; 11:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-0775
+CVE-2022-0402,"The Super Forms - Drag & Drop Form Builder WordPress plugin before 6.0.4 does not escape the bob_czy_panstwa_sprawa_zostala_rozwiazana parameter before outputting it back in an attribute via the super_language_switcher AJAX action, leading to a Reflected Cross-Site Scripting. The action is also lacking CSRF, making the attack easier to perform against any user.","January 16, 2024; 11:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-0402
+CVE-2022-4962,"A vulnerability was found in Apollo 2.0.0/2.0.1 and classified as problematic. Affected by this issue is some unknown functionality of the file /users of the component Configuration Center. The manipulation leads to improper authorization. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The real existence of this vulnerability is still doubted at the moment. VDB-250430 is the identifier assigned to this vulnerability. NOTE: The maintainer explains that user data information like user id, name, and email are not sensitive.","January 12, 2024; 5:15:44 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-4962
+CVE-2022-4961,A vulnerability was found in Weitong Mall 1.0.0. It has been declared as critical. Affected by this vulnerability is an unknown functionality of the file platform-shop\src\main\resources\com\platform\dao\OrderDao.xml. The manipulation of the argument sidx/order leads to sql injection. The associated identifier of this vulnerability is VDB-250243.,"January 12, 2024; 12:15:09 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-4961
+CVE-2022-48620,uev (aka libuev) before 2.4.1 has a buffer overflow in epoll_wait if maxevents is a large number.,"January 11, 2024; 11:15:08 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-48620
+CVE-2022-4960,"A vulnerability, which was classified as problematic, has been found in cloudfavorites favorites-web 1.3.0. Affected by this issue is some unknown functionality of the component Nickname Handler. The manipulation leads to cross site scripting. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. VDB-250238 is the identifier assigned to this vulnerability.","January 11, 2024; 10:15:08 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-4960
+CVE-2022-48619,An issue was discovered in drivers/input/input.c in the Linux kernel before 5.17.10. An attacker can cause a denial of service (panic) because input_set_capability mishandles the situation in which an event code falls outside of a bitmap.,"January 11, 2024; 10:15:08 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-48619
+CVE-2022-4959,A vulnerability classified as problematic was found in qkmc-rk redbbs 1.0. Affected by this vulnerability is an unknown functionality of the component Nickname Handler. The manipulation leads to cross site scripting. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-250237 was assigned to this vulnerability.,"January 11, 2024; 4:15:09 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-4959
+CVE-2022-4958,A vulnerability classified as problematic has been found in qkmc-rk redbbs 1.0. Affected is an unknown function of the component Post Handler. The manipulation of the argument title leads to cross site scripting. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-250236.,"January 11, 2024; 7:15:42 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-4958
+CVE-2022-40361,Cross Site Scripting Vulnerability in Elite CRM v1.2.11 allows attacker to execute arbitrary code via the language parameter to the /ngs/login endpoint.,"January 10, 2024; 10:15:09 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-40361
+CVE-2022-45794,"An attacker with network access to the affected PLC (CJ-series and CS-series PLCs, all versions) may use a network protocol to read and write files on the PLC internal memory and memory card.","January 10, 2024; 6:15:08 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-45794
+CVE-2022-48577,An access issue was addressed with improved access restrictions. This issue is fixed in macOS Ventura 13. An app may be able to access user-sensitive data.,"January 10, 2024; 5:15:47 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-48577
+CVE-2022-48504,The issue was addressed with improved handling of caches. This issue is fixed in macOS Ventura 13. An app may be able to access user-sensitive data.,"January 10, 2024; 5:15:47 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-48504
+CVE-2022-47965,The issue was addressed with improved memory handling. This issue is fixed in macOS Ventura 13. An app may be able to execute arbitrary code with kernel privileges.,"January 10, 2024; 5:15:47 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-47965
+CVE-2022-47915,The issue was addressed with improved memory handling. This issue is fixed in macOS Ventura 13. An app may be able to execute arbitrary code with kernel privileges.,"January 10, 2024; 5:15:47 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-47915
+CVE-2022-46721,The issue was addressed with improved memory handling. This issue is fixed in macOS Ventura 13. An app may be able to execute arbitrary code with kernel privileges.,"January 10, 2024; 5:15:47 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-46721
+CVE-2022-46710,"A logic issue was addressed with improved checks. This issue is fixed in iOS 16.2 and iPadOS 16.2, macOS Ventura 13.1. Location data may be shared via iCloud links even if Location metadata is disabled via the Share Sheet.","January 10, 2024; 5:15:47 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-46710
+CVE-2022-42839,"This issue was addressed with improved redaction of sensitive information. This issue is fixed in iOS 16.2 and iPadOS 16.2, macOS Ventura 13.1. An app may be able to read sensitive location information.","January 10, 2024; 5:15:47 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-42839
+CVE-2022-42816,A logic issue was addressed with improved state management. This issue is fixed in macOS Ventura 13. An app may be able to modify protected parts of the file system.,"January 10, 2024; 5:15:47 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-42816
+CVE-2022-32931,This issue was addressed with improved data protection. This issue is fixed in macOS Ventura 13. An app with root privileges may be able to access private information.,"January 10, 2024; 5:15:47 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-32931
+CVE-2022-32919,"The issue was addressed with improved UI handling. This issue is fixed in iOS 16.2 and iPadOS 16.2, macOS Ventura 13.1. Visiting a website that frames malicious content may lead to UI spoofing.","January 10, 2024; 5:15:47 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-32919
+CVE-2022-45793,Sysmac Studio installs executables in a directory with poor permissions. This can allow a locally-authenticated attacker to overwrite files which will result in code execution with privileges of a different user.,"January 10, 2024; 4:15:08 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-45793
+CVE-2022-46025,"Totolink N200RE_V5 V9.3.5u.6255_B20211224 is vulnerable to Incorrect Access Control. The device allows remote attackers to obtain Wi-Fi system information, such as Wi-Fi SSID and Wi-Fi password, without logging into the management page.","January 10, 2024; 3:15:37 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-46025
+CVE-2022-48618,"The issue was addressed with improved checks. This issue is fixed in macOS Ventura 13.1, watchOS 9.2, iOS 16.2 and iPadOS 16.2, tvOS 16.2. An attacker with arbitrary read and write capability may be able to bypass Pointer Authentication. Apple is aware of a report that this issue may have been exploited against versions of iOS released before iOS 15.7.1.","January 09, 2024; 1:15:45 PM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-48618
+CVE-2022-36765,"EDK2 is susceptible to a vulnerability in the CreateHob() function, allowing a user to trigger a integer overflow to buffer overflow via a local network. Successful exploitation of this vulnerability may result in a compromise of confidentiality, integrity, and/or availability.","January 09, 2024; 11:15:43 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-36765
+CVE-2022-36764,"EDK2 is susceptible to a vulnerability in the Tcg2MeasurePeImage() function, allowing a user to trigger a heap buffer overflow via a local network. Successful exploitation of this vulnerability may result in a compromise of confidentiality, integrity, and/or availability.","January 09, 2024; 11:15:43 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-36764
+CVE-2022-36763,"EDK2 is susceptible to a vulnerability in the Tcg2MeasureGptTable() function, allowing a user to trigger a heap buffer overflow via a local network. Successful exploitation of this vulnerability may result in a compromise of confidentiality, integrity, and/or availability.","January 09, 2024; 11:15:43 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-36763
+CVE-2022-28975,A stored cross-site scripting (XSS) vulnerability in Infoblox NIOS v8.5.2-409296 allows attackers to execute arbitrary web scripts or HTML via a crafted payload injected into the VLAN View Name field.,"January 09, 2024; 9:15:45 AM -0500",https://nvd.nist.gov/vuln/detail/CVE-2022-28975
