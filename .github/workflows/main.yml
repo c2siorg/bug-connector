@@ -2,7 +2,7 @@ name: Update NVD Data
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # Run every day at midnight
+    - cron: '*/1 * * * *'  # Run every day at midnight
 
 jobs:
   update_data:
