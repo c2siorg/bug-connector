@@ -1,5 +1,6 @@
 # Bug Connector
 
+[![Update NVD Data](https://github.com/Sanjeev-Kumar78/bug-connector/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/Sanjeev-Kumar78/bug-connector/actions/workflows/main.yml)
 ## Introduction:
 
 The idea of this project is to create a public dataset based on openly available CVE information, the key goal is to create fully functional scapers set to gather CVE information from different sources augment comprehensive data points, and make it publicly available for research purposes.
