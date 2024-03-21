@@ -77,7 +77,7 @@ def save_to_csv(headers, rows):
 
 
 if __name__ == "__main__":
-    start_index = 0 #6680
+    start_index = 0 #35760
     while True:
         html_content = scrape_nvd(start_index)
         time.sleep(3)
