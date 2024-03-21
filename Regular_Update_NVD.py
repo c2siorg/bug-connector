@@ -43,7 +43,7 @@ def save_to_csv(headers, rows):
             df = pd.DataFrame(columns=headers)
             df.to_csv(file_path, index=False)
         else:
-            df = pd.read_csv(file_path)
+            df = pd.read_csv(file_path, engine='python')
             # Ensure column names are consistent
             if list(df.columns) != headers:
                 continue  # Skip this row if column names are inconsistent
