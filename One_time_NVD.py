@@ -97,7 +97,7 @@ def save_to_csv(headers, rows):
 
 
 if __name__ == "__main__":
-    start_index = 0  # 35760, 1788
+    start_index = 40000  # 40000
     while True:
         html_content = scrape_nvd(start_index)
         time.sleep(3)
@@ -111,5 +111,5 @@ if __name__ == "__main__":
         save_to_csv(headers, rows)
         start_index += 20
         print(f"Scraped and saved data from page {start_index // 20}")
-        if (start_index // 20) == 2000:
+        if (start_index // 20) == 4000:
             break
