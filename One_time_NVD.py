@@ -111,3 +111,5 @@ if __name__ == "__main__":
         save_to_csv(headers, rows)
         start_index += 20
         print(f"Scraped and saved data from page {start_index // 20}")
+        if (start_index // 20) == 2000:
+            break
