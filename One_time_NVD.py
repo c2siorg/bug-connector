@@ -47,7 +47,7 @@ def extract_data(html_content):
     for row in table.find('tbody').find_all('tr'):
         # Vulnerability ID is in the first column
         vul_id = row.find('a').text.strip()
-        summary = row.find('p').text.strip('\n')
+        summary = "".join(row.find('p').text.strip('\n').split('\n'))
 
         published = row.find('td').find_all('span')[0].text.strip()
         # CVSS Severity is in the second column

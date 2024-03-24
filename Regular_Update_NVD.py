@@ -35,7 +35,7 @@ def extract_data(html_content):
 
         # Vulnerability ID is in the first column
         vul_id = row.find('a').text.strip()
-        summary = row.find('p').text.strip('\n')
+        summary = "".join(row.find('p').text.strip('\n').split('\n'))
 
         published = row.find('td').find_all('span')[0].text.strip()
 
@@ -43,8 +43,7 @@ def extract_data(html_content):
         cvss_severity = row.find_all('td')[1].text.strip()
         # CVSS Severity link
         if row.find_all('td')[1].find('a') is not None:
-            cvss_info = "https://nvd.nist.gov" + \
-                row.find_all('td')[1].find('a')['href']
+            cvss_info = "https://nvd.nist.gov" + row.find_all('td')[1].find('a')['href']
         else:
             cvss_info = None
         cvss_severity = cvss_severity + " (" + str(cvss_info) + ")"
