@@ -1,0 +1,2 @@
+Vuln ID|Summary|Published Date|CVSS Severity|Link
+CVE-2009-4123|The jruby-openssl gem before 0.6 for JRuby mishandles SSL certificate validation.|December 12, 2023; 11:15:07 AM -0500|V3.1: 7.5 HIGHV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2009-4123&vector=AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2009-4123
