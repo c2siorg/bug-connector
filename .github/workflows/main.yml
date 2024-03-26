@@ -3,16 +3,15 @@ name: Update NVD Data
 on:
   schedule:
     - cron: '0 0 * * *'  # Run every day at midnight
-  
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 permissions:
   contents: write
 
 jobs:
-  push:
-    branches: [ "main" ]
-    pull_request:
-    branches: [ "main" ]
   update_data:
     runs-on: ubuntu-latest
     steps:
