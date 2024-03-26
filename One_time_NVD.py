@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import os
-import time
+import random
 
 
 def scrape_nvd(start_index):
@@ -16,13 +16,17 @@ def scrape_nvd(start_index):
         bytes: The HTML content of the scraped page, or None if the request fails.
     """
     url = f"https://nvd.nist.gov/vuln/search/results?isCpeNameSearch=false&results_type=overview&form_type=Advanced&search_type=all&startIndex={start_index}"
-    response = requests.get(url)
-
-    if response.status_code == 200:
-        return response.content
-    else:
-        return None
-
+    
+    proxies = requests.get("https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt").text.split('\n')
+    # shuffle the proxies
+    random.shuffle(proxies)
+    for p in proxies:
+        try:
+            response = requests.get(url, proxies={"http": p})
+            if response.status_code == 200:
+                return response.content
+        except:
+            continue
 
 def extract_data(html_content):
     """
@@ -97,10 +101,10 @@ def save_to_csv(headers, rows):
 
 
 if __name__ == "__main__":
-    start_index = 80000  # 40000
+    start_index = 102800  # 5140
     while True:
         html_content = scrape_nvd(start_index)
-        time.sleep(3)
+        # time.sleep(3)
         if html_content is None:
             print("Failed to retrieve data.")
             break
@@ -111,5 +115,5 @@ if __name__ == "__main__":
         save_to_csv(headers, rows)
         start_index += 20
         print(f"Scraped and saved data from page {start_index // 20}")
-        if (start_index // 20) == 6000:
+        if (start_index // 20) == 7000:
             break

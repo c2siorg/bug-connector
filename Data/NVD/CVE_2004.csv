@@ -1,0 +1,2 @@
+Vuln ID|Summary|Published Date|CVSS Severity|Link
+CVE-2004-2776|go.cgi in GoScript 2.0 allows remote attackers to execute arbitrary commands via shell metacharacters in the (1) query string or (2) artarchive parameter.|December 31, 2019; 3:15:10 PM -0500|V3.1: 9.8 CRITICAL      V2.0: 7.5 HIGH (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2004-2776&vector=AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2004-2776
