@@ -4,6 +4,7 @@ import pandas as pd
 import os
 import random
 
+dead_proxies = []
 
 def scrape_nvd(start_index):
     """
@@ -19,6 +20,7 @@ def scrape_nvd(start_index):
     
     proxies = requests.get("https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt").text.split('\n')
     # shuffle the proxies
+    proxies = list(filter(lambda i: i not in dead_proxies, proxies))
     random.shuffle(proxies)
     for p in proxies:
         try:
@@ -26,6 +28,7 @@ def scrape_nvd(start_index):
             if response.status_code == 200:
                 return response.content
         except:
+            dead_proxies.append(p)
             continue
 
 def extract_data(html_content):
@@ -101,19 +104,19 @@ def save_to_csv(headers, rows):
 
 
 if __name__ == "__main__":
-    start_index = 102800  # 5140
+    start_index = 0  # 11000
     while True:
         html_content = scrape_nvd(start_index)
         # time.sleep(3)
         if html_content is None:
             print("Failed to retrieve data.")
+            dead_proxies.clear()
             break
         headers, rows = extract_data(html_content)
         if not rows:
             print("No more data to scrape.")
+            dead_proxies.clear()
             break
         save_to_csv(headers, rows)
         start_index += 20
         print(f"Scraped and saved data from page {start_index // 20}")
-        if (start_index // 20) == 7000:
-            break

@@ -33,7 +33,7 @@ jobs:
         id: git-check
         run: |
           git config --global user.email "actions@github.com"
-          git config --global user.name "GitHub Actions"
+          git config --global user.name "Sanjeev-Kumar78"
           git add .
           git diff --quiet && git diff --staged --quiet || git commit -am "Auto-update data"
           git push
