@@ -67,9 +67,9 @@ def save_to_csv(headers, rows):
 
         if not os.path.exists(file_path):
             df = pd.DataFrame(columns=headers)
-            df.to_csv(file_path, sep='|' , index=False)
+            df.to_csv(file_path, sep='|' , index=False, encoding='utf-8')
         else:
-            df = pd.read_csv(file_path, sep="|" , engine='python')
+            df = pd.read_csv(file_path, sep="|" , engine='python' , on_bad_lines='warn')
             # Ensure column names are consistent
             if list(df.columns) != headers:
                 continue  # Skip this row if column names are inconsistent
