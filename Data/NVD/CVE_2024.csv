@@ -3455,6 +3455,9 @@ CVE-2024-22150|"Improper Neutralization of Input During Web Page Generation ('Cr
 CVE-2024-22152|Unrestricted Upload of File with Dangerous Type vulnerability in WebToffee Product Import Export for WooCommerce.This issue affects Product Import Export for WooCommerce: from n/a through 2.3.7.|January 24, 2024; 7:15:57 AM -0500|V3.1: 7.2 HIGHV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2024-22152&vector=AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2024-22152
 CVE-2024-22153|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Fahad Mahmood & Alexandre Faustino Stock Locations for WooCommerce allows Stored XSS.This issue affects Stock Locations for WooCommerce: from n/a through 2.5.9.|January 31, 2024; 2:15:09 PM -0500|V3.1: 4.8 MEDIUMV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2024-22153&vector=AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2024-22153
 CVE-2024-22154|Exposure of Sensitive Information to an Unauthorized Actor vulnerability in SNP Digital SalesKing.This issue affects SalesKing: from n/a through 1.6.15.|January 24, 2024; 8:15:08 AM -0500|V3.1: 7.5 HIGHV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2024-22154&vector=AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2024-22154
+CVE-2024-22155|Cross-Site Request Forgery (CSRF) vulnerability in Automattic WooCommerce.This issue affects WooCommerce: from n/a through 8.5.2.|April 07, 2024; 2:15:08 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-22155
 CVE-2024-22156|Missing Authorization vulnerability in SNP Digital SalesKing.This issue affects SalesKing: from n/a through 1.6.15.|March 26, 2024; 9:15:45 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-22156
@@ -10492,6 +10495,24 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3040
 CVE-2024-3041|A vulnerability has been found in Netentsec NS-ASG Application Security Gateway 6.3 and classified as critical. This vulnerability affects unknown code of the file /protocol/log/listloginfo.php. The manipulation leads to sql injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. VDB-258430 is the identifier assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|March 28, 2024; 11:15:49 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3041
+CVE-2024-30413|Vulnerability of improper permission control in the window management module.Impact: Successful exploitation of this vulnerability will affect availability.|April 07, 2024; 4:15:07 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-30413
+CVE-2024-30414|Command injection vulnerability in the AccountManager module.Impact: Successful exploitation of this vulnerability may affect service confidentiality.|April 07, 2024; 4:15:07 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-30414
+CVE-2024-30415|Vulnerability of improper permission control in the window management module.Impact: Successful exploitation of this vulnerability will affect availability.|April 07, 2024; 4:15:07 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-30415
+CVE-2024-30416|Use After Free (UAF) vulnerability in the underlying driver module.Impact: Successful exploitation of this vulnerability will affect availability.|April 07, 2024; 5:15:08 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-30416
+CVE-2024-30417|Path traversal vulnerability in the Bluetooth-based sharing module.Impact: Successful exploitation of this vulnerability may affect service confidentiality.|April 07, 2024; 5:15:08 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-30417
+CVE-2024-30418|Vulnerability of insufficient permission verification in the app management module.Impact: Successful exploitation of this vulnerability will affect availability.|April 07, 2024; 5:15:08 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-30418
 CVE-2024-3042|A vulnerability was found in SourceCodester Simple Subscription Website 1.0 and classified as critical. This issue affects some unknown processing of the file manage_user.php. The manipulation of the argument id leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-258431.|March 28, 2024; 11:15:49 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3042
@@ -11237,24 +11258,93 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31218
 CVE-2024-31220|Sunshine is a self-hosted game stream host for Moonlight. Starting in version 0.16.0 and prior to version 0.18.0, an attacker may be able to remotely read arbitrary files without authentication due to a path traversal vulnerability. Users who exposed the Sunshine configuration web user interface outside of localhost may be affected, depending on firewall configuration. To exploit vulnerability, attacker could make an http/s request to the `node_modules` endpoint if user exposed Sunshine config web server to internet or attacker is on the LAN. Version 0.18.0 contains a patch for this issue. As a workaround, one may block access to Sunshine via firewall.|April 05, 2024; 11:15:08 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31220
+CVE-2024-31233|Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Sizam Rehub.This issue affects Rehub: from n/a through 19.6.1.|April 07, 2024; 2:15:08 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31233
+CVE-2024-31234|Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Sizam REHub Framework.This issue affects REHub Framework: from n/a before 19.6.2.|April 07, 2024; 2:15:09 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31234
+CVE-2024-31236|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WP Royal Royal Elementor Addons allows Stored XSS.This issue affects Royal Elementor Addons: from n/a through 1.3.93.|April 07, 2024; 2:15:09 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31236
 CVE-2024-3124|A vulnerability classified as problematic has been found in fridgecow smartalarm 1.8.1 on Android. This affects an unknown part of the file androidmanifest.xml of the component Backup File Handler. The manipulation leads to exposure of backup file to an unauthorized control sphere. It is possible to launch the attack on the physical device. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-258867.|April 01, 2024; 9:17:57 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3124
+CVE-2024-31241|Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in ThimPress LearnPress Export Import.This issue affects LearnPress Export Import: from n/a through 4.0.3.|April 07, 2024; 2:15:09 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31241
 CVE-2024-3125|A vulnerability classified as problematic was found in Zebra ZTC GK420d 1.0. This vulnerability affects unknown code of the file /settings of the component Alert Setup Page. The manipulation of the argument Address leads to cross site scripting. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-258868. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 01, 2024; 10:15:08 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3125
+CVE-2024-31255|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in ELEXtensions ELEX WooCommerce Dynamic Pricing and Discounts allows Reflected XSS.This issue affects ELEX WooCommerce Dynamic Pricing and Discounts: from n/a through 2.1.2.|April 07, 2024; 2:15:09 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31255
+CVE-2024-31256|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WebinarPress allows Reflected XSS.This issue affects WebinarPress: from n/a through 1.33.9.|April 07, 2024; 2:15:09 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31256
+CVE-2024-31257|"Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Formsite Formsite | Embed online forms to collect orders, registrations, leads, and surveys allows Stored XSS.This issue affects Formsite | Embed online forms to collect orders, registrations, leads, and surveys: from n/a through 1.6."|April 07, 2024; 2:15:09 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31257
+CVE-2024-31258|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Micro.Company Form to Chat App allows Stored XSS.This issue affects Form to Chat App: from n/a through 1.1.6.|April 07, 2024; 2:15:10 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31258
+CVE-2024-31260|Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in WisdmLabs Edwiser Bridge.This issue affects Edwiser Bridge: from n/a through 3.0.2.|April 07, 2024; 2:15:10 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31260
+CVE-2024-31277|Deserialization of Untrusted Data vulnerability in PickPlugins Product Designer.This issue affects Product Designer: from n/a through 1.0.32.|April 07, 2024; 2:15:10 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31277
 CVE-2024-3128|** UNSUPPORTED WHEN ASSIGNED ** A vulnerability, which was classified as problematic, has been found in Replify-Messenger 1.0 on Android. This issue affects some unknown processing of the file androidmanifest.xml of the component Backup File Handler. The manipulation leads to exposure of backup file to an unauthorized control sphere. It is possible to launch the attack on the physical device. The exploit has been disclosed to the public and may be used. The identifier VDB-258869 was assigned to this vulnerability. NOTE: This vulnerability only affects products that are no longer supported by the maintainer. NOTE: The vendor was contacted early and responded very quickly. He does not intend to maintain the app anymore and will revoke the availability in the Google Play Store.|April 01, 2024; 11:16:07 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3128
+CVE-2024-31280|Unrestricted Upload of File with Dangerous Type vulnerability in Andy Moyle Church Admin.This issue affects Church Admin: from n/a through 4.1.5.|April 07, 2024; 2:15:10 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31280
+CVE-2024-31286|Unrestricted Upload of File with Dangerous Type vulnerability in J.N. Breetvelt a.K.A. OpaJaap WP Photo Album Plus.This issue affects WP Photo Album Plus: from n/a before 8.6.03.005.|April 07, 2024; 2:15:11 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31286
+CVE-2024-31288|Server-Side Request Forgery (SSRF) vulnerability in RapidLoad RapidLoad Power-Up for Autoptimize.This issue affects RapidLoad Power-Up for Autoptimize: from n/a through 2.2.11.|April 07, 2024; 2:15:11 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31288
 CVE-2024-3129|A vulnerability was found in SourceCodester Image Accordion Gallery App 1.0. It has been classified as critical. This affects an unknown part of the file /endpoint/add-image.php. The manipulation of the argument image_name leads to unrestricted upload. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-258873 was assigned to this vulnerability.|April 01, 2024; 12:15:59 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3129
+CVE-2024-31291|Authorization Bypass Through User-Controlled Key vulnerability in Metagauss ProfileGrid.This issue affects ProfileGrid : from n/a through 5.7.6.|April 07, 2024; 2:15:11 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31291
+CVE-2024-31292|Unrestricted Upload of File with Dangerous Type vulnerability in Moove Agency Import XML and RSS Feeds.This issue affects Import XML and RSS Feeds: from n/a through 2.1.5.|April 07, 2024; 2:15:11 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31292
+CVE-2024-31296|Authorization Bypass Through User-Controlled Key vulnerability in Repute Infosystems BookingPress.This issue affects BookingPress: from n/a through 1.0.81.|April 07, 2024; 2:15:11 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31296
 CVE-2024-3130|Hard-coded Credentials in CoolKit eWeLlink app are before 5.4.x on Android and IOS allows local attacker to unauthorized access to sensitive data via Decryption algorithm and key obtained after decompiling app|April 01, 2024; 6:15:07 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3130
+CVE-2024-31306|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WPDeveloper Essential Blocks for Gutenberg allows Stored XSS.This issue affects Essential Blocks for Gutenberg: from n/a through 4.5.3.|April 07, 2024; 2:15:12 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31306
+CVE-2024-31308|Deserialization of Untrusted Data vulnerability in VJInfotech WP Import Export Lite.This issue affects WP Import Export Lite: from n/a through 3.9.26.|April 07, 2024; 2:15:12 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31308
 CVE-2024-3131|A vulnerability was found in SourceCodester Computer Laboratory Management System 1.0. It has been declared as critical. This vulnerability affects unknown code of the file /classes/Master.php?f=save_category. The manipulation of the argument id leads to sql injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. VDB-258874 is the identifier assigned to this vulnerability.|April 01, 2024; 1:16:19 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3131
+CVE-2024-31344|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Phpbits Creative Studio Easy Login Styler – White Label Admin Login Page for WordPress allows Stored XSS.This issue affects Easy Login Styler – White Label Admin Login Page for WordPress: from n/a through 1.0.6.|April 07, 2024; 2:15:12 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31344
+CVE-2024-31345|Unrestricted Upload of File with Dangerous Type vulnerability in Sukhchain Singh Auto Poster.This issue affects Auto Poster: from n/a through 1.2.|April 07, 2024; 2:15:12 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31345
+CVE-2024-31346|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Blocksmarket Gradient Text Widget for Elementor allows Stored XSS.This issue affects Gradient Text Widget for Elementor: from n/a through 1.0.1.|April 07, 2024; 2:15:12 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31346
+CVE-2024-31348|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Themepoints Testimonials allows Stored XSS.This issue affects Testimonials: from n/a through 3.0.5.|April 07, 2024; 2:15:13 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31348
+CVE-2024-31349|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in MailMunch MailMunch – Grow your Email List allows Stored XSS.This issue affects MailMunch – Grow your Email List: from n/a through 3.1.6.|April 07, 2024; 2:15:13 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31349
 CVE-2024-3135|The web server lacked CSRF tokens allowing an attacker to host malicious JavaScript on a host that when visited by a LocalAI user, could allow the attacker to fill disk space to deny service or abuse credits.|April 01, 2024; 3:15:46 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3135
@@ -11324,6 +11414,18 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31851
 CVE-2024-31852|"LLVM before 18.1.3 generates code in which the LR register can be overwritten without data being saved to the stack, and thus there can sometimes be an exploitable error in the flow of control. This affects the ARM backend and can be demonstrated with Clang. NOTE: the vendor perspective is ""we don't have strong objections for a CVE to be created ... It does seem that the likelihood of this miscompile enabling an exploit remains very low, because the miscompile resulting in this JOP gadget is such that the function is most likely to crash on most valid inputs to the function. So, if this function is covered by any testing, the miscompile is most likely to be discovered before the binary is shipped to production."""|April 05, 2024; 11:15:08 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31852
+CVE-2024-31948|In FRRouting (FRR) through 9.1, an attacker using a malformed Prefix SID attribute in a BGP UPDATE packet can cause the bgpd daemon to crash.|April 07, 2024; 5:15:07 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31948
+CVE-2024-31949|In FRRouting (FRR) through 9.1, an infinite loop can occur when receiving a MP/GR capability as a dynamic capability because malformed data results in a pointer not advancing.|April 07, 2024; 5:15:07 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31949
+CVE-2024-31950|In FRRouting (FRR) through 9.1, there can be a buffer overflow and daemon crash in ospf_te_parse_ri for OSPF LSA packets during an attempt to read Segment Routing subTLVs (their size is not validated).|April 07, 2024; 5:15:07 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31950
+CVE-2024-31951|In the Opaque LSA Extended Link parser in FRRouting (FRR) through 9.1, there can be a buffer overflow and daemon crash in ospf_te_parse_ext_link for OSPF LSA packets during an attempt to read Segment Routing Adjacency SID subTLVs (lengths are not validated).|April 07, 2024; 5:15:07 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31951
 CVE-2024-3202|A vulnerability, which was classified as problematic, has been found in codelyfe Stupid Simple CMS 1.2.4. This issue affects some unknown processing of the component Login Page. The manipulation leads to improper restriction of excessive authentication attempts. The attack may be initiated remotely. The complexity of an attack is rather high. The exploitation is known to be difficult. The exploit has been disclosed to the public and may be used. The identifier VDB-259049 was assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 02, 2024; 6:15:09 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3202
@@ -11486,6 +11588,66 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3414
 CVE-2024-3415|A vulnerability was found in SourceCodester Human Resource Information System 1.0. It has been classified as problematic. Affected is an unknown function of the file Superadmin_Dashboard/process/addbranches_process.php. The manipulation of the argument branches_name leads to cross site scripting. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-259584.|April 06, 2024; 7:15:07 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3415
+CVE-2024-3416|A vulnerability classified as critical was found in SourceCodester Online Courseware 1.0. This vulnerability affects unknown code of the file admin/editt.php. The manipulation of the argument id leads to sql injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-259588.|April 07, 2024; 12:15:07 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3416
+CVE-2024-3417|A vulnerability, which was classified as critical, has been found in SourceCodester Online Courseware 1.0. This issue affects some unknown processing of the file admin/saveeditt.php. The manipulation of the argument contact leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-259589 was assigned to this vulnerability.|April 07, 2024; 2:15:08 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3417
+CVE-2024-3418|A vulnerability, which was classified as critical, was found in SourceCodester Online Courseware 1.0. Affected is an unknown function of the file admin/deactivateteach.php. The manipulation of the argument selector leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. VDB-259590 is the identifier assigned to this vulnerability.|April 07, 2024; 6:15:08 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3418
+CVE-2024-3419|A vulnerability has been found in SourceCodester Online Courseware 1.0 and classified as critical. Affected by this vulnerability is an unknown functionality of the file admin/edit.php. The manipulation of the argument id leads to sql injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-259591.|April 07, 2024; 6:15:09 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3419
+CVE-2024-3420|A vulnerability was found in SourceCodester Online Courseware 1.0 and classified as critical. Affected by this issue is some unknown functionality of the file admin/saveedit.php. The manipulation of the argument id leads to sql injection. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-259592.|April 07, 2024; 7:15:07 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3420
+CVE-2024-3421|A vulnerability was found in SourceCodester Online Courseware 1.0. It has been classified as critical. This affects an unknown part of the file admin/deactivatestud.php. The manipulation of the argument selector leads to sql injection. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-259593 was assigned to this vulnerability.|April 07, 2024; 9:15:09 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3421
+CVE-2024-3422|A vulnerability was found in SourceCodester Online Courseware 1.0. It has been declared as critical. This vulnerability affects unknown code of the file admin/activatestud.php. The manipulation of the argument selector leads to sql injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. VDB-259594 is the identifier assigned to this vulnerability.|April 07, 2024; 10:15:07 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3422
+CVE-2024-3423|A vulnerability was found in SourceCodester Online Courseware 1.0. It has been rated as critical. This issue affects some unknown processing of the file admin/activateteach.php. The manipulation of the argument selector leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-259595.|April 07, 2024; 11:15:07 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3423
+CVE-2024-3424|A vulnerability classified as critical has been found in SourceCodester Online Courseware 1.0. Affected is an unknown function of the file admin/listscore.php. The manipulation of the argument title leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-259596.|April 07, 2024; 12:15:07 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3424
+CVE-2024-3425|A vulnerability classified as critical was found in SourceCodester Online Courseware 1.0. Affected by this vulnerability is an unknown functionality of the file admin/activateall.php. The manipulation of the argument selector leads to sql injection. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-259597 was assigned to this vulnerability.|April 07, 2024; 12:15:07 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3425
+CVE-2024-3426|A vulnerability, which was classified as problematic, has been found in SourceCodester Online Courseware 1.0. Affected by this issue is some unknown functionality of the file editt.php. The manipulation of the argument id leads to cross site scripting. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. VDB-259598 is the identifier assigned to this vulnerability.|April 07, 2024; 1:15:09 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3426
+CVE-2024-3427|A vulnerability, which was classified as problematic, was found in SourceCodester Online Courseware 1.0. This affects an unknown part of the file addq.php. The manipulation of the argument id leads to cross site scripting. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-259599.|April 07, 2024; 1:15:09 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3427
+CVE-2024-3428|A vulnerability has been found in SourceCodester Online Courseware 1.0 and classified as problematic. This vulnerability affects unknown code of the file edit.php. The manipulation of the argument id leads to cross site scripting. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-259600.|April 07, 2024; 2:15:13 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3428
+CVE-2024-3430|A vulnerability was found in QKSMS up to 3.9.4 on Android. It has been classified as problematic. This affects an unknown part of the file androidmanifest.xml of the component Backup File Handler. The manipulation leads to exposure of backup file to an unauthorized control sphere. It is possible to launch the attack on the physical device. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-259611. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 07, 2024; 6:15:09 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3430
+CVE-2024-3431|A vulnerability was found in EyouCMS 1.6.5. It has been declared as critical. This vulnerability affects unknown code of the file /login.php?m=admin&c=Field&a=channel_edit of the component Backend. The manipulation of the argument channel_id leads to deserialization. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-259612. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 07, 2024; 6:15:09 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3431
+CVE-2024-3432|A vulnerability was found in PuneethReddyHC Event Management 1.0. It has been rated as critical. This issue affects some unknown processing of the file /backend/register.php. The manipulation of the argument event_id/full_name/email/mobile/college/branch leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-259613 was assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 07, 2024; 7:15:08 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3432
+CVE-2024-3433|A vulnerability classified as problematic has been found in PuneethReddyHC Event Management 1.0. Affected is an unknown function of the file /backend/register.php. The manipulation of the argument event_id/full_name/email/mobile/college/branch leads to cross site scripting. It is possible to launch the attack remotely. VDB-259614 is the identifier assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 07, 2024; 7:15:08 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3433
+CVE-2024-3434|A vulnerability classified as critical was found in CP Plus Wi-Fi Camera up to 20240401. Affected by this vulnerability is an unknown functionality of the component User Management. The manipulation leads to improper authorization. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-259615. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 07, 2024; 8:15:08 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3434
+CVE-2024-3436|A vulnerability was found in SourceCodester Prison Management System 1.0. It has been declared as critical. This vulnerability affects unknown code of the file /Admin/edit-photo.php of the component Avatar Handler. The manipulation of the argument avatar leads to unrestricted upload. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. VDB-259630 is the identifier assigned to this vulnerability.|April 07, 2024; 8:15:08 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3436
+CVE-2024-3437|A vulnerability was found in SourceCodester Prison Management System 1.0. It has been rated as critical. This issue affects some unknown processing of the file /Admin/add-admin.php of the component Avatar Handler. The manipulation of the argument avatar leads to unrestricted upload. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-259631.|April 07, 2024; 8:15:08 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3437
 Exploiting this vulnerability is possible when running Black on untrusted input, or if you habitually put thousands of leading tab characters in your docstrings.|March 19, 2024; 1:15:09 AM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-21503|
 However, some local environment variables may have been set by the developer / CI environment for testing purposes, such as dropping the database during the application startup or trusting all TLS certificates to accept self-signed certificates. If these properties are configured using environment variables or the .env facility, they are captured into the built application. It leads to dangerous behavior if the application does not override these values.||||
 Mitigation:||||
