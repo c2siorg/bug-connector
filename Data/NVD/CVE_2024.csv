@@ -1757,6 +1757,9 @@ CVE-2024-1954|The Oliver POS – A WooCommerce Point of Sale (POS) plugin for Wo
 CVE-2024-1956|The wpb-show-core WordPress plugin before 2.7 does not sanitise and escape the parameters before outputting it back in the response of an unauthenticated request, leading to a Reflected Cross-Site Scripting|April 08, 2024; 1:15:07 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-1956
+CVE-2024-1957|The GiveWP – Donation Plugin and Fundraising Platform plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's 'give_form' shortcode in all versions up to, and including, 3.6.1 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers with contributor-level and above permissions to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.|April 12, 2024; 10:15:06 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-1957
 CVE-2024-1958|The WPB Show Core WordPress plugin before 2.7 does not sanitise and escape a parameter before outputting it back in the page, leading to a Reflected Cross-Site Scripting which could be used against high privilege users such as admin or unauthenticated users|April 08, 2024; 1:15:07 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-1958
@@ -5928,6 +5931,9 @@ CVE-2024-2581|A vulnerability was found in Tenda AC10 16.03.10.13 and classified
 CVE-2024-25811|An access control issue in Dreamer CMS v4.0.1 allows attackers to download backup files and leak sensitive information.|March 20, 2024; 10:52:15 PM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-25811
 CVE-2024-25817|Buffer Overflow vulnerability in eza before version 0.18.2, allows local attackers to execute arbitrary code via the .git/HEAD, .git/refs, and .git/objects components.|March 05, 2024; 7:15:52 PM -0500|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-25817
 CVE-2024-25828|cmseasy V7.7.7.9 has an arbitrary file deletion vulnerability in lib/admin/template_admin.php.|February 22, 2024; 11:15:54 AM -0500|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-25828
+CVE-2024-2583|The WP Shortcodes Plugin — Shortcodes Ultimate WordPress plugin before 7.0.5 does not properly escape some of its shortcodes attributes before they are echoed back to users, making it possible for users with the contributor role to conduct Stored XSS attacks.|April 13, 2024; 1:15:48 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-2583
 CVE-2024-25830|F-logic DataCube3 v1.0 is vulnerable to Incorrect Access Control due to an improper directory access restriction. An unauthenticated, remote attacker can exploit this, by sending a URI that contains the path of the configuration file. A successful exploit could allow the attacker to extract the root and admin password.|February 28, 2024; 8:44:16 PM -0500|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-25830
 CVE-2024-25831|F-logic DataCube3 Version 1.0 is affected by a reflected cross-site scripting (XSS) vulnerability due to improper input sanitization. An authenticated, remote attacker can execute arbitrary JavaScript code in the web management interface.|February 28, 2024; 8:44:16 PM -0500|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-25831
 CVE-2024-25832|F-logic DataCube3 v1.0 is vulnerable to unrestricted file upload, which could allow an authenticated malicious actor to upload a file of dangerous type by manipulating the filename extension.|February 28, 2024; 8:44:16 PM -0500|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-25832
@@ -8803,6 +8809,9 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-26813
 CVE-2024-26814|In the Linux kernel, the following vulnerability has been resolved:vfio/fsl-mc: Block calling interrupt handler without triggerThe eventfd_ctx trigger pointer of the vfio_fsl_mc_irq object isinitially NULL and may become NULL if the user sets the triggereventfd to -1.  The interrupt handler itself is guaranteed thattrigger is always valid between request_irq() and free_irq(), butthe loopback testing mechanisms to invoke the handler functionneed to test the trigger.  The triggering and setting ioctl pathsboth make use of igate and are therefore mutually exclusive.The vfio-fsl-mc driver does not make use of irqfds, nor does itsupport any sort of masking operations, therefore unlike vfio-pciand vfio-platform, the flow can remain essentially unchanged.|April 05, 2024; 5:15:09 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-26814
+CVE-2024-26817|In the Linux kernel, the following vulnerability has been resolved:amdkfd: use calloc instead of kzalloc to avoid integer overflowThis uses calloc instead of doing the multiplication which mightoverflow.|April 13, 2024; 8:15:11 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-26817
 CVE-2024-2682|A vulnerability classified as problematic has been found in Campcodes Online Job Finder System 1.0. Affected is an unknown function of the file /admin/employee/controller.php. The manipulation of the argument EMPLOYEEID leads to cross site scripting. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. VDB-257382 is the identifier assigned to this vulnerability.|March 20, 2024; 4:15:11 AM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-2682
 CVE-2024-2683|A vulnerability classified as problematic was found in Campcodes Online Job Finder System 1.0. Affected by this vulnerability is an unknown functionality of the file /admin/company/index.php. The manipulation of the argument view leads to cross site scripting. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-257383.|March 20, 2024; 6:15:10 AM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-2683
 CVE-2024-2684|A vulnerability, which was classified as problematic, has been found in Campcodes Online Job Finder System 1.0. Affected by this issue is some unknown functionality of the file /admin/category/index.php. The manipulation of the argument view leads to cross site scripting. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-257384.|March 20, 2024; 6:15:10 AM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-2684
@@ -11087,6 +11096,9 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-30266
 CVE-2024-30269|DataEase, an open source data visualization and analysis tool, has a database configuration information exposure vulnerability prior to version 2.5.0. Visiting the `/de2api/engine/getEngine;.js` path via a browser reveals that the platform's database configuration is returned. The vulnerability has been fixed in v2.5.0. No known workarounds are available aside from upgrading.|April 08, 2024; 11:15:07 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-30269
+CVE-2024-3027|The Smart Slider 3 plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the upload function in all versions up to, and including, 3.5.1.22. This makes it possible for authenticated attackers, with contributor-level access and above, to upload files, including SVG files, which can be used to conduct stored cross-site scripting attacks.|April 12, 2024; 10:15:06 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3027
 CVE-2024-30270|mailcow: dockerized is an open source groupware/email suite based on docker. A security vulnerability has been identified in mailcow affecting versions prior to 2024-04. This vulnerability is a combination of path traversal and arbitrary code execution, specifically targeting the `rspamd_maps()` function. It allows authenticated admin users to overwrite any file writable by the www-data user by exploiting improper path validation. The exploit chain can lead to the execution of arbitrary commands on the server. Version 2024-04 contains a patch for the issue.|April 04, 2024; 5:15:16 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-30270
@@ -12770,6 +12782,9 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3247
 CVE-2024-3248|In Xpdf 4.05 (and earlier), a PDF object loop in the attachments leads to infinite recursion and a stack overflow.|April 02, 2024; 7:15:55 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3248
+CVE-2024-32487|less through 653 allows OS command execution via a newline character in the name of a file, because quoting is mishandled in filename.c. Exploitation typically requires use with attacker-controlled file names, such as the files extracted from an untrusted archive. Exploitation also requires the LESSOPEN environment variable, but this is set by default in many common cases.|April 13, 2024; 11:15:52 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32487
 CVE-2024-3250|It was discovered that Canonical's Pebble service manager read-file API and the associated pebble pull command, before v1.10.2, allowed unprivileged local users to read files with root-equivalent permissions when Pebble was running as root. Fixes are also available as backports to v1.1.1, v1.4.2, and v1.7.4.|April 04, 2024; 11:15:39 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3250
@@ -13115,6 +13130,9 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3621
 CVE-2024-3652|The Libreswan Project was notified of an issue causing libreswan to restart when using IKEv1 without specifying an esp= line. When the peer requests AES-GMAC, libreswan's default proposal handler causes an assertion failure and crashes and restarts. IKEv2 connections are not affected.|April 10, 2024; 10:15:47 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3652
+CVE-2024-3662|The WPZOOM Social Feed Widget & Block plugin for WordPress is vulnerable to unauthorized access due to a missing capability check on the wpzoom_instagram_clear_data() function in all versions up to, and including, 2.1.13. This makes it possible for authenticated attackers, with subscriber-level access and above, to delete all Instagram images installed on the site.|April 13, 2024; 5:15:07 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3662
 CVE-2024-3685|A vulnerability, which was classified as critical, was found in DedeCMS 5.7.112-UTF8. Affected is an unknown function of the file stepselect_main.php. The manipulation of the argument ids leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-260472. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 12, 2024; 9:15:20 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3685
@@ -13160,6 +13178,33 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3706
 CVE-2024-3707|   Information exposure vulnerability in OpenGnsys affecting version 1.1.1d (Espeto). This vulnerability allows an attacker to enumerate all files in the web tree by accessing a php file.|April 12, 2024; 10:15:09 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3707
+CVE-2024-3719|A vulnerability, which was classified as critical, was found in Campcodes House Rental Management System 1.0. This affects an unknown part of the file ajax.php. The manipulation of the argument id leads to sql injection. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-260571.|April 13, 2024; 7:15:46 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3719
+CVE-2024-3720|A vulnerability has been found in Tianwell Fire Intelligent Command Platform 1.1.1.1 and classified as critical. This vulnerability affects unknown code of the file /mfsNotice/page of the component API Interface. The manipulation of the argument gsdwid leads to sql injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-260572.|April 13, 2024; 8:15:11 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3720
+CVE-2024-3721|A vulnerability was found in TBK DVR-4104 and DVR-4216 up to 20240412 and classified as critical. This issue affects some unknown processing of the file /device.rsp?opt=sys&cmd=___S_O_S_T_R_E_A_MAX___. The manipulation of the argument mdb/mdc leads to os command injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-260573 was assigned to this vulnerability.|April 13, 2024; 8:15:12 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3721
+CVE-2024-3735|A vulnerability was found in Smart Office up to 20240405. It has been classified as problematic. Affected is an unknown function of the file Main.aspx. The manipulation of the argument New Password/Confirm Password with the input 1 leads to weak password requirements. It is possible to launch the attack remotely. The complexity of an attack is rather high. The exploitability is told to be difficult. The exploit has been disclosed to the public and may be used. VDB-260574 is the identifier assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 13, 2024; 9:15:46 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3735
+CVE-2024-3736|A vulnerability was found in cym1102 nginxWebUI up to 3.9.9. It has been declared as problematic. Affected by this vulnerability is the function upload of the file /adminPage/main/upload. The manipulation leads to unrestricted upload. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-260575.|April 13, 2024; 10:15:07 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3736
+CVE-2024-3737|A vulnerability was found in cym1102 nginxWebUI up to 3.9.9. It has been rated as critical. Affected by this issue is the function findCountByQuery of the file /adminPage/www/addOver. The manipulation of the argument dir leads to path traversal. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-260576.|April 13, 2024; 1:15:50 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3737
+CVE-2024-3738|A vulnerability classified as critical has been found in cym1102 nginxWebUI up to 3.9.9. This affects the function handlePath of the file /adminPage/conf/saveCmd. The manipulation of the argument nginxPath leads to improper certificate validation. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-260577 was assigned to this vulnerability.|April 13, 2024; 2:15:07 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3738
+CVE-2024-3739|A vulnerability classified as critical was found in cym1102 nginxWebUI up to 3.9.9. This vulnerability affects unknown code of the file /adminPage/main/upload. The manipulation of the argument file leads to os command injection. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. VDB-260578 is the identifier assigned to this vulnerability.|April 13, 2024; 3:15:53 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3739
+CVE-2024-3740|A vulnerability, which was classified as critical, has been found in cym1102 nginxWebUI up to 3.9.9. This issue affects the function exec of the file /adminPage/conf/reload. The manipulation of the argument nginxExe leads to deserialization. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-260579.|April 13, 2024; 5:15:48 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3740
 Exploiting this vulnerability is possible when running Black on untrusted input, or if you habitually put thousands of leading tab characters in your docstrings.|March 19, 2024; 1:15:09 AM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-21503|
 However, some local environment variables may have been set by the developer / CI environment for testing purposes, such as dropping the database during the application startup or trusting all TLS certificates to accept self-signed certificates. If these properties are configured using environment variables or the .env facility, they are captured into the built application. It leads to dangerous behavior if the application does not override these values.||||
 Mitigation:||||
