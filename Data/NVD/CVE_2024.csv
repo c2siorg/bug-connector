@@ -117,6 +117,9 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-0082
 CVE-2024-0083|NVIDIA ChatRTX for Windows contains a vulnerability in the UI, where an attacker can cause a cross-site scripting error by network by running malicious scripts in users' browsers. A successful exploit of this vulnerability might lead to code execution, denial of service, and information disclosure.|April 08, 2024; 6:15:08 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-0083
+CVE-2024-0151|Insufficient argument checking in Secure state Entry functions in software using Cortex-M Security Extensions (CMSE), that has been compiled using toolchains that implement 'Arm v8-M Security Extensions Requirements on Development Tools' prior to version 1.4, allows an attacker to pass values to Secure state that are out of range for types smaller than 32-bits. Out of range values might lead to incorrect operations in secure state due.|April 24, 2024; 2:15:11 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-0151
 CVE-2024-0154|Dell PowerEdge Server BIOS and Dell Precision Rack BIOS contain an improper parameter initialization vulnerability. A local low privileged attacker could potentially exploit this vulnerability to read the contents of non-SMM stack memory.|March 13, 2024; 1:15:46 PM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-0154
 CVE-2024-0155|Dell Digital Delivery, versions prior to 5.0.86.0, contain a Use After Free Vulnerability. A local low privileged attacker could potentially exploit this vulnerability, leading to an application crash or execution of arbitrary code.|March 04, 2024; 8:15:44 AM -0500|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-0155
 CVE-2024-0156|Dell Digital Delivery, versions prior to 5.0.86.0, contain a Buffer Overflow vulnerability. A local low privileged attacker could potentially exploit this vulnerability, leading to arbitrary code execution and/or privilege escalation.|March 04, 2024; 8:15:44 AM -0500|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-0156
@@ -1671,6 +1674,9 @@ CVE-2024-1752|The Font Farsi WordPress plugin through 1.6.6 does not sanitise an
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-1752
 CVE-2024-1753|A flaw was found in Buildah (and subsequently Podman Build) which allows containers to mount arbitrary locations on the host filesystem into build containers. A malicious Containerfile can use a dummy image with a symbolic link to the root filesystem as a mount source and cause the mount operation to mount the host root filesystem inside the RUN step. The commands inside the RUN step will then have read-write access to the host filesystem, allowing for full container escape at build time.|March 18, 2024; 11:15:41 AM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-1753
+CVE-2024-1756|The WooCommerce Customers Manager WordPress plugin before 29.8 does not have authorisation and CSRF in an AJAX action, allowing any authenticated users, such as subscriber, to call it and retrieve the list of customer email addresses along with their id, first name and last name|April 24, 2024; 1:15:47 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-1756
 CVE-2024-1758|The SuperFaktura WooCommerce plugin for WordPress is vulnerable to Server-Side Request Forgery in all versions up to, and including, 1.40.3 via the wc_sf_url_check function. This makes it possible for authenticated attackers, with subscriber-level access and above, to make web requests to arbitrary locations originating from the web application and can be used to query and modify information from internal services.|February 26, 2024; 11:27:53 AM -0500|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-1758
 CVE-2024-1760|The Appointment Booking Calendar — Simply Schedule Appointments Booking Plugin plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 1.6.6.20. This is due to missing or incorrect nonce validation on the ssa_factory_reset() function. This makes it possible for unauthenticated attackers to reset the plugin's settings via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.|March 06, 2024; 1:15:49 AM -0500|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-1760
 CVE-2024-1761|The WP Chat App plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's widget/block in all versions up to, and including, 3.6.1 due to insufficient input sanitization and output escaping on user supplied attributes such as 'buttonColor' and 'phoneNumber'. This makes it possible for authenticated attackers with contributor-level and above permissions to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.|March 07, 2024; 12:15:54 AM -0500|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-1761
@@ -2087,6 +2093,9 @@ CVE-2024-20294|"A vulnerability in the Link Layer Discovery Protocol (LLDP) feat
  This vulnerability is due to improper handling of specific fields in an LLDP frame. An attacker could exploit this vulnerability by sending a crafted LLDP packet to an interface of an affected device and having an authenticated user retrieve LLDP statistics from the affected device through CLI show commands or Simple Network Management Protocol (SNMP) requests. A successful exploit could allow the attacker to cause the LLDP service to crash and stop running on the affected device. In certain situations, the LLDP crash may result in a reload of the affected device.
 
  Note: LLDP is a Layer 2 link protocol. To exploit this vulnerability, an attacker would need to be directly connected to an interface of an affected device, either physically or logically (for example, through a Layer 2 Tunnel configured to transport the LLDP protocol)."|February 28, 2024; 8:43:59 PM -0500|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-20294
+CVE-2024-20295|A vulnerability in the CLI of the Cisco Integrated Management Controller (IMC) could allow an authenticated, local attacker to perform command injection attacks on the underlying operating system and elevate privileges to root. To exploit this vulnerability, the attacker must have read-only or higher privileges on an affected device. This vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by submitting a crafted CLI command. A successful exploit could allow the attacker to elevate privileges to root.|April 24, 2024; 4:15:07 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-20295
 CVE-2024-2030|The Database for Contact Form 7, WPforms, Elementor forms plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's shortcode(s) in all versions up to, and including, 1.3.3 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers with contributor-level and above permissions to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.|March 13, 2024; 12:15:31 PM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-2030
 CVE-2024-20301|"A vulnerability in Cisco Duo Authentication for Windows Logon and RDP could allow an authenticated, physical attacker to bypass secondary authentication and access an affected Windows device. 
 
@@ -2102,6 +2111,9 @@ CVE-2024-2031|The Video Conferencing with Zoom plugin for WordPress is vulnerabl
 CVE-2024-20310|A vulnerability in the web-based interface of Cisco Unified Communications Manager IM & Presence Service (Unified CM IM&P) could allow an unauthenticated, remote attacker to conduct a cross-site scripting (XSS) attack against an authenticated user of the interface.|||
 CVE-2024-20311|A vulnerability in the Locator ID Separation Protocol (LISP) feature of Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause an affected device to reload.|||
 CVE-2024-20312|A vulnerability in the Intermediate System-to-Intermediate System (IS-IS) protocol of Cisco IOS Software and Cisco IOS XE Software could allow an unauthenticated, adjacent attacker to cause a denial of service (DoS) condition on an affected device.|||
+CVE-2024-20313|A vulnerability in the OSPF version 2 (OSPFv2) feature of Cisco IOS XE Software could allow an unauthenticated, adjacent attacker to cause an affected device to reload unexpectedly, resulting in a denial of service (DoS) condition. This vulnerability is due to improper validation of OSPF updates that are processed by a device. An attacker could exploit this vulnerability by sending a malformed OSPF update to the device. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition.|April 24, 2024; 5:15:46 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-20313
 CVE-2024-20314|A vulnerability in the IPv4 Software-Defined Access (SD-Access) fabric edge node feature of Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause high CPU utilization and stop all traffic processing, resulting in a denial of service (DoS) condition on an affected device.|||
 CVE-2024-20315|"A vulnerability in the access control list (ACL) processing on MPLS interfaces in the ingress direction of Cisco IOS XR Software could allow an unauthenticated, remote attacker to bypass a configured ACL.
 
@@ -2161,7 +2173,19 @@ CVE-2024-20348|A vulnerability in the Out-of-Band (OOB) Plug and Play (PnP) feat
 CVE-2024-20352|A vulnerability in Cisco Emergency Responder could allow an authenticated, remote attacker to conduct a directory traversal attack, which could allow the attacker to perform arbitrary actions on an affected device. This vulnerability is due to insufficient protections for the web UI of an affected system. An attacker could exploit this vulnerability by sending crafted requests to the web UI. A successful exploit could allow the attacker to perform arbitrary actions with the privilege level of the affected user, such as accessing password or log files or uploading and deleting existing files from the system.|April 03, 2024; 1:15:49 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-20352
+CVE-2024-20353|"A vulnerability in the management and VPN web servers for Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition. This vulnerability is due to incomplete error checking when parsing an HTTP header. An attacker could exploit this vulnerability by sending a crafted HTTP request to a targeted web server on a device. A successful exploit could allow the attacker to cause a DoS condition when the device reloads."|April 24, 2024; 3:15:46 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-20353
 CVE-2024-20354|A vulnerability in the handling of encrypted wireless frames of Cisco Aironet Access Point (AP) Software could allow an unauthenticated, adjacent attacker to cause a denial of service (DoS) condition on the affected device.|||
+CVE-2024-20356|A vulnerability in the web-based management interface of Cisco Integrated Management Controller (IMC) could allow an authenticated, remote attacker with Administrator-level privileges to perform command injection attacks on an affected system and elevate their privileges to root. This vulnerability is due to insufficient user input validation. An attacker could exploit this vulnerability by sending crafted commands to the web-based management interface of the affected software. A successful exploit could allow the attacker to elevate their privileges to root.|April 24, 2024; 4:15:07 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-20356
+CVE-2024-20358|A vulnerability in the Cisco Adaptive Security Appliance (ASA) restore functionality that is available in Cisco ASA Software and Cisco Firepower Threat Defense (FTD) Software could allow an authenticated, local attacker to execute arbitrary commands on the underlying operating system with root-level privileges. Administrator-level privileges are required to exploit this vulnerability. This vulnerability exists because the contents of a backup file are improperly sanitized at restore time. An attacker could exploit this vulnerability by restoring a crafted backup file to an affected device. A successful exploit could allow the attacker to execute arbitrary commands on the underlying Linux operating system as root.|April 24, 2024; 4:15:07 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-20358
+CVE-2024-20359|"A vulnerability in a legacy capability that allowed for the preloading of VPN clients and plug-ins and that has been available in Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an authenticated, local attacker to execute arbitrary code with root-level privileges. Administrator-level privileges are required to exploit this vulnerability. This vulnerability is due to improper validation of a file when it is read from system flash memory. An attacker could exploit this vulnerability by copying a crafted file to the disk0: file system of an affected device. A successful exploit could allow the attacker to execute arbitrary code on the affected device after the next reload of the device, which could alter system behavior. Because the injected code could persist across device reboots, Cisco has raised the Security Impact Rating (SIR) of this advisory from Medium to High."|April 24, 2024; 3:15:46 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-20359
 CVE-2024-20362|A vulnerability in the web-based management interface of Cisco Small Business RV016, RV042, RV042G, RV082, RV320, and RV325 Routers could allow an unauthenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the interface.|||
 CVE-2024-20367|A vulnerability in the web UI of Cisco Enterprise Chat and Email (ECE) could allow an authenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the interface.|||
 CVE-2024-20368|A vulnerability in the web-based management interface of Cisco Identity Services Engine (ISE) could allow an unauthenticated, remote attacker to conduct a cross-site request forgery (CSRF) attack and perform arbitrary actions on an affected device.|||
@@ -4945,6 +4969,9 @@ CVE-2024-23224|The issue was addressed with improved checks. This issue is fixed
 CVE-2024-23225|A memory corruption issue was addressed with improved validation. This issue is fixed in iOS 16.7.6 and iPadOS 16.7.6, iOS 17.4 and iPadOS 17.4. An attacker with arbitrary kernel read and write capability may be able to bypass kernel memory protections. Apple is aware of a report that this issue may have been exploited.|March 05, 2024; 3:16:01 PM -0500|V3.1: 7.8 HIGHV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2024-23225&vector=AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2024-23225
 CVE-2024-23226|The issue was addressed with improved memory handling. This issue is fixed in macOS Sonoma 14.4, visionOS 1.1, iOS 17.4 and iPadOS 17.4, watchOS 10.4, tvOS 17.4. Processing web content may lead to arbitrary code execution.|March 07, 2024; 9:15:47 PM -0500|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-23226
 CVE-2024-23227|This issue was addressed with improved redaction of sensitive information. This issue is fixed in macOS Sonoma 14.4, macOS Monterey 12.7.4, macOS Ventura 13.6.5. An app may be able to read sensitive location information.|March 07, 2024; 9:15:47 PM -0500|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-23227
+CVE-2024-23228|This issue was addressed through improved state management. This issue is fixed in iOS 17.3 and iPadOS 17.3. Locked Notes content may have been unexpectedly unlocked.|April 24, 2024; 1:15:47 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-23228
 CVE-2024-23230|This issue was addressed with improved file handling. This issue is fixed in macOS Sonoma 14.4, macOS Monterey 12.7.4, macOS Ventura 13.6.5. An app may be able to access sensitive user data.|March 07, 2024; 9:15:47 PM -0500|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-23230
 CVE-2024-23231|A privacy issue was addressed with improved private data redaction for log entries. This issue is fixed in macOS Ventura 13.6.5, macOS Sonoma 14.4, iOS 17.4 and iPadOS 17.4, watchOS 10.4, iOS 16.7.6 and iPadOS 16.7.6. An app may be able to access user-sensitive data.|March 07, 2024; 9:15:47 PM -0500|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-23231
 CVE-2024-23232|A privacy issue was addressed with improved handling of temporary files. This issue is fixed in macOS Sonoma 14.4. An app may be able to capture a user's screen.|March 07, 2024; 9:15:47 PM -0500|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-23232
@@ -4989,6 +5016,9 @@ CVE-2024-2327|The Global Elementor Buttons plugin for WordPress is vulnerable to
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-2327
 CVE-2024-23270|The issue was addressed with improved memory handling. This issue is fixed in macOS Monterey 12.7.4, macOS Ventura 13.6.5, macOS Sonoma 14.4, iOS 17.4 and iPadOS 17.4, tvOS 17.4. An app may be able to execute arbitrary code with kernel privileges.|March 07, 2024; 9:15:49 PM -0500|V3.1: 7.8 HIGHV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2024-23270&vector=AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2024-23270
+CVE-2024-23271|A logic issue was addressed with improved checks. This issue is fixed in iOS 17.3 and iPadOS 17.3, Safari 17.3, tvOS 17.3, macOS Sonoma 14.3, watchOS 10.3. A malicious website may cause unexpected cross-origin behavior.|April 24, 2024; 1:15:47 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-23271
 CVE-2024-23272|A logic issue was addressed with improved checks. This issue is fixed in macOS Sonoma 14.4, macOS Monterey 12.7.4, macOS Ventura 13.6.5. A user may gain access to protected parts of the file system.|March 07, 2024; 9:15:49 PM -0500|V3.1: 5.5 MEDIUMV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2024-23272&vector=AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2024-23272
 CVE-2024-23273|This issue was addressed through improved state management. This issue is fixed in Safari 17.4, iOS 17.4 and iPadOS 17.4, macOS Sonoma 14.4. Private Browsing tabs may be accessed without authentication.|March 07, 2024; 9:15:49 PM -0500|V3.1: 4.3 MEDIUMV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2024-23273&vector=AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:N/A:N&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2024-23273
 CVE-2024-23274|An injection issue was addressed with improved input validation. This issue is fixed in macOS Sonoma 14.4, macOS Monterey 12.7.4, macOS Ventura 13.6.5. An app may be able to elevate privileges.|March 07, 2024; 9:15:49 PM -0500|V3.1: 7.8 HIGHV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2024-23274&vector=AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2024-23274
@@ -5588,6 +5618,9 @@ CVE-2024-24015|A SQL injection vulnerability exists in Novel-Plus v4.3.0-RC1 and
 CVE-2024-24017|A SQL injection vulnerability exists in Novel-Plus v4.3.0-RC1 and prior versions. An attacker can pass crafted offset, limit, and sort parameters to perform SQL injection via /common/dict/list|February 07, 2024; 9:15:07 PM -0500|V3.1: 9.8 CRITICALV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2024-24017&vector=AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2024-24017
 CVE-2024-24018|A SQL injection vulnerability exists in Novel-Plus v4.3.0-RC1 and prior versions. An attacker can pass in crafted offset, limit, and sort parameters to perform SQL injection via /system/dataPerm/list|February 07, 2024; 8:15:27 PM -0500|V3.1: 9.8 CRITICALV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2024-24018&vector=AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2024-24018
 CVE-2024-24019|A SQL injection vulnerability exists in Novel-Plus v4.3.0-RC1 and prior versions. An attacker can pass in crafted offset, limit, and sort parameters to perform SQL injection via /system/roleDataPerm/list|February 06, 2024; 8:15:08 PM -0500|V3.1: 9.8 CRITICALV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2024-24019&vector=AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2024-24019
+CVE-2024-2402|The Better Comments WordPress plugin before 1.5.6 does not sanitise and escape some of its settings, which could allow high privilege users such as admin to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in multisite setup)|April 24, 2024; 1:15:47 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-2402
 CVE-2024-24021|A SQL injection vulnerability exists in Novel-Plus v4.3.0-RC1 and prior. An attacker can pass specially crafted offset, limit, and sort parameters to perform SQL injection via /novel/userFeedback/list.|February 07, 2024; 9:15:07 PM -0500|V3.1: 9.8 CRITICALV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2024-24021&vector=AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2024-24021
 CVE-2024-24023|A SQL injection vulnerability exists in Novel-Plus v4.3.0-RC1 and prior. An attacker can pass specially crafted offset, limit, and sort parameters to perform SQL injection via /novel/bookContent/list.|February 07, 2024; 8:15:27 PM -0500|V3.1: 9.8 CRITICALV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2024-24023&vector=AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2024-24023
 CVE-2024-24024|An arbitrary File download vulnerability exists in Novel-Plus v4.3.0-RC1 and prior at com.java2nb.common.controller.FileController: fileDownload(). An attacker can pass in specially crafted filePath and fieName parameters to perform arbitrary File download.|February 07, 2024; 8:15:27 PM -0500|V3.1: 9.8 CRITICALV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2024-24024&vector=AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2024-24024
@@ -5600,6 +5633,9 @@ CVE-2024-2403|"Improper cleanup in temporary file handling component in Devoluti
 earlier on Windows allows an attacker that compromised a user endpoint, under specific circumstances, to access sensitive information via residual files in the temporary directory."|March 13, 2024; 2:15:07 PM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-2403
 CVE-2024-24034|Setor Informatica S.I.L version 3.0 is vulnerable to Open Redirect via the hprinter parameter, allows remote attackers to execute arbitrary code.|February 08, 2024; 4:15:46 AM -0500|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-24034
 CVE-2024-24035|Cross Site Scripting (XSS) vulnerability in Setor Informatica SIL 3.1 allows attackers to run arbitrary code via the hmessage parameter.|March 07, 2024; 4:15:08 PM -0500|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-24035
+CVE-2024-2404|The Better Comments WordPress plugin before 1.5.6 does not sanitise and escape some of its settings, which could allow low privilege users such as Subscribers to perform Stored Cross-Site Scripting attacks.|April 24, 2024; 1:15:47 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-2404
 CVE-2024-24041|A stored cross-site scripting (XSS) vulnerability in Travel Journal Using PHP and MySQL with Source Code v1.0 allows attackers to execute arbitrary web scripts or HTML via a crafted payload injected into the location parameter at /travel-journal/write-journal.php.|February 01, 2024; 3:50:05 PM -0500|V3.1: 6.1 MEDIUMV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2024-24041&vector=AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2024-24041
 CVE-2024-24042|Directory Traversal vulnerability in Devan-Kerman ARRP v.0.8.1 and before allows a remote attacker to execute arbitrary code via the dumpDirect in RuntimeResourcePackImpl component.|March 19, 2024; 3:15:09 AM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-24042
 CVE-2024-24043|Directory Traversal vulnerability in Speedy11CZ MCRPX v.1.4.0 and before allows a local attacker to execute arbitrary code via a crafted file.|March 19, 2024; 3:15:09 AM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-24043
@@ -10110,6 +10146,9 @@ CVE-2024-27775|SysAid before version 23.2.14 b18 - CWE-918: Server-Side Request
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-27775
 CVE-2024-2778|A vulnerability was found in Campcodes Online Marriage Registration System 1.0 and classified as problematic. Affected by this issue is some unknown functionality of the file /admin/search.php. The manipulation of the argument searchdata leads to cross site scripting. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-257612.|March 21, 2024; 9:15:07 PM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-2778
 CVE-2024-2779|A vulnerability was found in Campcodes Online Marriage Registration System 1.0. It has been classified as problematic. This affects an unknown part of the file /admin/application-bwdates-reports-details.php. The manipulation of the argument fromdate leads to cross site scripting. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-257613 was assigned to this vulnerability.|March 21, 2024; 9:15:08 PM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-2779
+CVE-2024-27791|The issue was addressed with improved checks. This issue is fixed in iOS 17.3 and iPadOS 17.3, tvOS 17.3, macOS Ventura 13.6.4, iOS 16.7.5 and iPadOS 16.7.5, macOS Monterey 12.7.3, macOS Sonoma 14.3. An app may be able to corrupt coprocessor memory.|April 24, 2024; 1:15:47 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-27791
 CVE-2024-27794|Claris FileMaker Server before version 20.3.2 was susceptible to a reflected Cross-Site Scripting vulnerability due to an improperly handled parameter in the FileMaker WebDirect login endpoint. The vulnerability was resolved in FileMaker Server 20.3.2 by escaping the HTML contents of the login error message on the login page.|April 15, 2024; 7:15:06 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-27794
@@ -10822,6 +10861,9 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-28787
 CVE-2024-28816|Student Information Chatbot a0196ab allows SQL injection via the username to the login function in index.php.|March 10, 2024; 11:15:05 PM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-28816
 CVE-2024-28823|Amazon AWS aws-js-s3-explorer (aka AWS JavaScript S3 Explorer) 1.0.0 allows XSS via a crafted S3 bucket name to index.html.|March 11, 2024; 1:15:05 AM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-28823
 CVE-2024-28824|Least privilege violation and reliance on untrusted inputs in the mk_informix Checkmk agent plugin before Checkmk 2.3.0b4 (beta), 2.2.0p24, 2.1.0p41 and 2.0.0 (EOL) allows local users to escalate privileges.|March 22, 2024; 7:15:46 AM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-28824
+CVE-2024-28825|Improper restriction of excessive authentication attempts on some authentication methods in Checkmk before 2.3.0b5 (beta), 2.2.0p26, 2.1.0p43, and in Checkmk 2.0.0 (EOL) facilitates password brute-forcing.|April 24, 2024; 8:15:06 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-28825
 CVE-2024-2883|Use after free in ANGLE in Google Chrome prior to 123.0.6312.86 allowed a remote attacker to potentially exploit heap corruption via a crafted HTML page. (Chromium security severity: Critical)|March 26, 2024; 5:15:53 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-2883
@@ -10923,9 +10965,18 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-28957
 CVE-2024-2896|A vulnerability was found in Tenda AC7 15.03.06.44. It has been rated as critical. This issue affects the function formWifiWpsStart of the file /goform/WifiWpsStart. The manipulation of the argument index leads to stack-based buffer overflow. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-257939. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|March 26, 2024; 2:15:11 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-2896
+CVE-2024-28963|Telemetry Dashboard v1.0.0.7 for Dell ThinOS 2402 contains a sensitive information disclosure vulnerability. An unauthenticated user with local access to the device could exploit this vulnerability to read sensitive proxy settings information.|April 24, 2024; 4:15:37 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-28963
 CVE-2024-2897|A vulnerability classified as critical has been found in Tenda AC7 15.03.06.44. Affected is the function formWriteFacMac of the file /goform/WriteFacMac. The manipulation of the argument mac leads to os command injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-257940. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|March 26, 2024; 3:15:48 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-2897
+CVE-2024-28976|Dell Repository Manager, versions prior to 3.4.5, contains a Path Traversal vulnerability in API module. A local attacker with low privileges could potentially exploit this vulnerability to gain unauthorized write access to the files stored on the server filesystem with the privileges of the running web application.|April 24, 2024; 4:15:37 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-28976
+CVE-2024-28977|Dell Repository Manager, versions 3.4.2 through 3.4.4,contains a Path Traversal vulnerability in logger module. A local attacker with low privileges could potentially exploit this vulnerability to gain unauthorized read access to the files stored on the server filesystem with the privileges of the running web application.|April 24, 2024; 4:15:37 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-28977
 CVE-2024-2898|A vulnerability classified as critical was found in Tenda AC7 15.03.06.44. Affected by this vulnerability is the function fromSetRouteStatic of the file /goform/SetStaticRouteCfg. The manipulation of the argument list leads to stack-based buffer overflow. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-257941 was assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|March 26, 2024; 3:15:49 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-2898
@@ -11504,6 +11555,9 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-29686
 CVE-2024-2971|Out-of-bounds array write in Xpdf 4.05 and earlier, triggered by negative object number in indirect reference in the input PDF file.|March 26, 2024; 6:15:08 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-2971
+CVE-2024-2972|The Floating Chat Widget: Contact Chat Icons, WhatsApp, Telegram Chat, Line Messenger, WeChat, Email, SMS, Call Button  WordPress plugin before 3.1.9 does not sanitise and escape some of its settings, which could allow high privilege users such as admin to perform Stored Cross-Site Scripting attacks even when the unfiltered_html capability is disallowed (for example in multisite setup)|April 24, 2024; 1:15:47 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-2972
 CVE-2024-29732|"A SQL Injection has been found on SCAN_VISIO eDocument Suite Web Viewer of Abast. This vulnerability allows an unauthenticated user to retrieve, update and delete all the information of database. This vulnerability was found on login page via ""user"" parameter."|March 21, 2024; 7:15:28 AM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-29732
 CVE-2024-29733|Improper Certificate Validation vulnerability in Apache Airflow FTP Provider.The FTP hook lacks complete certificate validation in FTP_TLS connections, which can potentially be leveraged. Implementing proper certificate validation by passing context=ssl.create_default_context() during FTP_TLS instantiation is used as mitigation to validate the certificates properly.This issue affects Apache Airflow FTP Provider: before 3.7.0.Users are recommended to upgrade to version 3.7.0, which fixes the issue.|April 21, 2024; 2:15:45 PM -0400|"V3.x:(not available) 
 
@@ -13686,6 +13740,9 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31393
 CVE-2024-3140|A vulnerability, which was classified as problematic, was found in SourceCodester Computer Laboratory Management System 1.0. This affects an unknown part of the file /classes/Users.php?f=save. The manipulation of the argument middlename leads to cross site scripting. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-258915.|April 01, 2024; 7:15:09 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3140
+CVE-2024-31406|Active debug code vulnerability exists in RoamWiFi R10 prior to 4.8.45. If this vulnerability is exploited, a network-adjacent unauthenticated attacker with access to the device may perform unauthorized operations.|April 24, 2024; 2:15:13 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-31406
 CVE-2024-3141|A vulnerability has been found in Clavister E10 and E80 up to 20240323 and classified as problematic. This vulnerability affects unknown code of the file /?Page=Node&OBJ=/System/AdvancedSettings/DeviceSettings/MiscSettings of the component Misc Settings Page. The manipulation of the argument WatchdogTimerTime/BufFloodRebootTime/MaxPipeUsers/AVCache Lifetime/HTTPipeliningMaxReq/Reassembly MaxConnections/Reassembly MaxProcessingMem/ScrSaveTime leads to cross site scripting. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-258916. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 01, 2024; 7:15:10 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3141
@@ -14100,9 +14157,15 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32041
 CVE-2024-3205|A vulnerability was found in yaml libyaml up to 0.2.5 and classified as critical. Affected by this issue is the function yaml_emitter_emit_flow_sequence_item of the file /src/libyaml/src/emitter.c. The manipulation leads to heap-based buffer overflow. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-259052. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 02, 2024; 7:15:54 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3205
+CVE-2024-32051|Insertion of sensitive information into log file issue exists in RoamWiFi R10 prior to 4.8.45. If this vulnerability is exploited, a network-adjacent unauthenticated attacker with access to the device may obtain sensitive information.|April 24, 2024; 2:15:14 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32051
 CVE-2024-3207|A vulnerability was found in ermig1979 Simd up to 6.0.134. It has been declared as critical. This vulnerability affects the function ReadUnsigned of the file src/Simd/SimdMemoryStream.h. The manipulation leads to heap-based buffer overflow. The exploit has been disclosed to the public and may be used. VDB-259054 is the identifier assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 02, 2024; 7:15:54 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3207
+CVE-2024-32078|URL Redirection to Untrusted Site ('Open Redirect') vulnerability in Foliovision FV Flowplayer Video Player.This issue affects FV Flowplayer Video Player: from n/a through 7.5.44.7212.|April 24, 2024; 12:15:09 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32078
 CVE-2024-3208|The Sydney Toolbox plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's Filterable Gallery widget in all versions up to, and including, 1.28 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.|April 09, 2024; 3:15:40 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3208
@@ -14343,6 +14406,9 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32409
 CVE-2024-32418|An issue in flusity CMS v2.33 allows a remote attacker to execute arbitrary code via the add_addon.php component.|April 21, 2024; 9:15:47 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32418
+CVE-2024-32432|Missing Authorization vulnerability in Ovic Team Ovic Addon Toolkit.This issue affects Ovic Addon Toolkit: from n/a through 2.6.1.|April 24, 2024; 12:15:09 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32432
 CVE-2024-3244|The EmbedPress – Embed PDF, Google Docs, Vimeo, Wistia, Embed YouTube Videos, Audios, Maps & Embed Any Documents in Gutenberg & Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's |||
 CVE-2024-3245|The EmbedPress – Embed PDF, Google Docs, Vimeo, Wistia, Embed YouTube Videos, Audios, Maps & Embed Any Documents in Gutenberg & Elementor plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's Youtube block in all versions up to, and including, 3.9.14 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.|April 05, 2024; 11:15:08 PM -0400|"V3.x:(not available) 
 
@@ -14563,6 +14629,9 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32603
 CVE-2024-32604|Authorization Bypass Through User-Controlled Key vulnerability in Plechev Andrey WP-Recall.This issue affects WP-Recall: from n/a through 16.26.5.|April 18, 2024; 5:15:15 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32604
+CVE-2024-3261|The Strong Testimonials WordPress plugin before 3.1.12 does not validate and escape some of its Testimonial fields before outputting them back in a page/post, which could allow users with the contributor role and above to perform Stored Cross-Site Scripting attacks. The attack requires a specific view to be performed|April 24, 2024; 1:15:47 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3261
 CVE-2024-3262|Information exposure vulnerability in RT software affecting version 4.4.1. This vulnerability allows an attacker with local access to the device to retrieve sensitive information about the application, such as vulnerability tickets, because the application stores the information in the browser cache, leading to information exposure despite session termination.|April 04, 2024; 6:15:09 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3262
@@ -14605,6 +14674,15 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32662
 CVE-2024-3267|The Bold Page Builder plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's bt_bb_price_list shortcode in all versions up to, and including, 4.8.8 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.|April 09, 2024; 3:15:40 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3267
+CVE-2024-32675|Missing Authorization vulnerability in Xfinity Soft Order Limit for WooCommerce.This issue affects Order Limit for WooCommerce: from n/a through 2.0.0.|April 24, 2024; 12:15:09 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32675
+CVE-2024-32677|Missing Authorization vulnerability in LoginPress LoginPress Pro.This issue affects LoginPress Pro: from n/a through 2.5.3.|April 24, 2024; 12:15:09 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32677
+CVE-2024-32678|Missing Authorization vulnerability in TrackShip TrackShip for WooCommerce.This issue affects TrackShip for WooCommerce: from n/a through 1.7.5.|April 24, 2024; 12:15:09 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32678
 CVE-2024-32679|Missing Authorization vulnerability in Shared Files PRO Shared Files.This issue affects Shared Files: from n/a through 1.7.16.|April 23, 2024; 11:15:49 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32679
@@ -14656,12 +14734,54 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32697
 CVE-2024-32698|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Leevio Happy Addons for Elementor allows Stored XSS.This issue affects Happy Addons for Elementor: from n/a through 3.10.4.|April 22, 2024; 4:15:39 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32698
+CVE-2024-32699|Cross-Site Request Forgery (CSRF) vulnerability in YITH YITH WooCommerce Compare.This issue affects YITH WooCommerce Compare: from n/a through 2.37.0.|April 24, 2024; 11:15:46 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32699
 CVE-2024-3270|A vulnerability classified as problematic was found in ThingsBoard up to 3.6.2. This vulnerability affects unknown code of the component AdvancedFeature. The manipulation leads to improper access controls. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. VDB-259282 is the identifier assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure and replied to be planning to fix this issue in version 3.7.|April 03, 2024; 7:15:13 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3270
+CVE-2024-32702|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Repute info systems ARForms allows Reflected XSS.This issue affects ARForms: from n/a through 6.4.|April 24, 2024; 7:15:47 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32702
+CVE-2024-32706|Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Repute info systems ARForms.This issue affects ARForms: from n/a through 6.4.|April 24, 2024; 5:15:06 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32706
+CVE-2024-32707|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in GhozyLab Image Slider Widget allows Stored XSS.This issue affects Image Slider Widget: from n/a through 1.1.125.|April 24, 2024; 7:15:47 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32707
+CVE-2024-32709|Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Plechev Andrey WP-Recall.This issue affects WP-Recall: from n/a through 16.26.5.|April 24, 2024; 4:15:38 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32709
 CVE-2024-3271|A command injection vulnerability exists in the run-llama/llama_index repository, specifically within the safe_eval function. Attackers can bypass the intended security mechanism, which checks for the presence of underscores in code generated by LLM, to execute arbitrary code. This is achieved by crafting input that does not contain an underscore but still results in the execution of OS commands. The vulnerability allows for remote code execution (RCE) on the server hosting the application.|April 15, 2024; 8:15:12 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3271
+CVE-2024-32710|Improper Neutralization of Special Elements used in an SQL Command ('SQL Injection') vulnerability in Plechev Andrey WP-Recall.This issue affects WP-Recall: from n/a through 16.26.5.|April 24, 2024; 4:15:38 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32710
+CVE-2024-32711|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in myCred allows Stored XSS.This issue affects myCred: from n/a through 2.6.3.|April 24, 2024; 7:15:47 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32711
+CVE-2024-32716|Exposure of Sensitive Information to an Unauthorized Actor vulnerability in StreamWeasels StreamWeasels Twitch Integration.This issue affects StreamWeasels Twitch Integration: from n/a through 1.7.8.|April 24, 2024; 4:15:38 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32716
+CVE-2024-32718|Server-Side Request Forgery (SSRF) vulnerability in Webangon The Pack Elementor.This issue affects The Pack Elementor addons: from n/a through 2.0.8.2.|April 24, 2024; 4:15:38 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32718
+CVE-2024-32721|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Jegtheme Jeg Elementor Kit allows Stored XSS.This issue affects Jeg Elementor Kit: from n/a through 2.6.3.|April 24, 2024; 6:15:06 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32721
+CVE-2024-32722|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Coupon & Discount Code Reveal Button allows Stored XSS.This issue affects Coupon & Discount Code Reveal Button: from n/a through 1.2.5.|April 24, 2024; 6:15:07 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32722
+CVE-2024-32723|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Code Tides Advanced Floating Content allows Stored XSS.This issue affects Advanced Floating Content: from n/a through 1.2.5.|April 24, 2024; 6:15:07 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32723
+CVE-2024-32726|Exposure of Sensitive Information to an Unauthorized Actor vulnerability in vinoth06. Frontend Dashboard.This issue affects Frontend Dashboard: from n/a through 2.2.2.|April 24, 2024; 4:15:38 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32726
+CVE-2024-32728|Cross-Site Request Forgery (CSRF) vulnerability in Cozmoslabs Paid Member Subscriptions.This issue affects Paid Member Subscriptions: from n/a through 2.11.0.|April 24, 2024; 11:15:46 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32728
 CVE-2024-32743|A cross-site scripting (XSS) vulnerability in the Settings section of WonderCMS v3.4.3 allows attackers to execute arbitrary web scripts or HTML via a crafted payload injected into the SITE LANGUAGE CONFIG parameter under the Security module.|April 17, 2024; 5:15:09 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32743
@@ -14674,9 +14794,96 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32745
 CVE-2024-32746|A cross-site scripting (XSS) vulnerability in the Settings section of WonderCMS v3.4.3 allows attackers to execute arbitrary web scripts or HTML via a crafted payload injected into the MENU parameter under the Menu module.|April 17, 2024; 5:15:09 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32746
+CVE-2024-32772|Authorization Bypass Through User-Controlled Key vulnerability in Metagauss ProfileGrid.This issue affects ProfileGrid : from n/a through 5.7.9.|April 24, 2024; 7:15:47 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32772
+CVE-2024-32773|Cross-Site Request Forgery (CSRF) vulnerability in WP Royal Royal Elementor Kit.This issue affects Royal Elementor Kit: from n/a through 1.0.116.|April 24, 2024; 11:15:46 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32773
+CVE-2024-32775|Server-Side Request Forgery (SSRF) vulnerability in Pavex Embed Google Photos album.This issue affects Embed Google Photos album: from n/a through 2.1.9.|April 24, 2024; 4:15:39 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32775
+CVE-2024-32780|Exposure of Sensitive Information to an Unauthorized Actor vulnerability in E4J s.R.L. VikRentCar.This issue affects VikRentCar: from n/a through 1.3.2.|April 24, 2024; 4:15:39 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32780
+CVE-2024-32781|Exposure of Sensitive Information to an Unauthorized Actor vulnerability in ThemeHigh Email Customizer for WooCommerce.This issue affects Email Customizer for WooCommerce: from n/a through 2.6.0.|April 24, 2024; 4:15:39 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32781
+CVE-2024-32782|Exposure of Sensitive Information to an Unauthorized Actor vulnerability in HasThemes HT Mega.This issue affects HT Mega: from n/a through 2.4.7.|April 24, 2024; 4:15:39 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32782
+CVE-2024-32785|Cross-Site Request Forgery (CSRF) vulnerability in Webangon The Pack Elementor addons allows Cross-Site Scripting (XSS).This issue affects The Pack Elementor addons: from n/a through 2.0.8.3.|April 24, 2024; 7:15:47 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32785
+CVE-2024-32788|Insertion of Sensitive Information into Log File vulnerability in Frédéric GILLES FG Joomla to WordPress.This issue affects FG Joomla to WordPress: from n/a through 4.20.2.|April 24, 2024; 4:15:39 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32788
+CVE-2024-32789|Cross-Site Request Forgery (CSRF) vulnerability in Seers allows Cross-Site Scripting (XSS).This issue affects Seers: from n/a through 8.1.0.|April 24, 2024; 7:15:47 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32789
+CVE-2024-32791|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Leap13 Premium Addons for Elementor allows Stored XSS.This issue affects Premium Addons for Elementor: from n/a through 4.10.25.|April 24, 2024; 5:15:06 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32791
+CVE-2024-32793|Cross-Site Request Forgery (CSRF) vulnerability in Paid Memberships Pro.This issue affects Paid Memberships Pro: from n/a through 2.12.10.|April 24, 2024; 11:15:47 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32793
+CVE-2024-32794|Cross-Site Request Forgery (CSRF) vulnerability in Paid Memberships Pro.This issue affects Paid Memberships Pro: from n/a through 2.12.10.|April 24, 2024; 11:15:47 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32794
+CVE-2024-32795|Cross-Site Request Forgery (CSRF) vulnerability in Revmakx WPCal.Io – Easy Meeting Scheduler.This issue affects WPCal.Io – Easy Meeting Scheduler: from n/a through 0.9.5.8.|April 24, 2024; 11:15:47 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32795
+CVE-2024-32796|Insertion of Sensitive Information into Log File vulnerability in Very Good Plugins WP Fusion Lite.This issue affects WP Fusion Lite: from n/a through 3.42.10.|April 24, 2024; 4:15:40 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32796
+CVE-2024-32801|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in ShapedPlugin Widget Post Slider allows Stored XSS.This issue affects Widget Post Slider: from n/a through 1.3.5.|April 24, 2024; 5:15:07 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32801
+CVE-2024-32803|Server-Side Request Forgery (SSRF) vulnerability in 2day.Sk, Webikon SuperFaktura WooCommerce.This issue affects SuperFaktura WooCommerce: from n/a through 1.40.3.|April 24, 2024; 4:15:40 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32803
+CVE-2024-32806|Cross-Site Request Forgery (CSRF) vulnerability in CoSchedule Headline Analyzer.This issue affects Headline Analyzer: from n/a through 1.3.3.|April 24, 2024; 11:15:47 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32806
+CVE-2024-32808|Authorization Bypass Through User-Controlled Key vulnerability in Metagauss ProfileGrid.This issue affects ProfileGrid : from n/a through 5.7.9.|April 24, 2024; 7:15:48 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32808
+CVE-2024-32812|Server-Side Request Forgery (SSRF) vulnerability in Podlove Podlove Podcast Publisher.This issue affects Podlove Podcast Publisher: from n/a through 4.0.11.|April 24, 2024; 4:15:40 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32812
+CVE-2024-32815|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Jeroen Peters All-in-one Like Widget allows Stored XSS.This issue affects All-in-one Like Widget: from n/a through 2.2.7.|April 24, 2024; 5:15:07 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32815
+CVE-2024-32816|Exposure of Sensitive Information to an Unauthorized Actor vulnerability in PickPlugins Post Grid.This issue affects Post Grid: from n/a through 2.2.78.|April 24, 2024; 4:15:40 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32816
+CVE-2024-32817|Deserialization of Untrusted Data vulnerability in Import and export users and customers.This issue affects Import and export users and customers: from n/a through 1.26.2.|April 24, 2024; 4:15:40 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32817
+CVE-2024-32819|Server-Side Request Forgery (SSRF) vulnerability in Culqi.This issue affects Culqi: from n/a through 3.0.14.|April 24, 2024; 3:15:47 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32819
+CVE-2024-32823|Authorization Bypass Through User-Controlled Key vulnerability in FeedbackWP Rate my Post – WP Rating System.This issue affects Rate my Post – WP Rating System: from n/a through 3.4.4.|April 24, 2024; 7:15:48 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32823
+CVE-2024-32825|Insertion of Sensitive Information into Log File vulnerability in Patrick Posner Simply Static.This issue affects Simply Static: from n/a through 3.1.3.|April 24, 2024; 4:15:41 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32825
 CVE-2024-3283|A vulnerability in mintplex-labs/anything-llm allows users with manager roles to escalate their privileges to admin roles through a mass assignment issue. The '/admin/system-preferences' API endpoint improperly authorizes manager-level users to modify the 'multi_user_mode' system variable, enabling them to access the '/api/system/enable-multi-user' endpoint and create a new admin user. This issue results from the endpoint accepting a full JSON object in the request body without proper validation of modifiable fields, leading to unauthorized modification of system settings and subsequent privilege escalation.|April 10, 2024; 1:15:56 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3283
+CVE-2024-32833|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Nick Halsey List Custom Taxonomy Widget allows Stored XSS.This issue affects List Custom Taxonomy Widget: from n/a through 4.1.|April 24, 2024; 5:15:07 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32833
+CVE-2024-32834|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in WebToffee WooCommerce Shipping Label allows Stored XSS.This issue affects WooCommerce Shipping Label: from n/a through 2.3.8.|April 24, 2024; 5:15:08 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32834
+CVE-2024-32835|Deserialization of Untrusted Data vulnerability in WebToffee Import Export WordPress Users.This issue affects Import Export WordPress Users: from n/a through 2.5.3.|April 24, 2024; 4:15:41 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32835
+CVE-2024-32836|Unrestricted Upload of File with Dangerous Type vulnerability in WP Lab WP-Lister Lite for eBay.This issue affects WP-Lister Lite for eBay: from n/a through 3.5.11.|April 24, 2024; 4:15:41 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32836
 CVE-2024-3285|The Slider, Gallery, and Carousel by MetaSlider – Responsive WordPress Slideshows plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's 'metaslider' shortcode in all versions up to, and including, 3.70.0 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers, with contributor-level access and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.|April 11, 2024; 4:15:50 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3285
@@ -14686,12 +14893,51 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32866
 CVE-2024-32869|Hono is a Web application framework that provides support for any JavaScript runtime. Prior to version 4.2.7, when using serveStatic with deno, it is possible to traverse the directory where `main.ts` is located. This can result in retrieval of unexpected files. Version 4.2.7 contains a patch for the issue.|April 23, 2024; 5:15:48 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32869
+CVE-2024-32872|Umbraco workflow provides workflows for the Umbraco content management system. Prior to versions 10.3.9, 12.2.6, and 13.0.6, an Umbraco Backoffice user can modify requests to a particular API endpoint to include SQL, which will be executed by the server. Umbraco Workflow versions 10.3.9, 12.2.6, 13.0.6, as well as Umbraco Plumber version 10.1.2, contain a patch for this issue.|April 24, 2024; 11:15:48 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32872
 CVE-2024-32875|Hugo is a static site generator. Starting in version 0.123.0 and prior to version 0.125.3, title arguments in Markdown for links and images not escaped in internal render hooks. Hugo users who are impacted are those who have these hooks enabled and do not trust their Markdown content files. The issue is patched in v0.125.3. As a workaround, replace the templates with user defined templates or disable the internal templates.|April 23, 2024; 5:15:48 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32875
+CVE-2024-32876|NewPipe is an Android app for video streaming written in Java. It supports exporting and importing backups, as a way to let users move their data to a new device effortlessly. However, in versions 0.13.4 through 0.26.1, importing a backup file from an untrusted source could have resulted in Arbitrary Code Execution. This is because backups are serialized/deserialized using Java's Object Serialization Stream Protocol, which can allow constructing any class in the app, unless properly restricted.To exploit this vulnerability, an attacker would need to build a backup file containing the exploit, and then persuade a user into importing it. During the import process, the malicious code would be executed, possibly crashing the app, stealing user data from the NewPipe app, performing nasty actions through Android APIs, and attempting Android JVM/Sandbox escapes through vulnerabilities in the Android OS.The attack can take place only if the user imports a malicious backup file, so an attacker would need to trick a user into importing a backup file from a source they can control. The implementation details of the malicious backup file can be independent of the attacked user or the device they are being run on, and do not require additional privileges.All NewPipe versions from 0.13.4 to 0.26.1 are vulnerable. NewPipe version 0.27.0 fixes the issue by doing the following: Restrict the classes that can be deserialized when calling Java's Object Serialization Stream Protocol, by adding a whitelist with only innocuous data-only classes that can't lead to Arbitrary Code Execution; deprecate backups serialized with Java's Object Serialization Stream Protocol; use JSON serialization for all newly created backups (but still include an alternative file serialized with Java's Object Serialization Stream Protocol in the backup zip for backwards compatibility); show a warning to the user when attempting to import a backup where the only available serialization mode is Java's Object Serialization Stream Protocol (note that in the future this serialization mode will be removed completely).|April 24, 2024; 3:15:47 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32876
+CVE-2024-32879|Python Social Auth is a social authentication/registration mechanism. Prior to version 5.4.1, due to default case-insensitive collation in MySQL or MariaDB databases, third-party authentication user IDs are not case-sensitive and could cause different IDs to match. This issue has been addressed by a fix released in version 5.4.1. An immediate workaround would be to change collation of the affected field.|April 24, 2024; 4:15:07 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32879
 CVE-2024-3293|The rtMedia for WordPress, BuddyPress and bbPress plugin for WordPress is vulnerable to blind SQL Injection via the rtmedia_gallery shortcode in all versions up to, and including, 4.6.18 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for authenticated attackers, with contributor-level access and above, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.|April 22, 2024; 10:15:48 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3293
+CVE-2024-32947|Cross-Site Request Forgery (CSRF) vulnerability in AlumniOnline Web Services LLC WP ADA Compliance Check Basic.This issue affects WP ADA Compliance Check Basic: from n/a through 3.1.3.|April 24, 2024; 11:15:48 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32947
+CVE-2024-32948|Missing Authorization vulnerability in Repute Infosystems ARMember.This issue affects ARMember: from n/a through 4.0.28.|April 24, 2024; 3:15:48 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32948
+CVE-2024-32950|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in DeBAAT WP Media Category Management allows Reflected XSS.This issue affects WP Media Category Management: from n/a through 2.2.|April 24, 2024; 5:15:08 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32950
+CVE-2024-32951|Missing Authorization vulnerability in BloomPixel Max Addons Pro for Bricks.This issue affects Max Addons Pro for Bricks: from n/a through 1.6.1.|April 24, 2024; 3:15:48 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32951
+CVE-2024-32952|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in BloomPixel Max Addons Pro for Bricks allows Reflected XSS.This issue affects Max Addons Pro for Bricks: from n/a through 1.6.1.|April 24, 2024; 5:15:08 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32952
+CVE-2024-32953|Insertion of Sensitive Information into Log File vulnerability in Newsletters.This issue affects Newsletters: from n/a through 4.9.5.|April 24, 2024; 4:15:41 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32953
+CVE-2024-32954|Unrestricted Upload of File with Dangerous Type vulnerability in Tribulant Newsletters.This issue affects Newsletters: from n/a through 4.9.5.|April 24, 2024; 7:15:48 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32954
+CVE-2024-32955|Server-Side Request Forgery (SSRF) vulnerability in Foliovision FV Flowplayer Video Player.This issue affects FV Flowplayer Video Player: from n/a through 7.5.43.7212.|April 24, 2024; 3:15:49 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32955
+CVE-2024-32956|Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting') vulnerability in Rometheme RomethemeKit For Elementor allows Stored XSS.This issue affects RomethemeKit For Elementor: from n/a through 1.4.1.|April 24, 2024; 5:15:08 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32956
+CVE-2024-32958|Cross-Site Request Forgery (CSRF) vulnerability in Giorgos Sarigiannidis Slash Admin allows Cross-Site Scripting (XSS).This issue affects Slash Admin: from n/a through 3.8.1.|April 24, 2024; 11:15:48 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-32958
 CVE-2024-3296|A timing-based side-channel exists in the rust-openssl package, which could be sufficient to recover a plaintext across a network in a Bleichenbacher-style attack. To achieve successful decryption, an attacker would have to be able to send a large number of trial messages for decryption. The vulnerability affects the legacy PKCS#1v1.5 RSA encryption padding mode.|April 04, 2024; 10:15:11 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3296
@@ -14773,6 +15019,9 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3352
 CVE-2024-3353|A vulnerability was found in SourceCodester Aplaya Beach Resort Online Reservation System 1.0 and classified as critical. This issue affects some unknown processing of the file admin/mod_reports/index.php. The manipulation of the argument categ/end leads to sql injection. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-259457 was assigned to this vulnerability.|April 05, 2024; 4:15:09 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3353
+CVE-2024-33531|cdbattags lua-resty-jwt 0.2.3 allows attackers to bypass all JWT-parsing signature checks by crafting a JWT with an enc header with the value A256GCM.|April 24, 2024; 2:15:14 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-33531
 CVE-2024-3354|A vulnerability was found in SourceCodester Aplaya Beach Resort Online Reservation System 1.0. It has been classified as critical. Affected is an unknown function of the file admin/mod_users/index.php. The manipulation of the argument id leads to sql injection. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. VDB-259458 is the identifier assigned to this vulnerability.|April 05, 2024; 4:15:09 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3354
@@ -14815,6 +15064,9 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3366
 CVE-2024-3369|A vulnerability, which was classified as critical, has been found in code-projects Car Rental 1.0. Affected by this issue is some unknown functionality of the file add-vehicle.php. The manipulation of the argument Upload Image leads to unrestricted upload. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. VDB-259490 is the identifier assigned to this vulnerability.|April 06, 2024; 7:15:09 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3369
+CVE-2024-3371|MongoDB Compass may accept and use insufficiently validated input from an untrusted external source. This may cause unintended application behavior, including data disclosure and enabling attackers to impersonate users. This issue affects MongoDB Compass versions 1.35.0 to 1.40.5.|April 24, 2024; 1:15:47 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3371
 CVE-2024-3376|A vulnerability classified as critical has been found in SourceCodester Computer Laboratory Management System 1.0. This affects an unknown part of the file config.php. The manipulation of the argument url leads to execution after redirect. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-259497 was assigned to this vulnerability.|April 06, 2024; 8:15:08 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3376
@@ -15329,6 +15581,60 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4074
 CVE-2024-4075|A vulnerability classified as problematic has been found in Kashipara Online Furniture Shopping Ecommerce Website 1.0. This affects an unknown part of the file login.php. The manipulation of the argument txtAddress leads to cross site scripting. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-261801 was assigned to this vulnerability.|April 23, 2024; 7:15:49 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4075
+CVE-2024-4111|A vulnerability was found in Tenda TX9 22.03.02.10. It has been rated as critical. Affected by this issue is the function sub_42BD7C of the file /goform/SetLEDCfg. The manipulation of the argument time leads to stack-based buffer overflow. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. VDB-261854 is the identifier assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 24, 2024; 10:15:45 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4111
+CVE-2024-4112|A vulnerability classified as critical has been found in Tenda TX9 22.03.02.10. This affects the function sub_42CB94 of the file /goform/SetVirtualServerCfg. The manipulation of the argument list leads to stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-261855. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 24, 2024; 11:15:48 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4112
+CVE-2024-4113|A vulnerability classified as critical was found in Tenda TX9 22.03.02.10. This vulnerability affects the function sub_42D4DC of the file /goform/SetSysTimeCfg. The manipulation of the argument time leads to stack-based buffer overflow. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-261856. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 24, 2024; 11:15:48 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4113
+CVE-2024-4114|A vulnerability, which was classified as critical, has been found in Tenda TX9 22.03.02.10. This issue affects the function sub_42C014 of the file /goform/PowerSaveSet. The manipulation of the argument time leads to stack-based buffer overflow. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-261857 was assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 24, 2024; 11:15:49 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4114
+CVE-2024-4115|A vulnerability, which was classified as critical, was found in Tenda W15E 15.11.0.14. Affected is the function formAddDnsForward of the file /goform/AddDnsForward. The manipulation of the argument DnsForwardRule leads to stack-based buffer overflow. It is possible to launch the attack remotely. The exploit has been disclosed to the public and may be used. VDB-261858 is the identifier assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 24, 2024; 12:15:10 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4115
+CVE-2024-4116|A vulnerability has been found in Tenda W15E 15.11.0.14 and classified as critical. Affected by this vulnerability is the function formDelDhcpRule of the file /goform/DelDhcpRule. The manipulation of the argument delDhcpIndex leads to stack-based buffer overflow. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-261859. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 24, 2024; 12:15:10 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4116
+CVE-2024-4117|A vulnerability was found in Tenda W15E 15.11.0.14 and classified as critical. Affected by this issue is the function formDelPortMapping of the file /goform/DelPortMapping. The manipulation of the argument portMappingIndex leads to stack-based buffer overflow. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-261860. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 24, 2024; 12:15:10 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4117
+CVE-2024-4118|A vulnerability was found in Tenda W15E 15.11.0.14. It has been classified as critical. This affects the function formIPMacBindAdd of the file /goform/addIpMacBind. The manipulation of the argument IPMacBindRule leads to stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-261861 was assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 24, 2024; 1:15:47 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4118
+CVE-2024-4119|A vulnerability was found in Tenda W15E 15.11.0.14. It has been declared as critical. This vulnerability affects the function formIPMacBindDel of the file /goform/delIpMacBind. The manipulation of the argument IPMacBindIndex leads to stack-based buffer overflow. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. VDB-261862 is the identifier assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 24, 2024; 1:15:47 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4119
+CVE-2024-4120|A vulnerability was found in Tenda W15E 15.11.0.14. It has been rated as critical. This issue affects the function formIPMacBindModify of the file /goform/modifyIpMacBind. The manipulation of the argument IPMacBindRuleId/IPMacBindRuleIp/IPMacBindRuleMac/IPMacBindRuleRemark leads to stack-based buffer overflow. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-261863. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 24, 2024; 2:15:11 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4120
+CVE-2024-4121|A vulnerability classified as critical has been found in Tenda W15E 15.11.0.14. Affected is the function formQOSRuleDel. The manipulation of the argument qosIndex leads to stack-based buffer overflow. It is possible to launch the attack remotely. The identifier of this vulnerability is VDB-261864. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 24, 2024; 2:15:11 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4121
+CVE-2024-4122|A vulnerability classified as critical was found in Tenda W15E 15.11.0.14. Affected by this vulnerability is the function formSetDebugCfg of the file /goform/setDebugCfg. The manipulation of the argument enable/level/module leads to stack-based buffer overflow. The attack can be launched remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-261865 was assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 24, 2024; 2:15:11 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4122
+CVE-2024-4123|A vulnerability, which was classified as critical, has been found in Tenda W15E 15.11.0.14. Affected by this issue is the function formSetPortMapping of the file /goform/SetPortMapping. The manipulation of the argument portMappingServer/portMappingProtocol/portMappingWan/porMappingtInternal/portMappingExternal leads to stack-based buffer overflow. The attack may be launched remotely. The exploit has been disclosed to the public and may be used. VDB-261866 is the identifier assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 24, 2024; 3:15:47 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4123
+CVE-2024-4124|A vulnerability, which was classified as critical, was found in Tenda W15E 15.11.0.14. This affects the function formSetRemoteWebManage of the file /goform/SetRemoteWebManage. The manipulation of the argument remoteIP leads to stack-based buffer overflow. It is possible to initiate the attack remotely. The exploit has been disclosed to the public and may be used. The associated identifier of this vulnerability is VDB-261867. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 24, 2024; 3:15:47 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4124
+CVE-2024-4125|A vulnerability has been found in Tenda W15E 15.11.0.14 and classified as critical. This vulnerability affects the function formSetStaticRoute of the file /goform/setStaticRoute. The manipulation of the argument staticRouteIndex leads to stack-based buffer overflow. The attack can be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier of this vulnerability is VDB-261868. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 24, 2024; 3:15:47 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4125
+CVE-2024-4126|A vulnerability was found in Tenda W15E 15.11.0.14 and classified as critical. This issue affects the function formSetSysTime of the file /goform/SetSysTimeCfg. The manipulation of the argument manualTime leads to stack-based buffer overflow. The attack may be initiated remotely. The exploit has been disclosed to the public and may be used. The identifier VDB-261869 was assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 24, 2024; 4:15:08 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4126
+CVE-2024-4127|A vulnerability was found in Tenda W15E 15.11.0.14. It has been classified as critical. Affected is the function guestWifiRuleRefresh. The manipulation of the argument qosGuestDownstream leads to stack-based buffer overflow. It is possible to launch the attack remotely. VDB-261870 is the identifier assigned to this vulnerability. NOTE: The vendor was contacted early about this disclosure but did not respond in any way.|April 24, 2024; 4:15:08 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4127
+CVE-2024-4141|Out-of-bounds array write in Xpdf 4.05 and earlier, triggered by an invalid character code in a Type 1 font. The root problem was a bounds check that was being optimized away by modern compilers.|April 24, 2024; 3:15:47 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-4141
 Exploiting this vulnerability is possible when running Black on untrusted input, or if you habitually put thousands of leading tab characters in your docstrings.|March 19, 2024; 1:15:09 AM -0400|V3.x:(not available) V2.0:(not available)  (None)|https://nvd.nist.gov/vuln/detail/CVE-2024-21503|
 However, some local environment variables may have been set by the developer / CI environment for testing purposes, such as dropping the database during the application startup or trusting all TLS certificates to accept self-signed certificates. If these properties are configured using environment variables or the .env facility, they are captured into the built application. It leads to dangerous behavior if the application does not override these values.||||
 Mitigation:||||
