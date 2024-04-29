@@ -6326,6 +6326,9 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-2504
 CVE-2024-25048|IBM MQ Appliance 9.3 CD and LTS are vulnerable to a heap-based buffer overflow, caused by improper bounds checking. A remote authenticated attacker could overflow a buffer and execute arbitrary code on the system or cause the server to crash.  IBM X-Force ID:  283137.|April 27, 2024; 8:15:10 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-25048
+CVE-2024-25050|IBM i 7.2, 7.3, 7.4, 7.5 and IBM Rational Development Studio for i 7.2, 7.3, 7.4, 7.5 networking and compiler infrastructure could allow a local user to gain elevated privileges due to an unqualified library call. A malicious actor could cause user-controlled code to run with administrator privileges.  IBM X-Force ID:  283242.|April 28, 2024; 9:15:08 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-25050
 CVE-2024-25062|An issue was discovered in libxml2 before 2.11.7 and 2.12.x before 2.12.5. When using the XML Reader interface with DTD validation and XInclude expansion enabled, processing crafted XML documents can lead to an xmlValidatePopElement use-after-free.|February 04, 2024; 11:15:45 AM -0500|V3.1: 7.5 HIGHV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2024-25062&vector=AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2024-25062
 CVE-2024-25063|Due to insufficient server-side validation, a successful exploit of this vulnerability could allow an attacker to gain access to certain URLs that the attacker should not have access to.|March 01, 2024; 10:15:06 PM -0500|V3.1: 7.5 HIGHV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2024-25063&vector=AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2024-25063
 CVE-2024-25064|Due to insufficient server-side validation, an attacker with login privileges could access certain resources that the attacker should not have access to by changing parameter values.|March 01, 2024; 10:15:06 PM -0500|V3.1: 4.3 MEDIUMV2.0:(not available)  (https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?name=CVE-2024-25064&vector=AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N&version=3.1&source=NIST)|https://nvd.nist.gov/vuln/detail/CVE-2024-25064
@@ -9743,6 +9746,12 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-26925
 CVE-2024-26926|"In the Linux kernel, the following vulnerability has been resolved:binder: check offset alignment in binder_get_object()Commit 6d98eb95b450 (""binder: avoid potential data leakage when copyingtxn"") introduced changes to how binder objects are copied. In doing so,it unintentionally removed an offset alignment check done through callsto binder_alloc_copy_from_buffer() -> check_buffer().These calls were replaced in binder_get_object() with copy_from_user(),so now an explicit offset alignment check is needed here. This avoidslater complications when unwinding the objects gets harder.It is worth noting this check existed prior to commit 7a67a39320df(""binder: add function to copy binder object from buffer""), likelyremoved due to redundancy at the time."|April 25, 2024; 2:15:57 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-26926
+CVE-2024-26927|"In the Linux kernel, the following vulnerability has been resolved:ASoC: SOF: Add some bounds checking to firmware dataSmatch complains about ""head->full_size - head->header_size"" canunderflow.  To some extent, we're always going to have to trust thefirmware a bit.  However, it's easy enough to add a check for negatives,and let's add a upper bounds check as well."|April 28, 2024; 8:15:21 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-26927
+CVE-2024-26928|In the Linux kernel, the following vulnerability has been resolved:smb: client: fix potential UAF in cifs_debug_files_proc_show()Skip sessions that are being teared down (status == SES_EXITING) toavoid UAF.|April 28, 2024; 8:15:21 AM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-26928
 CVE-2024-2693|The Link Whisper Free plugin for WordPress is vulnerable to PHP Object Injection in all versions up to, and including, 0.7.1 via deserialization of untrusted input of the 'mfn-page-items' post meta value. This makes it possible for authenticated attackers, with contributor-level access and above, to inject a PHP Object. No known POP chain is present in the vulnerable plugin. If a POP chain is present via an additional plugin or theme installed on the target system, it could allow the attacker to delete arbitrary files, retrieve sensitive data, or execute code.|April 09, 2024; 3:15:36 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-2693
@@ -15545,6 +15554,15 @@ V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3387
 CVE-2024-3388|A vulnerability in the GlobalProtect Gateway in Palo Alto Networks PAN-OS software enables an authenticated attacker to impersonate another user and send network packets to internal assets. However, this vulnerability does not allow the attacker to receive response packets from those internal assets.|April 10, 2024; 1:15:57 PM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3388
+CVE-2024-33883|The ejs (aka Embedded JavaScript templates) package before 3.1.10 for Node.js lacks certain pollution protection.|April 28, 2024; 12:15:23 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-33883
+CVE-2024-33891|Delinea Secret Server before 11.7.000001 allows attackers to bypass authentication via the SOAP API in SecretServer/webservices/SSWebService.asmx. This is related to a hardcoded key, the use of the integer 2 for the Admin user, and removal of the oauthExpirationId attribute.|April 28, 2024; 7:15:07 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-33891
+CVE-2024-33899|RARLAB WinRAR before 7.00, on Linux and UNIX platforms, allows attackers to spoof the screen output, or cause a denial of service, via ANSI escape sequences.|April 28, 2024; 8:15:07 PM -0400|"V3.x:(not available) 
+
+V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-33899
 CVE-2024-3400|A command injection vulnerability in the GlobalProtect feature of Palo Alto Networks PAN-OS software for specific PAN-OS versions and distinct feature configurations may enable an unauthenticated attacker to execute arbitrary code with root privileges on the firewall.Fixes for PAN-OS 10.2, PAN-OS 11.0, and PAN-OS 11.1 are in development and are expected to be released by April 14, 2024. Cloud NGFW, Panorama appliances, and Prisma Access are not impacted by this vulnerability. All other versions of PAN-OS are also not impacted.|April 12, 2024; 4:15:06 AM -0400|"V3.x:(not available) 
 
 V2.0:(not available) (None)"|https://nvd.nist.gov/vuln/detail/CVE-2024-3400
