@@ -8,4 +8,3 @@ CVE-1999-1506,"Vulnerability in SMI Sendmail 4.0 and earlier, on SunOS up to 4.0
 CVE-1999-0084,Certain NFS servers allow users to use mknod to gain privileges by creating a writable kmem device and setting the UID to 0.
 CVE-2000-0388,Buffer overflow in FreeBSD libmytinfo library allows local users to execute commands via a long TERMCAP environmental variable.
 CVE-1999-0209,The SunView (SunTools) selection_svc facility allows remote users to read files.
-...
