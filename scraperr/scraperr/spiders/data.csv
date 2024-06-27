@@ -1,0 +1,11 @@
+url,value
+CVE-1999-0095,"El comando de depuración de Sendmail está activado, permitiendo a atacantes ejecutar comandos como root."
+CVE-1999-0082,CWD ~root command in ftpd allows root access.
+CVE-1999-1471,Buffer overflow in passwd in BSD based operating systems 4.3 and earlier allows local users to gain root privileges by specifying a long shell or GECOS field.
+CVE-1999-1122,Vulnerability in restore in SunOS 4.0.3 and earlier allows local users to gain privileges.
+CVE-1999-1467,"Vulnerability in rcp on SunOS 4.0.x allows remote attackers from trusted hosts to execute arbitrary commands as root, possibly related to the configuration of the nobody user."
+CVE-1999-1506,"Vulnerability in SMI Sendmail 4.0 and earlier, on SunOS up to 4.0.3, allows remote attackers to access user bin."
+CVE-1999-0084,Certain NFS servers allow users to use mknod to gain privileges by creating a writable kmem device and setting the UID to 0.
+CVE-2000-0388,Buffer overflow in FreeBSD libmytinfo library allows local users to execute commands via a long TERMCAP environmental variable.
+CVE-1999-0209,The SunView (SunTools) selection_svc facility allows remote users to read files.
+...
