@@ -15,12 +15,12 @@ class SpiderSpider(scrapy.Spider):
 
         for vulnerabilities1 in data['vulnerabilities']:
              data1=(vulnerabilities1['cve'])
-             abc=(data1['id'])
+             data2=(data1['id'])
              print(data1['id'])
              
 
-             for abc in data1['descriptions']:
-                 print(abc['value'])
+             for data2 in data1['descriptions']:
+                 print(data2['value'])
 
             # print(data1['published'])
             # print(data1['lastModified'])
@@ -28,8 +28,9 @@ class SpiderSpider(scrapy.Spider):
 
              yield {
             'url' : (data1['id']),
-            'value':  (abc['value'])
+            'value':  (data2['value'])
             }
+             
              
              
            
