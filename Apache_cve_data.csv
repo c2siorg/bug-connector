@@ -1,0 +1,951 @@
+type,sha/number,title/message,html_url
+commit,5971ee662032d861024462a18f950e4eed4ab8ad,"Fail if SSLInsecureRenegotiation is used with mod_ssl, CVE-2009-3555
+is now approaching 15 years old.
+
+* modules/ssl/ssl_engine_config.c (ssl_cmd_SSLInsecureRenegotiation):
+  Fail if used.
+  (ssl_config_server_new, ssl_config_server_merge): Remove insecure
+  reneg handling.
+
+* modules/ssl/ssl_engine_init.c (ssl_init_ctx_protocol): Remove
+  insecure_reneg handling.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1917600 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/5971ee662032d861024462a18f950e4eed4ab8ad
+commit,c0ce3a729218279a6b4b03aab7a71bb8ae9d6259,"remove request details from error documents (CVE-2019-10092).
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1864191 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/c0ce3a729218279a6b4b03aab7a71bb8ae9d6259
+commit,f6fcec7974993fdae6ee442416cad2f1014ba3b9,"mod_proxy_http: follow up to r1836588: fix drop of spurious 100 responses.
+
+r1836588 broke t/security/CVE-2008-2364.t by forwarding more than one
+""100 continue"" response, fix it.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1836750 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/f6fcec7974993fdae6ee442416cad2f1014ba3b9
+commit,2302082b337cdf3948ed7d43051ec21b60fb1618,"httpdunit: merge CVE-2017-9788 regression tests from feature branch
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1801998 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/2302082b337cdf3948ed7d43051ec21b60fb1618
+commit,0dc9280e94ced62ebe6f5206616540764d6afe2f,"CVE-2017-9788: add unit tests for get_digest_rec()
+
+Including the module source is a dirty hack, but maybe the direct way is
+best for now. More functional tests are still TODO.
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/branches/httpdunit@1801996 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/0dc9280e94ced62ebe6f5206616540764d6afe2f
+commit,63047d39ba21f0507eadb11262467624ededb9eb,"ap_find_token: add unit tests
+
+Add previously embargoed test case for CVE-2017-7668.
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/branches/httpdunit@1799377 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/63047d39ba21f0507eadb11262467624ededb9eb
+commit,2a99e0920b29cd6baa36dd12c8c24193c0e76f75,"util.c: ensure all TEST_CHAR loops stop at the null terminator
+
+In the aftermath of CVE-2017-7668, decouple the business logic (""is NULL
+a T_HTTP_CTRL"") from the postcondition (""must not go past the end of the
+string""). The NULL-byte classification in the TEST_CHAR table may change
+in the future.
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1799375 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/2a99e0920b29cd6baa36dd12c8c24193c0e76f75
+commit,734d6332aad0f0fcaa0237a67991daeda7b6f609,"CVE-2017-3167: add documentation to ap_get_basic_auth_pw()
+
+Now that we've released, add clarifying comments to the now-deprecated
+API.
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1799374 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/734d6332aad0f0fcaa0237a67991daeda7b6f609
+commit,c18ad646a55a0ea3819793cb15830321ed4ab160,"mod_mime: fix quoted pair scanning
+
+
+Submitted By: ylavic
+CVEID: CVE-2017-7679
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1797550 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/c18ad646a55a0ea3819793cb15830321ed4ab160
+commit,41b123254c49c2ab29cad344eee8f7978dfce0f7,"short-circuit on NULL
+
+Submitted By: jchampion
+CVEID: CVE-2017-7668
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1796350 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/41b123254c49c2ab29cad344eee8f7978dfce0f7
+commit,92ab67cbad4e148c4ed97bba713e7b320a4412f9,"core: deprecate and replace ap_get_basic_auth_pw
+
+  *) core: Deprecate ap_get_basic_auth_pw() and add 
+    ap_get_basic_auth_components(). 
+
+Submitted By: Emmanuel Dreyfus <manu netbsd.org>, Jacob Champion, Eric Covener
+CVEID: CVE-2017-3167
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1796348 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/92ab67cbad4e148c4ed97bba713e7b320a4412f9
+commit,11250ebd61ba9173b172ab253f5634ba19fad205,"mod_ssl: fix ctx passed to ssl_io_filter_error()
+
+Consistently pass the expected bio_filter_in_ctx_t
+to ssl_io_filter_error(). 
+
+Submitted By: Yann Ylavic
+CVEID: CVE-2017-3169
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1796343 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/11250ebd61ba9173b172ab253f5634ba19fad205
+commit,832cbdb76ae5ff8709a910c25684c0d8cf3ddaef,"On the trunk:
+
+mod_http2: fix for crash when running out of memory. Initial patch by Robert Swiecki <robert@swiecki.net>
+CVEID: CVE-2017-7659
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1781304 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/832cbdb76ae5ff8709a910c25684c0d8cf3ddaef
+commit,c671673db96e286e2321d5babf05c767cb76a1ef,"SECURITY: CVE-2016-8740
+
+mod_http2: properly crafted, endless HTTP/2 CONTINUATION frames could be used to exhaust all server's memory.
+
+Reported by: Naveen Tiwari <naveen.tiwari@asu.edu> and CDF/SEFCOM at Arizona State University
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1772576 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/c671673db96e286e2321d5babf05c767cb76a1ef
+commit,ebd03293e6c97ae567ff0b86cc3fffab7206163d,"mod_http2: support for several different request engines per connection, fixes CVE-2016-1546
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1733727 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/ebd03293e6c97ae567ff0b86cc3fffab7206163d
+commit,e2017967f973e0c418fb85488cd948c955a08d52,"Support for OpenSSL 1.1.0:
+- use SSL_peek instead of looping with
+  has_buffered_data().
+
+This fixes t/security/CVE-2009-3555.t where
+has_buffered_data() doesn't help, because it
+finds the buffered data and doesn't call
+SSL_read(), so the reneg handshake isn't
+triggered. SSL_peek() for 0 bytes seems to
+reliably trigger the reneg in every case.
+
+No more polling/sleeping. The code for the
+OpenSSL 1.1.0 case is now again very close to
+the pre 1.1.0 case.
+
+Still need to run the full test suite with a
+clean build.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1730316 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/e2017967f973e0c418fb85488cd948c955a08d52
+commit,db81019ab88734ed35fa70294a0cfa7a19743f73,"SECURITY: CVE-2015-3185 (cve.mitre.org)
+
+Replacement of ap_some_auth_required (unusable in Apache httpd 2.4)
+with new ap_some_authn_required and ap_force_authn hook.
+
+Submitted by: breser
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1684524 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/db81019ab88734ed35fa70294a0cfa7a19743f73
+commit,be0f5335e3e73eb63253b050fdc23f252f5c8ae3,"  *) SECURITY: CVE-2015-0253 (cve.mitre.org)
+     core: Fix a crash introduced in with ErrorDocument 400 pointing
+     to a local URL-path with the INCLUDES filter active, introduced
+     in 2.4.11. PR 57531. [Yann Ylavic]
+
+
+Submitted By: ylavic
+Committed By: covener
+
+
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1664205 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/be0f5335e3e73eb63253b050fdc23f252f5c8ae3
+commit,78eb3b9235515652ed141353d98c239237030410,"  *) SECURITY: CVE-2015-0228 (cve.mitre.org)
+     mod_lua: A maliciously crafted websockets PING after a script
+     calls r:wsupgrade() can cause a child process crash.
+     [Edward Lu <Chaosed0 gmail.com>]
+
+Discovered by Guido Vranken <guidovranken gmail.com>
+
+Submitted by: Edward Lu
+Committed by: covener
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1657261 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/78eb3b9235515652ed141353d98c239237030410
+commit,38535f55b12814315ba5ded4a6180e11e821134e,"  *) SECURITY: CVE-2014-8109 (cve.mitre.org)
+     mod_lua: Fix handling of the Require line when a LuaAuthzProvider is
+     used in multiple Require directives with different arguments.
+     PR57204 [Edward Lu <Chaosed0 gmail.com>]
+
+Submitted By: Edward Lu
+Committed By: covener
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1642499 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/38535f55b12814315ba5ded4a6180e11e821134e
+commit,14baf35e69c15bd4656e923db5a6e80ec9e96c33,"mod_authnz_fcgi is not vulnerable to the CVE-2014-3583 bug
+(and it is too late to use the same CVE anyway).
+
+The code changes to mod_authnz_fcgi are retained in order
+to keep the similar code in sync between the two modules.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1640331 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/14baf35e69c15bd4656e923db5a6e80ec9e96c33
+commit,54f079749858377dfff23843956fc34d513eb40c,"mod_proxy_fcgi: SECURITY: CVE-2014-3583 (cve.mitre.org)
+Fix a potential crash with response headers' size above 8K.
+
+The code changes to mod_authnz_fcgi keep the handle_headers()
+function in sync between the two modules.  mod_authnz_fcgi
+does not have this issue because it allocated a separate byte
+for terminating '\0'.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1640036 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/54f079749858377dfff23843956fc34d513eb40c
+commit,02e736ae5a7bb18b2767bbee1690fa4f0be4e6e1,"mod_proxy_fcgi: CVE-2014-3583: Fix a potential crash with response headers'
+size above 8K.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1638818 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/02e736ae5a7bb18b2767bbee1690fa4f0be4e6e1
+commit,2fa69ec09458a7a6519eb1e960b1fee45da66143,"SECURITY (CVE-2014-3581): Fix a mod_cache NULL pointer deference
+in Content-Type handling.
+
+mod_cache: Avoid a crash when Content-Type has an empty value. PR56924.
+
+Submitted By: Mark Montague <mark catseye.org>
+Reviewed By: Jan Kaluza
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1624234 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/2fa69ec09458a7a6519eb1e960b1fee45da66143
+commit,8cc5e00f9ead2e8f915a567aeb756c5cca357188,"  *) SECURITY: CVE-2013-5704 (cve.mitre.org)
+     core: HTTP trailers could be used to replace HTTP headers
+     late during request processing, potentially undoing or
+     otherwise confusing modules that examined or modified
+     request headers earlier.  Adds ""MergeTrailers"" directive to restore
+     legacy behavior.  
+
+Submitted By: Edward Lu, Yann Ylavic, Joe Orton, Eric Covener
+Committed By: covener
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1610814 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/8cc5e00f9ead2e8f915a567aeb756c5cca357188
+commit,bb2749fd6e18dd1682bd1da89b160ca4175c2ec1,"SECURITY (CVE-2014-0117): Fix a crash in mod_proxy.  In a reverse
+proxy configuration, a remote attacker could send a carefully crafted
+request which could crash a server process, resulting in denial of
+service.
+
+Thanks to Marek Kroemeke working with HP's Zero Day Initiative for
+reporting this issue.
+
+* server/util.c (ap_parse_token_list_strict): New function.
+
+* modules/proxy/proxy_util.c (find_conn_headers): Use it here.
+
+* modules/proxy/mod_proxy_http.c (ap_proxy_http_process_response):
+  Send a 400 for a malformed Connection header.
+
+Submitted by: Edward Lu, breser, covener
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1610674 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/bb2749fd6e18dd1682bd1da89b160ca4175c2ec1
+commit,42bcf81be8dc9f51682e62bb71a6a98d4a511426,"SECURITY (CVE-2014-3523): Fix a memory consumption denial of
+service in the WinNT MPM used in all Windows installations.
+Workaround: AcceptFilter <protocol> {none|connect}
+
+Submitted by: trawick
+Reviewed by: jorton, covener, jim
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1610652 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/42bcf81be8dc9f51682e62bb71a6a98d4a511426
+commit,c0be5abcd369a29528c9e9f3cc5b74753a3ec4a5,"SECURITY: CVE-2014-0231 (cve.mitre.org): Part two of two, with r1535125:
+
+   mod_cgid: Fix a denial of service against CGI scripts that do
+   not consume stdin that could lead to lingering HTTPD child processes
+   filling up the scoreboard and eventually hanging the server.
+   [Rainer Jung, Eric Covener, Yann Ylavic]
+
+Submitted By: rjung, covener, ylavic
+Reviewed By: trawick, jorton, covener, jim
+   
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1610509 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/c0be5abcd369a29528c9e9f3cc5b74753a3ec4a5
+commit,6346ece4d953e367f08263a5f2a814e2a9f1a946,"  *) SECURITY: CVE-2014-0118 (cve.mitre.org)
+     mod_deflate: The DEFLATE input filter (inflates request bodies) now
+     limits the length and compression ratio of inflated request bodies to avoid
+     denial of sevice via highly compressed bodies.  See directives 
+     DeflateInflateLimitRequestBody, DeflateInflateRatioLimit,
+     and DeflateInflateRatioBurst.
+
+Thanks to Giancarlo Pellegrino and Davide Balzarotti for reporting the issue.
+
+Submitted By: ylavic, covener
+Reviewed By: jorton, covener, jim
+
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1610501 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/6346ece4d953e367f08263a5f2a814e2a9f1a946
+commit,b2605d20c42fe882a42f55d059286f64927ac30d,"SECURITY (CVE-2014-0226): Fix a race condition in scoreboard handling,
+which could lead to a heap buffer overflow.  Thanks to Marek Kroemeke
+working with HP's Zero Day Initiative for reporting this.
+
+* include/scoreboard.h: Add ap_copy_scoreboard_worker.
+
+* server/scoreboard.c (ap_copy_scoreboard_worker): New function.
+
+* modules/generators/mod_status.c (status_handler): Use it.
+
+* modules/lua/lua_request.c (lua_ap_scoreboard_worker): Likewise.
+
+Reviewed by: trawick, jorton, covener, jim
+Submitted by: jorton, covener
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1610491 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/b2605d20c42fe882a42f55d059286f64927ac30d
+commit,0559370e7e2bf322d11d6df51b934d211fb2465c,"CVE-2014-0098 (reported by Rainer Canavan <rainer-apache 7val com>)
+Segfaults w/ truncated cookie logging.
+
+Clean up the cookie logging parser to recognize only the cookie=value pairs,
+not valueless cookies.  This refactors multiple passes over the same string
+buffer into a single pass parser.
+
+Submitted by: wrowe
+Reviewed by: rpluem, jim 
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1575400 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/0559370e7e2bf322d11d6df51b934d211fb2465c
+commit,02780d57bd9287c472c9ce5c25c6e46d04d67ea6,"SECURITY: CVE-2013-6438 (cve.mitre.org)
+mod_dav: Keep track of length of cdata properly when removing leading spaces.
+
+* modules/dav/main/util.c
+  (dav_xml_get_cdata): reduce len variable when increasing cdata pointer.
+
+Submitted by: Amin Tora <Amin.Tora neustar.biz>
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1556428 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/02780d57bd9287c472c9ce5c25c6e46d04d67ea6
+commit,41488e891d12eddcf21bb435d90ae71eda8d218a,"SECURITY (CVE-2014-0231): Fix for DoS due to hang waiting for CGI script.
+Patch one of two.
+
+Permit a read timeout to be used in mod_cgid to give up on a slow CGI script.
+
+In trunk, it defaults to the servers Timeout.  PR43494 
+
+Submitted By: Eric Covener, Toshikuni Fukaya
+Reviewed By: Eric Covener
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1535125 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/41488e891d12eddcf21bb435d90ae71eda8d218a
+commit,e62246ac2b5eaab42df01b4ba96b80a89b66a966,"SECURITY (CVE-2013-4352): Fix a NULL pointer deference which allowed
+untrusted origin servers to crash mod_cache in a forward proxy configuration.
+
+mod_cache: Avoid a crash with strcmp() when the hostname is not provided.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1523235 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/e62246ac2b5eaab42df01b4ba96b80a89b66a966
+commit,3eed634c9c382265179381c05181ba683672262f,"CVE-2013-2249
+
+mod_session_dbd: Make sure that dirty flag is respected when saving 
+sessions, and ensure the session ID is changed each time the session 
+changes.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1488158 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/3eed634c9c382265179381c05181ba683672262f
+commit,87367647decd3415021f9654958f3a987f245fd1,"CVE-2013-1896
+
+mod_dav: Sending a MERGE request against a URI handled by mod_dav_svn with
+the source href (sent as part of the request body as XML) pointing to a
+URI that is not configured for DAV will trigger a segfault.
+
+Submitted by: Ben Reser <ben reser.org>
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1485668 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/87367647decd3415021f9654958f3a987f245fd1
+commit,d5b414c34d90cd63196a9214872c55e390838a9c,"CVE-2012-3499
+
+add missing html escaping
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1418752 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/d5b414c34d90cd63196a9214872c55e390838a9c
+commit,18cc8e835b71e832d78c93bf97a6232a088747fb,"CVE-2012-3499 and CVE-2012-4558
+
+Be sure to escape potential troubled strings
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1413732 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/18cc8e835b71e832d78c93bf97a6232a088747fb
+commit,4cf751dbb992d73c70687e93ba38335121c4194b,"Fix closing the back end connection in case of error.
+The field ""closed"" was changed from an int to a bit
+field of size one in 2.4.x.
+For historical reasons a close instruction was coded
+as an increment on the field, which in 2.4.x flips
+the field each time. There were mutliple code paths
+that would flip it several times for a single error,
+so effectively the connection was no longer closed
+in these cases.
+
+Especially in the case of an aborted client connection
+this lead to a non consumed back end buffer and thus to
+response mixup between users.
+
+PR 53727
+
+CVE-2012-3052
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1373955 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/4cf751dbb992d73c70687e93ba38335121c4194b
+commit,83acd755ee086266e9fa1c85bddadf6b14ad5c1e,"* modules/mappers/mod_rewrite.c (cmd_rewriteoptions, hook_uri2file):
+  Add ""AllowAnyURI"" flag which disables the strict URL-path input
+  string check introduced to fix CVE-2011-3368/CVE-2011-4317.
+
+* docs/manual: Update docs.
+
+Inspired by: covener
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1356115 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/83acd755ee086266e9fa1c85bddadf6b14ad5c1e
+commit,aead8d0148ac001f77094d22fb2e68fb62b2c493,"bump CVE to the top of CHANGES
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1355831 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/aead8d0148ac001f77094d22fb2e68fb62b2c493
+commit,885e76bebb7f8a1eeb5c72d3c217dd94fd6a8556,"SECURITY: CVE-2012-2687 (cve.mitre.org):
+
+mod_negotiation: Escape filenames in variant list to prevent an
+possible XSS for a site where untrusted users can upload files to a
+location with MultiViews enabled.
+
+* modules/mappers/mod_negotiation.c (make_variant_list): Escape
+  filenames in variant list.
+
+Submitted by: Niels Heinen <heinenn google.com>
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1349905 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/885e76bebb7f8a1eeb5c72d3c217dd94fd6a8556
+commit,5d9207c78c138a941a763b8fe14eca26c43698d7,"Fix insecure handling of LD_LIBRARY_PATH that could lead to the
+current working directory to be searched for DSOs
+
+CVE-2012-0883
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1296428 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/5d9207c78c138a941a763b8fe14eca26c43698d7
+commit,76aa41352dca4c8b6a6ae4c5f2efa451f6a99779,"CVE-2012-0053: Fix an issue in error responses that could expose 
+""httpOnly"" cookies when no custom ErrorDocument is specified for 
+status code 400.
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1234837 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/76aa41352dca4c8b6a6ae4c5f2efa451f6a99779
+commit,6635e5a3da3e3c27b8a279297e67c37f75da1db2,"Adjust CVE-2011-3368/CVE-2011-4317 fixes to rely solely on 
+core's translate-name to fail unsupported URIs.
+
+Rewrite and proxy now decline what they don't support rather
+than fail the request.
+
+Suggested by: trawick
+Implemented by: jorton
+Tweaked by: wrowe
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1233604 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/6635e5a3da3e3c27b8a279297e67c37f75da1db2
+commit,65718cf0f5980f1e5e2e9a2335a0cfb599b30cda,"SECURITY (CVE-2012-0031): Fix possible crash on shutdown if a child
+changes the sb_type field in the scoreboard.  Since unprivileged
+children should not be able to affect the parent in this way, this is
+treated as a Low severity security issue.
+
+Thanks to ""halfdog"" <me halfdog.net> for reporting this issue.
+
+* include/scoreboard.h (global_score): Remove sb_type field.
+
+* include/ap_mmn.h: Bump MMN for above.
+
+* server/scoreboard.c (ap_cleanup_scoreboard, ap_create_scoreboard):
+  Use a static global to store store the scoreboard type.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1230065 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/65718cf0f5980f1e5e2e9a2335a0cfb599b30cda
+commit,066712a8cdcb414467706def84e461b393af503c,"SECURITY: CVE-2012-0021 (cve.mitre.org)
+
+Fix segfault when trying to log a nameless valueless cookie
+
+PR: 52256
+Submitted by: Rainer Canavan <rainer-apache 7val com>
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1225380 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/066712a8cdcb414467706def84e461b393af503c
+commit,14fef5ae8528914791df2dd5041cb804c1c7b793,"Fix for additional cases of URL rewriting with ProxyPassMatch or
+RewriteRule, where particular request-URIs could result in undesired
+backend network exposure in some configurations. (CVE-2011-4317)
+
+Thanks to Prutha Parikh from Qualys for reporting this issue.
+
+* modules/proxy/mod_proxy.c (proxy_trans): Decline to handle the ""*""
+  request-URI.  Fail for cases where r->uri does not begin with a ""/"".
+
+* modules/mappers/mod_rewrite.c (hook_uri2file): Likewise.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1209432 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/14fef5ae8528914791df2dd5041cb804c1c7b793
+commit,fd962221ea30b998581edb12177fd3328195bec6,"Fix integer overflow in ap_pregsub. This can be triggered e.g.
+with mod_setenvif via a malicious .htaccess
+
+CVE-2011-3607
+http://www.halfdog.net/Security/2011/ApacheModSetEnvIfIntegerOverflow/
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1198940 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/fd962221ea30b998581edb12177fd3328195bec6
+commit,31d85243ba13abebc7df77de696c6418c29c3953,"- add note here in light of CVE-2011-3368
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1179272 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/31d85243ba13abebc7df77de696c6418c29c3953
+commit,ffce0a307e00246db14337c4e60c0c430d4f29a6,"- add a security warning, and tweak the example, in light of CVE-2011-3368
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1179266 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/ffce0a307e00246db14337c4e60c0c430d4f29a6
+commit,3371c662632f499a390317ec46f35abd7bb1f066,"SECURITY (CVE-2011-3368): Prevent unintended pattern expansion in some
+reverse proxy configurations by strictly validating the request-URI:
+
+* server/protocol.c (read_request_line): Send a 400 response if the
+  request-URI does not match the grammar from RFC 2616.  This ensures
+  the input string for RewriteRule et al really is an absolute path.
+
+Reviewed by: rpluem, wrowe, covener, fielding
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1179239 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/3371c662632f499a390317ec46f35abd7bb1f066
+commit,571b03678ecbd9b78f2a0d9f1f8c67880b156426,"* modules/http/byterange_filter.c (ap_byterange_filter): Don't reveal
+  the pid in the boundary delimiter (part of CVE-2003-1418).
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1165268 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/571b03678ecbd9b78f2a0d9f1f8c67880b156426
+commit,c7c14f473fc0b925e377fea9c7b79f82ece0c23b,"* Fix a regression in the CVE-2011-3192 byterange fix:
+  Range: bytes=-1
+
+  Resulted in the first two bytes delivered, not in the last one.
+
+PR: 51748
+Submitted by: low_priority <lowprio20 gmail.com>
+Reviewed by: rpluem
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1163985 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/c7c14f473fc0b925e377fea9c7b79f82ece0c23b
+commit,2fe752e16be831a618c7e3e5d3c0f8edf491a82d,"Fold in Stefan's initial PoC for fixing memory issues with ranges
+by keeping orig brigade untouched and avoiding 1byte brigades
+(related to CVE-2011-3192)
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1161534 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/2fe752e16be831a618c7e3e5d3c0f8edf491a82d
+commit,d814b8320690cb668b158e4d04c1a94c440c5082,"Fix CVE-2010-1623 in mod_reqtimeout, too. It includes a non-blocking variant
+of apr_brigade_split_line().
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@1003626 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/d814b8320690cb668b158e4d04c1a94c440c5082
+commit,ad53d4dcbdacc1e9bd35f0348d20416d08e18566,"CVE-2010-1452: Fix handling of missing path segments in the parsed URI structure.
+
+If a specially crafted request was sent, it is possible to crash mod_dav, 
+mod_cache or mod_session, as they accessed a field that is set to NULL
+by the URI parser, assuming that it always put in a valid string.
+
+PR: 49246
+Submitted by: Mark Drayton
+Patch by: Jeff Trawick
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@966348 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/ad53d4dcbdacc1e9bd35f0348d20416d08e18566
+commit,dd92e8d0d36b4cc63f091a3a2aaf38903cdc043c,"Use APR_STATUS_IS_TIMEUP instead of direct compare to APR_TIMEUP to
+be more safe on different platforms.
+
+Note: This commit has an additional, platform-independent change to
+mark the back-end connection for closing (""backend->close = 1;"").
+That code is not required to resolve CVE-2010-2068 on any platform.
+
+PR: 49417
+Addresses CVE-2010-2068
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@953418 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/dd92e8d0d36b4cc63f091a3a2aaf38903cdc043c
+commit,3913a638db81c35e9ea7c29f4f845cc1a97b0398,"reflect assignment of CVE-2010-0434
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@918428 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/3913a638db81c35e9ea7c29f4f845cc1a97b0398
+commit,29525f5d2c0514611cb8c5b616fd88d6fc0ce6a0,"SECURITY: CVE-2010-0408 (cve.mitre.org)
+
+mod_proxy_ajp: Respond with HTTP_BAD_REQUEST when the body is not sent after
+request headers indicate a request body is incoming; this is not a case of
+HTTP_INTERNAL_SERVER_ERROR.
+
+Submitted by: Niku Toivola <niku.toivola sulake.com>
+Reviewed by: rpluem, jim, wrowe
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@917875 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/29525f5d2c0514611cb8c5b616fd88d6fc0ce6a0
+commit,1ea89a333a6f69e8c55459213c653b614dda5b7b,"SECURITY: CVE-2010-0425 (cve.mitre.org)
+
+mod_isapi: Do not unload an isapi .dll module until the request
+processing is completed, avoiding orphaned callback pointers.
+
+Submitted by: Brett Gervasoni <brettg senseofsecurity.com>, trawick
+Reviewed by: trawick, wrowe
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@917870 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/1ea89a333a6f69e8c55459213c653b614dda5b7b
+commit,115c1e496d8f7057447571534bd73bb61e99b114,"Correctly align the behavior of headers_in to be consistent with the
+treatment of headers_out, resolving PR 48359 by keeping subrequest
+scope changes out of the main request headers.  This ensures that all
+requests-without-bodies behave as the requests-with-bodies code has.
+
+Mitre: CVE-2010-0434
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@901578 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/115c1e496d8f7057447571534bd73bb61e99b114
+commit,c9897ccf0ccdb7de8687621bc400a43d7b7f31bf,"Further mitigation for the TLS renegotation attack, CVE-2009-3555:
+
+* modules/ssl/ssl_engine_kernel.c (has_buffered_data): New function.
+  (ssl_hook_Access): Forcibly disable keepalive for the connection if
+  there is any buffered data readable from the input filter stack.
+
+* modules/ssl/ssl_engine_io.c (ssl_io_filter_input): Ensure that the
+  BIO uses blocking operations when invoked outside direct control of
+  the httpd filter stack.
+
+Thanks to Hartmut Keil <Hartmut.Keil adnovum.ch> for proposing this
+technique.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@891282 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/c9897ccf0ccdb7de8687621bc400a43d7b7f31bf
+commit,39d5d9507b28016c51c2f9bb2f67c7884cdb7a35,"SECURITY: Partial fix for CVE-2009-3555:
+
+Reject client-initiated renegotiations; this is sufficient to prevent
+the attack for any configuration which does not require renegotiation
+due to per-directory/per-location access control configuration.
+
+Configuration with per-directory/per-location access control
+requirements (such as ""SSLVerifyClient require"") are still vulnerable
+to CVE-2009-3555 with this patch applied (if using OpenSSL <= 0.9.8k).
+
+* modules/ssl/ssl_private.h (SSLConnRec): Add reneg_state field.
+  (ssl_callback_Info): Renamed from ssl_callback_LogTracingState.
+
+* modules/ssl/ssl_engine_init.c (ssl_init_ctx_callbacks): Install
+  the (renamed) info callback unconditionally.
+
+* modules/ssl/ssl_engine_io.c (ssl_filter_ctx_t): Add config pointer
+  to SSLConnRec.
+  (bio_filter_out_write, bio_filter_in_read): Fail with
+  APR_ECONNABORTED if the reneg state is set to RENEG_ABORT.
+
+* modules/ssl/ssl_engine_kernel.c (log_tracing_state): Factored out
+  of ssl_callback_LogTracingState.
+  (ssl_callback_Info): New function.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@833582 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/39d5d9507b28016c51c2f9bb2f67c7884cdb7a35
+commit,cb80694fcc8d7d377eaa14608b3d868fd1d5980e,"htdigest: Fix possible overflow in command line processing. htdigest is not
+supposed to be suid save, therefore not treated as a security issue.
+
+CVE-2005-1344
+Submitted by: Adam Conrad
+Reviewed by: Stefan Fritsch
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@826506 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/cb80694fcc8d7d377eaa14608b3d868fd1d5980e
+commit,f9999f9bd94d12f6eb7b27367a7f18c03538451c,"Add attribution and CVE notices.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@814850 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/f9999f9bd94d12f6eb7b27367a7f18c03538451c
+commit,8d3f77b70d3c49bd14eb05c423788ec5df65bdad,"Security fix - this is presumed to fix CVE-2009-3094 (the disclosed
+information was limited so this has not been confirmed):
+
+* modules/proxy/mod_proxy_ftp.c (parse_epsv_reply): New function.
+  (proxy_ftp_handler): Fix possible NULL pointer deference in
+  apr_socket_close(NULL) on error paths.  Fix possible buffer overread
+  in EPSV response parser; use parse_epsv_reply instead.  Thanks to
+  Jeff Trawick and Stefan Fritsch for analysis of this issue.
+
+Submitted by: Stefan Fritsch <sf fritsch.de>, jorton
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@814652 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/8d3f77b70d3c49bd14eb05c423788ec5df65bdad
+commit,0f0480b2631ca6b827c386b6458ca1a860ab7f20,"Security fix - this is presumed to fix CVE-2009-3095 (the disclosed
+information was limited so this has not been confirmed):
+
+* modules/proxy/mod_proxy_ftp.c (proxy_ftp_handler): Fail if the
+  decoded Basic credentials contain ""special"" characters.
+  Thanks to Stefan Fritsch for analysis of this issue.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@814045 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/0f0480b2631ca6b827c386b6458ca1a860ab7f20
+commit,b5c7491d6712fcbec142ea9d2c0a870b831d6c99,"Security fix for CVE-2009-1890:
+
+* modules/proxy/mod_proxy_http.c (stream_reqbody_cl): Specify the base
+  passed to apr_strtoff, and validate the Content-Length in the same
+  way the HTTP_IN filter does.  If the number of bytes streamed
+  exceeds the expected body length, bail out of the loop.
+
+Thanks to: Toadie <toadie643 gmail.com> for reporting and diagnosis of
+	this issue.
+Submitted by: niq, jorton
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@790587 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/b5c7491d6712fcbec142ea9d2c0a870b831d6c99
+commit,2a8cb24343ecb7e946611c0c7ca971bba6ba352b,"* Fix for the following configuration where the exec command was disabled
+  in /subdir. All CVE-2009-1195 tests still pass with this patch.
+
+# only two containers in the config
+
+<Directory />
+Options Includes
+AllowOverride None
+</Directory>
+
+<Directory /subdir>
+# with this container, mod_cgi/mod_cgid complains about exec being off
+# without it, exec cmd= works as expected
+SetEnv foo bar
+</Directory>
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@773322 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/2a8cb24343ecb7e946611c0c7ca971bba6ba352b
+commit,489bc420ddbbb3ba7bd6f4b8b8e44fc4183deaf0,"Security fix for CVE-2009-1195: fix Options handling such that
+'AllowOverride Options=IncludesNoExec' does not permit Includes with
+exec= enabled to be configured in an .htaccess file:
+
+* include/http_core.h: Change semantics of Includes/IncludeNoExec
+  options bits to be additive; OPT_INCLUDES now means SSI is enabled
+  without exec=.  OPT_INCLUDES|OPT_INC_WITH_EXEC means SSI is enabled
+  with exec=.
+
+* server/core.c (create_core_dir_config): Remove defunct OPT_INCNOEXEC
+  from default override_opts; no functional change.
+  (merge_core_dir_configs): Update logic to ensure that exec= is
+  disabled in a context where IncludesNoexec is configured, even if
+  Includes-with-exec is permitted in the inherited options set.
+  (set_allow_opts, set_options): Update to reflect new semantics
+  of OPT_INCLUDES, OPT_INC_WITH_EXEC.
+
+* server/config.c: Update to remove OPT_INCNOEXEC from default 
+  override_opts; no functional change.
+
+* modules/filters/mod_include.c (includes_filter): Update to reflect
+  new options semantics - disable exec= support if the
+  OPT_INC_WITH_EXEC bit is not set.
+
+Submitted by: Jonathan Peatfield <j.s.peatfield damtp.cam.ac.uk>,
+          jorton
+Thanks to: Vincent Danon <vdanon redhat.com>
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@772997 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/489bc420ddbbb3ba7bd6f4b8b8e44fc4183deaf0
+commit,fa68deee1c9d8d315839924196ff9dc668b1420f,"Use CVE-2009-1191 for this issue.  We would only
+share a CVE name where the flaw was due to a
+shared code base, and this isn't the case for
+the mod_jk CVE-2008-5519 issue.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@767089 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/fa68deee1c9d8d315839924196ff9dc668b1420f
+commit,985bcfa5acef560d90d8131115d7c820c07976a9,"* Add CVE number
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@763885 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/985bcfa5acef560d90d8131115d7c820c07976a9
+commit,b6b2ba9ef27f5695e6838cf1a901ca36ab16eb3a,"* Avoid delivering content from a previous request which failed to send a request
+  body by closing the connection to the backend in this case instead of reusing it.
+
+CVE: CVE-2008-5519
+PR: 46949
+Reviewed by: jim, wrowe
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@763394 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/b6b2ba9ef27f5695e6838cf1a901ca36ab16eb3a
+commit,14e37944f999e75071e35681b64c4b7dd293ed9d,"* Prevent XSS attacks when using wildcards in the path of the FTP URL
+  (CVE-2008-2939). Discovered by Marc Bevand of Rapid7.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@682868 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/14e37944f999e75071e35681b64c4b7dd293ed9d
+commit,33f7a2ac3bff0b73cfae18f1070253e49faa97b0,"Patch for CVE-2008-2364...
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@666154 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/33f7a2ac3bff0b73cfae18f1070253e49faa97b0
+commit,ce75fb285cd93533233b6dafd7ba77127fcbecb7,"No functional change; simplify the CVE-2007-6420 fix slightly, as
+suggested by rpluem:
+
+* modules/proxy/mod_proxy_balancer.c (balancer_init): Serialize the
+  UUID to a string here...
+  (balancer_handler): ...rather than here.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@663967 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/ce75fb285cd93533233b6dafd7ba77127fcbecb7
+commit,4a375eff2269d4a6178997a91c22116b3df5c272,"Prevent CSRF attacks against the balancer-manager (CVE-2007-6420)
+
+* modules/proxy/mod_proxy_balancer.c (balancer_init): New function.
+  (balancer_handler): Place a nonce in the form output, and check that
+  the submitted form data includes that nonce.
+  (ap_proxy_balancer_register_hook): Register the new post_config hook.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@661666 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/4a375eff2269d4a6178997a91c22116b3df5c272
+commit,2b2ed2f5e03becd9d7616f8fa378060954e98488,"* Added missing CVE number
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@607403 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/2b2ed2f5e03becd9d7616f8fa378060954e98488
+commit,7d2f3417e54c8a4938010ac82ead6cb4e320da18,"* Added missing CVE number
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@607402 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/7d2f3417e54c8a4938010ac82ead6cb4e320da18
+commit,5b442e5f1b9b81bfe8299259671ec43d3be129c3,"Fix CVE-2007-5000:
+
+* modules/mappers/mod_imagemap.c (menu_header): Fix
+  cross-site-scripting issue by escaping the URI, and ensure that a
+  charset parameter is sent in the content-type to prevent
+  autodetection by broken browsers.
+
+Reported by: JPCERT
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@603282 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/5b442e5f1b9b81bfe8299259671ec43d3be129c3
+commit,0a0d324e07439178928268989607d3219f7e8b34,"Add alternative fixes for CVE-2007-3304:
+
+* configure.in: Check for getpgid.
+
+* include/mpm_common.h (ap_mpm_safe_kill): New prototype.
+
+* server/mpm_common.c (reclaim_one_pid): Ensure pid validity before
+calling apr_proc_wait().
+(ap_mpm_safe_kill): New function.
+
+* server/mpm/prefork/prefork.c, server/mpm/worker/worker.c,
+server/mpm/experimental/event/event.c: Use ap_mpm_safe_kill() on pids
+from the scoreboard, throughout.
+
+* include/ap_mmn.h: Minor bump.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@551843 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/0a0d324e07439178928268989607d3219f7e8b34
+commit,57f6aefe6c52077a7751ab6ecf0b1b7ea648a38f,"This issue now has a CVE name
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@549417 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/57f6aefe6c52077a7751ab6ecf0b1b7ea648a38f
+commit,a4ca339bc6f6101691f3dfca63700d37ec64615d,"Fix CVE-2006-5752:
+
+* modules/generators/mod_status.c (status_handler): Specify charset in
+content-type to prevent browsers doing charset ""detection"", which
+allows an XSS attack.  Use logitem-escaping on the request string to
+make it charset-neutral.
+
+Reported by: Stefan Esser <sesser hardened-php.net>
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@549159 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/a4ca339bc6f6101691f3dfca63700d37ec64615d
+commit,9a29cd5f657671998da41c51e1933d23312ad310,"SECURITY: CVE-2007-1862 (cve.mitre.org)
+mod_mem_cache: Copy headers into longer lived storage; header names and
+values could previously point to cleaned up storage
+
+PR: 41551
+Submitted by: Davi Arnaut <davi haxent.com.br>
+Reviewed by: covener
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@543515 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/9a29cd5f657671998da41c51e1933d23312ad310
+commit,7a16eaa47bf5a844a5579da4fa4692c03ca1215b,"* CVE-2006-3747 was the main reason to release 2.2.3. So place the changelog
+  entry where it belongs.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@476628 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/7a16eaa47bf5a844a5579da4fa4692c03ca1215b
+commit,51a32c455163c877eaa7d01d28d95bbb2e78a4c3,"Add a note about case-sensitivity to the windows platform docs.
+Partially in response to the disputed vulnerability:
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4110
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@433005 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/51a32c455163c877eaa7d01d28d95bbb2e78a4c3
+commit,1f2b32f04e587a32a28f9de680524ab599130b43,"Make it clear that url-path is always case-sensitive.
+Provide an example of using a regex to make it case-insensitive.
+Make it clear that ScriptAlias is only used when you want
+BOTH mapping and script-designation.
+
+Partially in response to the disputed vulnerability:
+http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-4110
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@432997 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/1f2b32f04e587a32a28f9de680524ab599130b43
+commit,862dd4e3e7a3391afd6fe392e4ab568d73b9c873,"SECURITY: CVE-2006-3747 (cve.mitre.org)
+mod_rewrite: Fix an off-by-one security problem in the ldap scheme
+handling.  For some RewriteRules this could lead to a pointer being
+written out of bounds.  Reported by Mark Dowd of McAfee.
+
+Ack: trawick, lars, jorton, wrowe, benl
+
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@426138 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/862dd4e3e7a3391afd6fe392e4ab568d73b9c873
+commit,90521799bdb923df031e975021b7ce1d093fc4eb,"Bring forward the fix for CVE-2005-3352 already on the branches:
+
+* modules/mappers/mod_imagemap.c (imap_url): Escape the referer.
+
+* server/util.c (ap_escape_html): Escape the "" character.
+
+Submitted by: mjc
+Reviewed by: fielding, jorton
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@357161 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/90521799bdb923df031e975021b7ce1d093fc4eb
+commit,89edea4952bbb387b229f913fca2ea059abbb471,"Today a one-time change happens to all CAN- names as they are
+renamed to CVE-.  Make this change to our changelog.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@326454 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/89edea4952bbb387b229f913fca2ea059abbb471
+commit,a1e9d51be373b9c9e537d129a48e140232643a9e,"Fix CVE CAN-2005-2700:
+
+* modules/ssl/ssl_engine_kernel.c (ssl_hook_Access): Ensure that
+renegotiation is performed for a transition from ""SSLVerifyClient
+optional"" to ""SSLVerifyClient require"".
+
+The boolean ""verify_old & SSL_VERIFY_PEER_STRICT"" is true if the old
+context merely has optional verification configured, since the
+definition of SSL_VERIFY_PEER_STRICT is
+(SSL_VERIFY_FAIL_IF_NO_PEER_CERT | SSL_VERIFY_PEER).
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@264800 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/a1e9d51be373b9c9e537d129a48e140232643a9e
+commit,4ddf48af17a85a133b08ce2c1b99aae7bb78ef01,"Fix for memory consumption DoS, CVE CAN-2004-0942:
+
+* server/protocol.c (ap_rgetline_core): Don't trim trailing whitespace
+from the buffer here.
+(ap_get_mime_headers_core): Trim trailing whitespace here, after
+reading a complete field including continuation lines.  Also simplify
+code to remove whitespace between field-name and colon.
+
+Reviewed by: Andr�� Malo, Bill Stoddard
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@105680 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/4ddf48af17a85a133b08ce2c1b99aae7bb78ef01
+commit,fbe18fa727538c24fc20af0e4c0e44be9becffd6,"CAN to CVE promotions from CVE version 20040901
+PR:
+Obtained from:
+Submitted by:
+Reviewed by:
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@104930 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/fbe18fa727538c24fc20af0e4c0e44be9becffd6
+commit,3efccf4239e0a576d7667c95d61c4a618af32916,"* modules/ssl/ssl_engine_kernel.c (ssl_hook_UserCheck): Fix buffer
+overflow in FakeBasicAuth code if client's subject DN exceeds 6K in
+length (CVE CAN-2004-0488); switch to using apr-util base64 encoder
+functions.
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@103754 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/3efccf4239e0a576d7667c95d61c4a618af32916
+commit,737150cef005e507b1bdfd5310e2c0e0bfa7a416,"Be more consistant in how we label security issues
+Promote the issues that have been allocated a full CVE name (to replace CAN)
+PR:
+Obtained from:
+Submitted by:
+Reviewed by:
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@100151 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/737150cef005e507b1bdfd5310e2c0e0bfa7a416
+commit,92404a26e276707b3545596b94f9a9ce049fc562,"This is worthy of a CVE name, thanks to Joe for the headsup and text
+PR:
+Obtained from: Joe Orton
+Submitted by:
+Reviewed by:
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@97095 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/92404a26e276707b3545596b94f9a9ce049fc562
+commit,599b7eb50cd09cb8033f9e9ce537b96ec9f54d91,"Add in missing CVE name; make SECURITY entries more consistant
+PR:
+Obtained from:
+Submitted by:
+Reviewed by:
+
+
+git-svn-id: https://svn.apache.org/repos/asf/httpd/httpd/trunk@96236 13f79535-47bb-0310-9956-ffa450edef68",https://github.com/apache/httpd/commit/599b7eb50cd09cb8033f9e9ce537b96ec9f54d91
+pull_request,333,Fix seperator in mod_session.c,https://github.com/apache/httpd/pull/333
