@@ -59,10 +59,13 @@ python cli.py --output_file output.csv
 You will be prompted to enter a CVE ID, and the system will output the mapped CVE-commit information to the specified CSV file (output.csv).
 
 Contributing
+
 Feel free to open issues or submit pull requests. Ensure you adhere to the project's coding standards and provide appropriate documentation for any new features or fixes.
 
 License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 Contact
+
 For any inquiries or support, please contact joy.zawadi32@gmail.com
