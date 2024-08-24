@@ -1,0 +1,27 @@
+This guide explains how to use the CLI for mapping CVEs to Apache commits.
+
+1. Overview
+The CLI allows you to map Common Vulnerabilities and Exposures (CVE) data from MITRE and NIST sources to commit messages from Apache repositories. The mapping is done using cosine similarity between CVE descriptions and commit messages and commit ID's.
+
+2. How to Run the CLI
+To start the CLI, use the following command in the terminal:
+
+```bash
+python cli.py --output_file <output-file-path>
+```
+3. CLI Inputs
+Output File (--output_file): Specify the path to the file where the results will be saved. The results will be saved in CSV format.
+Example:
+
+```bash
+Copy code
+python cli.py --output_file results.csv
+```
+After running the above command, the system will prompt you to enter a CVE ID. Once entered, the system will search through the MITRE and NIST datasets and map relevant commit messages and commit ID'S based on cosine similarity.
+
+4. CLI Outputs
+Mapped Data: The output will be saved to the specified CSV file, which will contain the following columns:
+CVE_ID: The ID of the CVE.
+Commit_Message: The commit message related to the CVE.
+Similarity_Score: The cosine similarity score between the CVE description and the commit message.
+Commit SHA: The commit ID related to the CVE 
