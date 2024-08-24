@@ -24,20 +24,16 @@ Before setting up the project, ensure that the following dependencies are instal
 2. Clone the Repository
 First, clone the GitHub repository to your local machine:
 
-bash
-
+```bash
 git clone https://github.com/yourusername/cve-commit-mapping.git
 cd cve-commit-mapping
-
-
 
 3. Create a Virtual Environment (Optional)
 It is highly recommended to use a virtual environment to manage dependencies and avoid conflicts.
 
 To create and activate a virtual environment:
 
-bash
-
+```bash
 # Create virtual environment
 python -m venv venv
 
@@ -48,19 +44,23 @@ venv\Scripts\activate
 # On MacOS/Linux
 source venv/bin/activate
 
-
 4. Install Dependencies
 Install the required Python packages using pip:
-
-bash
+```bash
 pip install -r requirements.txt
-
 
 5. Running the CLI
 To run the main command-line interface (CLI):
 
-bash
-
+```bash
 python cli.py --output_file output.csv
 
 You will be prompted to enter a CVE ID, and the system will output the mapped CVE-commit information to the specified CSV file (output.csv).
+Contributing
+Feel free to open issues or submit pull requests. Ensure you adhere to the project's coding standards and provide appropriate documentation for any new features or fixes.
+
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Contact
+For any inquiries or support, please contact joy.zawadi32@gmail.com
