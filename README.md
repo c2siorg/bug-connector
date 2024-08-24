@@ -24,8 +24,8 @@ Before setting up the project, ensure that the following dependencies are instal
 First, clone the GitHub repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/cve-commit-mapping.git
-cd cve-commit-mapping
+git clone https://github.com/yourusername/bug-connector.git
+cd bug-connector
 ```
 3. Create a Virtual Environment (Optional)
 It is highly recommended to use a virtual environment to manage dependencies and avoid conflicts.
@@ -39,10 +39,10 @@ python -m venv venv
 
 # Activate the virtual environment
 # On Windows
-venv\Scripts\activate
+```venv\Scripts\activate```
 
 # On MacOS/Linux
-source venv/bin/activate
+```source venv/bin/activate```
 
 4. Install Dependencies
 Install the required Python packages using pip:
