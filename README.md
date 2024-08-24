@@ -1,7 +1,6 @@
 # bug-connector
 The idea of this project is to create a public dataset based on openly available CVE information, the key goal is to create fully functional scapers set to gather CVE information from different sources augment comprehensive data points, and make it public
 
-# CVE to Apache Commit Mapping System
 
 ## Project Overview
 This project provides a system that maps Common Vulnerabilities and Exposures (CVE) data from public sources (like MITRE and NIST) to historical commit data from the Apache repository. The system uses natural language processing (NLP) models, specifically SentenceTransformers, to generate semantic embeddings of text and computes cosine similarity to identify the most relevant commits for each CVE. This allows developers and security researchers to link vulnerabilities to specific code changes, making it easier to track the resolution of security issues in open-source software.
@@ -27,7 +26,7 @@ First, clone the GitHub repository to your local machine:
 ```bash
 git clone https://github.com/yourusername/cve-commit-mapping.git
 cd cve-commit-mapping
-
+```
 3. Create a Virtual Environment (Optional)
 It is highly recommended to use a virtual environment to manage dependencies and avoid conflicts.
 
@@ -36,6 +35,7 @@ To create and activate a virtual environment:
 ```bash
 # Create virtual environment
 python -m venv venv
+```
 
 # Activate the virtual environment
 # On Windows
@@ -48,14 +48,16 @@ source venv/bin/activate
 Install the required Python packages using pip:
 ```bash
 pip install -r requirements.txt
+```
 
 5. Running the CLI
 To run the main command-line interface (CLI):
 
 ```bash
 python cli.py --output_file output.csv
-
+```
 You will be prompted to enter a CVE ID, and the system will output the mapped CVE-commit information to the specified CSV file (output.csv).
+
 Contributing
 Feel free to open issues or submit pull requests. Ensure you adhere to the project's coding standards and provide appropriate documentation for any new features or fixes.
 
