@@ -54,7 +54,8 @@ pip install -r requirements.txt
 To run the main command-line interface (CLI):
 
 ```bash
-python cli.py --output_file output.csv
+python cli.py --output_file "filepath\bug-connector\results_mapped_cve.csv"
+
 ```
 You will be prompted to enter a CVE ID, and the system will output the mapped CVE-commit information to the specified CSV file (output.csv).
 
