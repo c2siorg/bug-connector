@@ -45,12 +45,14 @@ python -m venv venv
 ```source venv/bin/activate```
 
 4. Install Dependencies
+   
 Install the required Python packages using pip:
 ```bash
 pip install -r requirements.txt
 ```
 
 5. Running the CLI
+   
 To run the main command-line interface (CLI):
 
 ```bash
