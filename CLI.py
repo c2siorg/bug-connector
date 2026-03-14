@@ -1,11 +1,24 @@
+import os
 import pandas as pd
 from sentence_transformers import SentenceTransformer, util
 import argparse
 
-# Define constants for file paths
-MITRE_FILE_PATH = r'C:\Users\ADMIN\Desktop\bug-connector\mitre_allitems.csv'
-NIST_FILE_PATH = r'C:\Users\ADMIN\Desktop\bug-connector\Datasets\NIST_cve_data.csv'
-COMMIT_FILE_PATH = r'C:\Users\ADMIN\Desktop\bug-connector\Datasets\Mapped_CVE_file.csv'
+# Resolve file paths relative to the repository root so the tool works on any
+# OS without manual path edits.  Users can also override each path via
+# environment variables: MITRE_FILE_PATH, NIST_FILE_PATH, COMMIT_FILE_PATH.
+_REPO_ROOT = os.path.dirname(os.path.abspath(__file__))
+MITRE_FILE_PATH = os.environ.get(
+    "MITRE_FILE_PATH",
+    os.path.join(_REPO_ROOT, "mitre_allitems.csv"),
+)
+NIST_FILE_PATH = os.environ.get(
+    "NIST_FILE_PATH",
+    os.path.join(_REPO_ROOT, "Datasets", "NIST_cve_data.csv"),
+)
+COMMIT_FILE_PATH = os.environ.get(
+    "COMMIT_FILE_PATH",
+    os.path.join(_REPO_ROOT, "Datasets", "Mapped_CVE_file.csv"),
+)
 
 # Function to load CSV and handle errors
 def load_csv(file_path, skip_rows=None):
