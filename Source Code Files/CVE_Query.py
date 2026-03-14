@@ -1,11 +1,6 @@
+import os
 import pandas as pd
 from sentence_transformers import SentenceTransformer, util  # For semantic similarity
-import ssl
-import urllib3
-
-# SSL Issue Handling: Disable SSL certificate verification
-ssl._create_default_https_context = ssl._create_unverified_context
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Function to load CSV and handle errors
 def load_csv(file_path, skip_rows=None):
@@ -115,10 +110,21 @@ def search_cve(cve_id, mitre_df, nist_df, commit_df, model, threshold=0.5):
 if __name__ == "__main__":
     model = SentenceTransformer('paraphrase-MiniLM-L6-v2')  # Lightweight and efficient model
 
-    # File paths for the MITRE, NIST, and Apache datasets
-    mitre_file_path = r'C:\Users\ADMIN\Desktop\bug-connector\mitre_allitems.csv'
-    nist_file_path = r'C:\Users\ADMIN\Desktop\bug-connector\Datasets\NIST_cve_data.csv'
-    commit_file_path = r'C:\Users\ADMIN\Desktop\bug-connector\Datasets\Apache_cve_data.csv'
+    # Resolve paths relative to the repository root so this script works on
+    # any OS.  Override via environment variables if needed.
+    _REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    mitre_file_path = os.environ.get(
+        "MITRE_FILE_PATH",
+        os.path.join(_REPO_ROOT, "mitre_allitems.csv"),
+    )
+    nist_file_path = os.environ.get(
+        "NIST_FILE_PATH",
+        os.path.join(_REPO_ROOT, "Datasets", "NIST_cve_data.csv"),
+    )
+    commit_file_path = os.environ.get(
+        "COMMIT_FILE_PATH",
+        os.path.join(_REPO_ROOT, "Datasets", "Apache_cve_data.csv"),
+    )
 
     # Load the MITRE CSV with skiprows (column headers on line 3)
     mitre_df = load_csv(mitre_file_path, skip_rows=2)  # Skips the first two rows

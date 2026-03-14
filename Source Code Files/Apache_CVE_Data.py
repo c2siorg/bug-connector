@@ -1,3 +1,4 @@
+import os
 import requests
 import csv
 from requests.adapters import HTTPAdapter
@@ -7,7 +8,9 @@ from requests.packages.urllib3.util.retry import Retry
 repo_owner = "apache"
 repo_name = "httpd"
 base_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}"
-token = "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"  # Replace with your GitHub token for higher rate limits
+
+# Read token from environment variable to avoid hardcoding credentials in source
+token = os.environ.get("GITHUB_TOKEN", "")
 
 # Set up retry logic
 def create_session():
